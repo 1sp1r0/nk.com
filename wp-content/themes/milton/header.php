@@ -23,6 +23,7 @@
     	
 		</script>
 	<!-- End Google Analytics -->
+	<!-- verifying successful git deployment -->
 </head>
 <body>
 	
