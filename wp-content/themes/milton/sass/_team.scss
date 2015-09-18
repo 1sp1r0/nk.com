@@ -1,0 +1,76 @@
+.the_team{
+	background: url('../assets/images/team/team_bg.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+.team{
+	@include self-clear;
+	margin-bottom: 4em;
+	
+	img{ width: 100%; margin-bottom: 2em; margin-top: -2em; }
+	
+	h3{
+		background: $nkblue;
+		color: #fff;
+		padding: .5em 1em;
+		position: absolute;
+		top: 0;
+		left: 20px;
+		text-transform: uppercase;
+		font-size: .8em;
+		@include whitney_book;
+	}
+	
+	.one_third{
+		width: 31%;
+		margin-right: 4%;
+		border-top: 1px solid #ccc;
+		padding-top: 3em;
+		position: relative;
+		padding-left: 20px;
+		@include box-sizing(border-box);
+	}
+	
+	.two_thirds{
+		width: 65%;
+		border-top: 1px solid #ccc;
+		padding-top: 3em;
+		position: relative;
+		padding-left: 20px;
+		@include box-sizing(border-box);
+	}
+	
+	dt{ @include whitney_semi_bold; color: #666; font-size: .8em; text-transform: uppercase;  }
+	
+	dd{ 
+		padding-top: .25em;
+		margin-top: .25em;
+		margin-bottom: 1em;
+		text-indent: 20px;}
+}
+
+
+@media screen and (max-width: 880px){
+	
+	.team{
+		img{ margin-top: 0; }
+		
+		.one_third{
+			width: 100%;
+			float: none;
+			text-align: center;
+			padding: 3em;
+		}
+		
+		.two_thirds{
+			width: 100%;
+			float: none;
+			padding: 3em 20px;
+		}
+		
+		dd{
+			text-indent: 0;
+		}
+	}
+	
+}

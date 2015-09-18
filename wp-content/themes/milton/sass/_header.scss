@@ -1,0 +1,164 @@
+header{
+	padding: 2em 0;
+	@include self-clear;
+	@include whitney-book;
+	background: #fff;
+	
+	.wrapper{
+		max-width: 980px;
+		margin: 0 auto;
+	}
+	
+	/* Shimmer effect for header logo on hover*/
+	.site_title:after {
+	    content: "";
+	    position: absolute;
+	    top: 0px;
+	    left: 0px;
+	    width: 0%;
+	    height: 100%;
+	    background-color: rgba(255,255,255,0.4);
+	    -webkit-transition: none;
+	    -moz-transition: none;
+	    -ms-transition: none;
+	    -o-transition: none;
+	    transition: none;
+
+	}
+	.site_title:hover:after {
+	    width: 100%;
+	    background-color: rgba(255,255,255,.0);
+	    @include transition(all .75s ease-out);
+	}
+}
+
+.site_title{
+	float: left;
+	text-transform: uppercase;
+	background: url('../assets/images/header/nk-logo.png') no-repeat 0 0;
+	text-indent: -9999em;
+	width: 170px;
+	position: relative;
+	height: 35px;
+}
+
+.menu_hamburger{ display: none; }
+
+.global_nav{
+	float: right;
+	text-transform: uppercase;
+	padding-top: .75em;
+	font-size: .9em;
+	ul li{
+		display: inline-block;
+		list-style: none;
+		margin: 0 1em;
+		
+		&.current-menu-item{
+			a{ color: $nkblue; }
+		}
+		
+		a{ 
+			color: #666;
+			&:hover{
+				color: $nkblue;
+			} 
+		}
+		
+		
+		
+		&:last-child a{
+			border: 1px solid $nkblue;
+			color: $nkblue;
+			padding: .25em 1.5em;
+			margin-left: 2em;
+			@include transition(all .5s);
+			
+			&:hover{
+				background: $nkblue;
+				color: #fff;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1100px){
+	.site_title{
+		background: url('../assets/images/header/nk-logo-mobile.png') no-repeat 0 0;
+		width: 120px;
+		height: 25px;
+	}
+	
+	.global_nav{
+		padding-top: .3em;
+	}
+}
+
+@media screen and (max-width: 950px){
+	.site_title{
+		float: none;
+		margin: 1em auto;
+		background: url('../assets/images/header/nk-logo.png') no-repeat 0 0;
+		width: 175px;
+		height: 35px;
+	}
+	
+	.global_nav{
+		padding-top: 1em;
+		float: none;
+		width: 100%;
+		text-align: center;
+		
+		ul li:last-child a{
+			border: none;
+			padding: 0;
+			margin: 0;
+			color: #666;
+			
+			&:hover{
+				color: $nkblue;
+				background: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 720px){
+	.site_title{
+		text-align: left;
+		width: 200px;
+		float: left;
+	}
+	
+	.menu_hamburger{
+		display: block;
+		position: absolute;
+		right: 2em;
+		margin-top: 1em;
+		text-indent: -9999em;
+		height: 30px;
+		width: 30px;
+		background: url('../assets/images/menu-hamburger.png') no-repeat 0 0;
+		background-size: cover;
+		
+	}
+	
+	.global_nav{
+		clear: both;
+		height: 0;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		@include transition(all .5s);
+		
+		&.visible{
+			height: 200px;
+			padding-top: 2em;
+		}
+		
+		ul li{
+			display: block;
+			margin-bottom: 1.5em;
+		}
+	}
+}

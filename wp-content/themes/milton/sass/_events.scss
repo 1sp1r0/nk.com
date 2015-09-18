@@ -1,0 +1,26 @@
+.event{
+	margin: 1em 0;
+	@include self-clear;
+	
+	img{ 
+		float: left;
+		width: 33%;
+		} 
+		
+	h3{
+		font-size: 2em;
+		margin-bottom: .5em;
+		margin-left: 36%;
+	}
+	
+	.description{
+		float: left;
+		width: 41%;
+		margin: 0 3%;
+	}
+	
+	dl{ 
+		float: right; 
+		width: 20%;
+	}
+}

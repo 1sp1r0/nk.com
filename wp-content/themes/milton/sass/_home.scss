@@ -1,0 +1,204 @@
+.home{
+	@include whitney-book;
+	
+	hr{
+		border-color: #fff;
+	}
+
+	#homepage_lead{
+		background: #cfe3ec url('../assets/images/home/480/home_bg_1.jpg') no-repeat center center;
+		background-size: cover;
+
+		
+		p{
+			margin-bottom: 1em;
+		}
+	}
+	
+	#who_we_are{
+		section{
+			background: #0d435f url('../assets/images/home/480/home_bg_2.jpg') no-repeat center center;
+			background-size: cover;
+		}
+		
+		h4{ margin-bottom: .5em; }
+		
+		.button{ margin-top: 0; }
+		
+		p{ margin-bottom: 3.5em; }
+		
+		li{
+			float: left;
+			width: 30%;
+			margin: 0 1.5%;
+			
+			dt{
+				background: rgba(0,0,0,.2);
+				text-transform: uppercase;
+				font-weight: 500;
+				letter-spacing: 2px;
+				padding: 1em 0;
+				margin: 0 0 1em;
+			}
+			
+			dd{
+				line-height: 1.4em;
+			}
+		}
+	}
+	
+	#who_we_work_with{
+		section{
+			background: #16242d url('../assets/images/home/480/home_bg_3.jpg') no-repeat center center;
+			background-size: cover;
+		}
+		
+		header .button{ margin: 0; }
+		
+		.logo-set{ 
+			display: none; 
+			
+			&.active{
+				display: block;
+			}
+			
+			li img{ border: 1px dotted #fff; }
+			
+			
+			li{
+				position: relative;
+			
+				a{
+					
+					img{ 
+						border: 1px dotted $nkblue;
+						@include transition(background, .5s); 
+					}
+					
+					.more{
+						color: $nkblue;
+						@include sentinel-italic;
+						position: absolute;
+						bottom: 4px;
+						left: 1px;
+						width: 90%;
+						display: block;
+						padding: 5%;
+						text-align: center;
+					}
+					
+					&:hover img{ background: lighten($nkblue, 50% ); }
+				}
+			}
+		}
+		
+		hr{ margin: 2em auto; }
+		
+		ul{ 
+			margin-top: 5em;  
+			border-bottom: 4px solid #fff; 
+			width: 120%;
+			margin-left: -10%;
+			@include self-clear;
+		}
+		
+		li{
+			float: left;
+			width: 20%;
+			margin: 0 2.5% 0 2.5%;
+			
+			img{ width: 100%; }
+		}
+		
+		
+
+		section{ padding: 6em 0; }
+		
+		.button{ margin-top: 4em; }
+		
+	}
+	
+	header{
+		padding: 3em 25%;
+		h3{ 
+			float: left;
+			padding-top: .25em;
+			@include whitney_book;
+			text-transform: uppercase;
+			font-size: 1.4em;
+		}
+		.button{ float: right; vertical-align: top; }
+	}
+	
+	.page_wrapper.clear{
+		color: #fff;
+	}
+	
+}
+
+@media screen and (max-width: 880px){
+	
+	.home{
+		header{
+			text-align: center;
+			
+			h3{
+				float: none;
+				width: 100%;
+				line-height: 1.4em;
+			}
+			
+			.button{
+				margin-top: 2em!important;
+				float: none;
+			}
+		}
+		
+		#who_we_are li{
+			float: none;
+			width: 75%;
+			margin: 0 auto 3em;
+		}
+	}
+}
+
+
+@media screen and (max-width: 800px){
+	
+	.home{
+		#who_we_work_with li{ width: 46%; margin: 2%; }
+	}
+	
+}
+
+@media screen and (max-width: 480px){
+	.home{
+		
+		header{
+			padding: 1.5em 5%;
+		}
+		
+		#who_we_work_with ul{
+			display: none;
+		}
+	}
+}
+
+
+@media screen and (min-width: 480px){
+	.home #homepage_lead{ background-image: url('../assets/images/home/768/home_bg_1.jpg'); }
+	.home #who_we_are section{ background-image: url('../assets/images/home/768/home_bg_2.jpg'); }
+	.home #who_we_work_with section{ background-image: url('../assets/images/home/768/home_bg_3.jpg'); }
+}
+
+@media screen and (min-width: 768px){
+	.home #homepage_lead{ background-image: url('../assets/images/home/1200/home_bg_1.jpg'); }
+	.home #who_we_are section{ background-image: url('../assets/images/home/1200/home_bg_2.jpg'); }
+	.home #who_we_work_with section{ background-image: url('../assets/images/home/1200/home_bg_3.jpg'); }
+}
+
+@media screen and (min-width: 1200px){
+	.home #homepage_lead{ background-image: url('../assets/images/home/1600/home_bg_1.jpg'); }
+	.home #who_we_are section{ background-image: url('../assets/images/home/1600/home_bg_2.jpg'); }
+	.home #who_we_work_with section{ background-image: url('../assets/images/home/1600/home_bg_3.jpg'); }
+}

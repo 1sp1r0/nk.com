@@ -1,0 +1,256 @@
+.bordered{
+	border: 10px solid #000;
+	padding: 1em;
+	margin: 1em 0;
+	display: inline-block;
+	min-width: 500px;
+	@include border-image( url('../assets/images/page/border-box.png') 10 10);
+}
+
+.page_section{ 
+	padding-top: 10em;
+}
+
+.page hr{ margin-top: 2em; }
+	
+.page_wrapper{
+	background: rgba(255,255,255,.8);
+	text-align: center;
+	@include self-clear;
+	
+	&.clear{
+		background: none;
+	}
+	
+	&.dark{ background: rgba(0,0,0,.6); color: #fff; }
+	
+	section{ margin-top: 4em; }
+	
+	.divider{
+		width: 200px;
+		border-bottom: 2px solid #000;
+		display: block;
+		margin : 2em auto 0;
+	}
+	
+	ol{
+		li{ 
+			padding-top: 35px; 
+			margin-bottom: 1em;
+			
+			&:nth-child(1){
+				background: url('../assets/images/page/list_1.png') no-repeat top center;
+			}
+			
+			&:nth-child(2){
+				background: url('../assets/images/page/list_2.png') no-repeat top center;
+			}
+			
+			&:nth-child(3){
+				background: url('../assets/images/page/list_3.png') no-repeat top center;
+			}
+		}	
+	}
+}
+
+.page_title{ 
+	text-align: center;
+	font-size: 2.6em;
+	background: rgba(255,255,255,.8);
+	padding: .5em 12.5%;
+	width: 75%;
+	margin-bottom: 1em;
+	@include sentinel-italic;
+	text-transform: uppercase;
+	letter-spacing: 8px;
+	
+	&.dark{ background: rgba(0,0,0,.6); color: #fff; }
+}
+
+.page_summary{
+	text-align: center;
+	margin-bottom: 8em;
+	
+	span{
+		background: #00b3e3;
+		color: #fff;
+		display: inline-block;
+		padding: .25em .5em;
+		margin: 0 auto;
+		text-align: center;
+		@include sentinel-italic;
+		letter-spacing: 1px;
+		font-size: 1.2em;
+	}
+}
+
+.page_break{
+	text-align: center;
+	padding: 2em 0;
+	@include whitney-semi-bold;
+	width: 850px;
+	margin: 0 auto;
+	font-size: 3em;
+	text-transform: uppercase;
+	
+	p{ line-height: 1.2em; }
+}
+
+#where_we_began{
+	background: url('../assets/images/page/480/our-story-bg.jpg') no-repeat center;
+	background-size: cover;
+	
+	img{ margin-top: 3em; }
+}
+
+#where_were_headed{
+	background: url('../assets/images/page/our-work-bg-2.jpg') no-repeat center;
+	background-size: cover;
+}
+
+.our_purpose{
+	background: url('../assets/images/page/our-work-bg.jpg') no-repeat center;
+	background-size: cover;
+}
+
+	
+.cards{
+	@include self-clear;
+	
+	ul li{
+		width: 32%;
+		margin: 0 2% 2% 0;
+		float: left;
+		text-align: left;
+		
+		&.work-item{ height: 270px; }
+		
+		img{ 
+			width: 100%; 
+			margin-bottom: .5em; 
+			opacity: .8; 
+			-webkit-backface-visibility: hidden;
+			@include transition(opacity, .5s); 
+		}
+		
+		&:nth-child(3n){ margin-right: 0; }
+		
+		a{ 
+			height: 100%;
+			width: 100%;
+			position: relative;
+			
+			&:hover img{
+				opacity: 1;
+			}
+		}
+		
+		dl{
+			color: #fff;
+			width: 100%;
+			
+			
+			dt{ 
+				border-bottom: 1px solid #000; 
+				text-transform: uppercase;
+				margin-bottom: .25em;
+				padding-bottom: .35em;
+				letter-spacing: 1px;
+				@include whitney_semi_bold;
+			}
+			
+			dd{
+				@include whitney_book;
+				line-height: 1.4em;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1110px){
+	.page_wrapper{
+		padding: 4em 10%;
+		width: 90%;
+	}
+	
+	.page_break{
+		width: 75%;
+	}
+	
+	.cards ul li{
+		width: 45%;
+		margin: 0 5% 5% 0;
+		
+		&:nth-child(3n){ margin-right: 5%; }
+		&:nth-child(2n){ margin-right: 0; }
+		
+		&.work-item{ height: 320px; }
+	}
+	
+	
+}
+
+@media screen and (max-width: 880px){
+	.cards ul li.work-item{ height: 280px; }
+	
+	.bordered{
+		min-width: inherit;
+		width: 75%;
+		border: 1px solid #333;
+	}
+	
+	.page_section{ padding-top: 2em; }
+	
+	.page_summary{
+		width: 75%;
+		margin: 0 auto 2em;
+	}
+	
+	.page_break{ 
+		font-size: 2em;
+	}
+	
+	.page_title{
+		font-size: 2.2em; 
+		letter-spacing: 6px;
+	}
+}
+
+@media screen and (max-width: 560px){
+	
+	.cards ul li{
+		float: none;
+		width: 100%;
+		margin: 0 0 4em!important;
+		height: auto!important;
+		
+		
+	}
+	
+	.page_wrapper{
+		img{ width: 100%; }
+	}
+	
+	.page_title{
+		font-size: 1.6em;
+		letter-spacing: 3px;
+	}
+}
+
+@media screen and (max-width: 480px){
+	.page_wrapper{
+		padding: 2em 0;
+	}
+}
+
+@media sceen and (min-width: 480px){
+	#where_we_began{ background-image: url('../assets/images/page/768/our-story-bg.jpg'); }
+}
+
+@media screen and (min-width: 768px){
+	#where_we_began{ background-image: url('../assets/images/page/1200/our-story-bg.jpg'); }
+}
+
+@media screen and (min-width: 1200px){
+	#where_we_began{ background-image: url('../assets/images/page/1600/our-story-bg.jpg'); }
+}

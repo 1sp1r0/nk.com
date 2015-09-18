@@ -1,0 +1,98 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+
+
+#page_header{
+
+	.site_title{
+		margin: 0 auto;
+		float: none;
+	}
+
+	.global_nav{
+		display: none;
+	}
+}
+
+.workshop{
+
+	#workshop_title{
+		background: none!important;
+		padding: 2em 0 1em;
+
+		h2, h3{ 
+			color: #000;
+			margin: 0 auto;
+			width: 80%;
+			padding-bottom: .25em;
+		}
+
+		h3{ padding-top: 1em; }
+
+		hr{
+			color: #333;
+			margin: 1em auto;
+		}	
+
+		.arrow{ display: none; }
+	}
+
+	#workshop_about{
+
+		#workshop_summary{
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		#workshop_tagline{
+			background: none!important;
+			padding: 0;
+			margin-bottom: 2em;
+			
+			h4{
+				font-size: 1.4em;
+				width: 80%;
+			}
+		}
+
+		#workshop_takeaways{
+			float: none;
+			width: 80%;
+			margin: 4em auto;
+		}
+
+		#workshop_details{
+		float: none;
+		width: 80%;
+		margin: 2em auto;
+
+			.attend{ 
+				display: none; 
+			}
+		
+		}	
+
+	}
+	
+
+	#workshop_info{
+
+		#leader_info{
+			background: none;
+			width: 80%;
+			margin: 0 auto;
+			padding: 0;
+			margin-bottom: 2em;
+		}
+	}
+
+	#upcoming_workshops{
+		display: none;
+	}
+
+}
+
+#site_footer{
+	display: none;
+}

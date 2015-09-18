@@ -1,0 +1,96 @@
+#site_footer{
+	background: #363636;
+	color: #fff;
+	padding: 4em 0 2em;
+	@include whitney-book;
+	@include self-clear;
+	
+	.wrapper{
+		max-width: 980px;
+		margin: 0 auto;
+	}
+	
+	.site_title{
+		float: none;
+		margin-bottom: 1em;
+	}
+	
+	p{ 
+		color: #aaa; 
+		
+		strong{
+			color: #fff;
+		}
+	}
+	
+	.one_third{
+		width: 33%;
+	}
+	
+	.contact_info{
+		text-align: right;
+	}
+
+	.hs-input{
+		background:none;
+		border:1px solid #aaa;
+		padding:.5em;
+		width: 200px;
+		color: #fff;
+		font-family: 'Whitney SSm A', 'Whitney SSm B';
+		margin-bottom: 2em;
+	}
+
+	label{
+		margin-bottom: 1em;
+		font-size: .8em;
+		display: block;
+	}
+
+	.submitted-message{
+		font-size: .8em;
+		line-height:1.4em;
+		margin-bottom: 1em
+	}
+
+	.hs-form-required, .hs-button, .hs-error-msgs{ display: none!important; }
+	
+	.footer_contact{ font-size: .8em; }
+	
+	.mission_statement p{ color: #fff; }
+	
+	.footer_social{
+		margin: 2em 0;
+		
+		li{
+			display: inline-block;
+			
+			a{
+				display: block;
+				text-indent: -9999em;
+				background-position: 0 0;
+				background-repeat: no-repeat;
+				height: 25px;
+				width: 27px;
+				text-align: left;
+				margin-left: 1em;
+				background-image: url('../assets/images/footer/social_sprite.png');
+				&.linkedin{ background-position: -27px 0; }
+				&.twitter{ background-position: -54px 0; }
+				&.facebook{ background-position: -81px 0; }
+			}
+		}
+	}
+	
+	.copyright{ clear: both; font-size: .8em; }
+}
+
+@media screen and (max-width: 880px){
+	
+	#site_footer{
+		.one_third{ width: 100%; text-align: center; }
+		.contact_info{ margin-top: 2em; }
+		.footer_contact{ text-align: center; }
+		.copyright{ text-align: center; }
+	}
+}

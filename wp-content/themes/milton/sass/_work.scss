@@ -1,0 +1,154 @@
+.work{
+
+	
+	.case_study{
+		margin: 2em 0 6em;;
+		
+		dl{ 
+			text-align: center; 
+			padding: 0 10%;
+			margin-bottom: 2em;
+		
+			dd{ 
+				display: inline; 
+				font-size: .8em;
+			}
+		}
+	}	
+	
+	.content_section{ 
+		clear: both; 
+		padding: 0 0 4em;
+		position: relative;
+		@include legacy-pie-clearfix;
+		
+		h3{
+			border-top: 1px solid #ccc;
+			margin: 0 auto 4em;
+  			max-width: 980px;
+  			color: #fff;
+  			text-transform: uppercase;
+  			font-size: .75em;
+  			padding: .8em 0;
+
+			span{
+				background: $nkblue;
+				padding: .75em;
+			}
+		}
+		
+		img{ 
+			margin: 0 0 2em 2em; 
+		}
+		
+		.sub_section{ 
+			clear: both;
+			
+			&.no-image{
+				p{ padding-left: 20px; }
+			}
+		
+			&.one-third{
+				img{ width: 33%; }
+			}
+
+			&.two-thirds{
+				img{ width: 66%; }
+			}
+			&.full-width{
+				img{ width: 100%; margin-left: 0; }
+				p{ padding: 0 10%; }
+			}
+			&.full-bleed{
+				max-width: 100%;
+				img{ width: 100%; margin-left: 0; }
+				p{ padding: 0 10%; }
+			}
+		}
+		
+		blockquote{
+			@include chronicle;
+			font-size: 1.05em;
+			margin-top: 2em;
+		}
+		
+
+	}
+	
+	.case_summary{
+		text-align: center;
+		margin: 0 0 1em;
+		padding: 0 10%;
+	}
+	
+	.quote{
+		text-align: center;
+		padding: 0 15%;
+		@include sentinel;
+		font-size: 1.6em;
+		
+		img{ margin-bottom: 2em; }
+		
+		blockquote{
+			line-height: 1.4em;
+		}
+		
+		span{ 
+			@include whitney_book; 
+			display: block;
+			margin-top: 2em;
+			font-size: .6em;
+			line-height: 1.4em;
+			
+			i{ display: block; font-size: .8em; }
+		}
+	}
+	
+}
+
+@media screen and (max-width: 880px){
+	
+	.work{
+		.content_section .sub_section.two-thirds{
+			
+			p{ margin-bottom: 2em; padding: 0 10%; }
+			
+			img{
+				float: none!important;
+				width: 100%;
+				margin:  0 0 2em;
+			}
+		}
+		
+		.sub_nav{
+			display: none;
+			ul li{
+				display: block;
+				margin: 1em 0;
+				text-align: center;
+			}
+		}
+	} 
+	
+}
+
+@media screen and (max-width: 560px){
+	
+	.work{
+		
+		.content_section .sub_section.one-third{
+			
+			img{
+				float: none!important;
+				width: 100%;
+				margin: 0 0 2em;
+			}
+			
+			p{ margin-bottom: 2em; padding: 0 10%; }
+		}
+		
+		.quote{ padding: 0 2%; }
+		
+	}
+	
+}

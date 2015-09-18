@@ -1,0 +1,125 @@
+p{
+	line-height: 1.6em;
+	
+	+ p{
+		margin-top: 2em;
+	}
+}
+
+em{ font-style: italic; }
+strong{ font-weight: bold; }
+
+a{ 
+	text-decoration: none; 
+	color: inherit;
+	@include transition(color .5s);
+	
+	&:hover{
+		color: #0af;
+	}
+}
+
+.blue{
+	color: #00b3e3;
+}
+
+.dark_gray{
+	color: #363636;
+}
+
+.med_gray{
+	color: #56565a;
+}
+
+.larger{ font-size: 1.4em; 
+	&.sentinel{ letter-spacing: 1px; }
+}
+
+.largest{ font-size: 2.2em;
+	&.whitney_semi_bold{ letter-spacing: 1px; } 
+}
+
+.caps{ text-transform: uppercase; }
+
+@mixin chronicle{
+	font-family: 'Chronicle Text G2 A', 'Chronicle Text G2 B'; 
+	font-weight: 400; 
+	font-style: normal;
+}
+
+.chronicle{ @include chronicle; }
+
+@mixin chronicle-italic{
+	@include chronicle;
+	font-style: italic;
+}
+
+.chronicle_italic{ @include chronicle-italic; }
+
+@mixin sentinel{
+	font-family: 'Sentinel A', 'Sentinel B'; 
+	font-weight: 500; 
+	font-style: normal;
+}
+
+.sentinel{ @include sentinel; }
+
+@mixin sentinel-italic{
+	@include sentinel;
+	font-style: italic;
+}
+
+.sentinel_italic{ @include sentinel-italic; }
+
+@mixin whitney-book{
+	font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 400; font-style: normal;
+}
+
+.whitney_book{ @include whitney-book; }
+
+@mixin whitney-book-italic{
+	@include whitney-book;
+	font-style: italic;
+}
+
+.whitney_book_italic{ @include whitney-book-italic; }
+
+
+@mixin whitney-medium{
+	font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 500; font-style: normal;
+}
+
+.whitney_medium{ @include whitney-medium; }
+
+@mixin whitney-semi-bold{
+	font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: 600; font-style: normal;
+	&.italic{
+		font-style: italic;
+	}
+}
+
+.whitney_semi_bold{ @include whitney-semi-bold; }
+
+@mixin leviathan{
+	font-family: 'Leviathan A', 'Leviathan B'; 
+	font-weight: 800; 
+	font-style: normal;
+}
+
+.leviathan{ 
+	@include leviathan; 
+	letter-spacing: 5px;
+	&.italic{ font-weight: italic; }
+}
+
+
+@media screen and (max-width: 880px){
+	.largest{ font-size: 1.8em; }
+	.larger{ font-size: 1.2em; }
+}
+
+@media screen and (max-width: 480px){
+	br{ display: none!important; }
+	.largest{ font-size: 1.3em; }
+	.larger{ font-size: 1.15em; }
+}

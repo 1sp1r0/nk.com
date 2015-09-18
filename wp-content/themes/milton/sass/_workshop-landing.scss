@@ -1,0 +1,276 @@
+.workshop_landing{
+	
+	#workshops_intro{
+		text-align: center;
+		padding: 2em;
+		//background in markup - editable through admin
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+
+		p{
+			font-size: 2.5em;
+			color: #fff;
+			text-align: center;
+			padding: 0;
+			margin: 0 auto 1.5em;
+			width: 75%;
+			@include sentinel-italic;
+			
+			strong{
+				@include leviathan;
+				letter-spacing: 0;
+				font-size: 2em;
+				margin-top: .25em;
+				display: block;
+				text-transform: uppercase;
+			}
+			
+			&:last-child{
+				@include whitney-book;
+				text-transform: uppercase;
+				font-size: 1.25em;
+			}
+		}
+		
+		.arrow{ 
+			display: block;
+			text-indent: -9999em;
+			background: url('../assets/images/workshops/landing_arrow.png') center no-repeat;
+			margin: 0 0 1em;
+			height: 40px;
+		}
+		
+		hr{ color: #fff; }
+
+	}
+
+	#workshops_overview{
+		padding: 4em 0;
+
+		p{ 
+			width: 75%; 
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center; 
+			@include whitney_semi_bold;
+			font-size: 2em;
+			
+			strong{
+				font-size: 1.2em;
+			}
+			
+			&:last-child{
+				@include whitney_book;
+				font-size: 1.75em;
+				width: 70%;
+			}
+		}
+		
+		hr{ margin: 2em auto; }
+
+	}
+
+	.workshops_list{
+		margin-bottom: 2em;
+
+		h3{
+			padding: 2em 0;
+			border-top: 2px solid #ccc;
+			border-bottom: 2px solid #ccc;
+			@include whitney-book;
+			color: #ccc;	
+			font-size: 1em;
+			text-transform: uppercase;
+		}
+
+		.workshop{ 
+			clear: both;
+			padding: 1em 0;
+			border-bottom: 2px solid #ccc;
+			@include self-clear;
+			
+			.button{
+				border: 1px solid #000;
+				color: #000;
+				background: none;
+				padding: .5em 1.5em;
+				margin-top: 1em;
+				text-transform: uppercase;
+				display: inline-block;
+				@include whitney_semi_bold;
+				@include transition(all .5s);
+				
+				&:hover{
+					color: $nkblue;
+					border-color: $nkblue;
+				}
+			}
+
+			h4{
+				text-indent: -9999em;
+				float: left;
+				width: 45%;
+				margin-right: 5%;
+				display: block;
+				height: 260px;
+				background-size: cover!important;
+			}
+			
+			p{
+				@include sentinel;
+				font-size: 1.25em;
+				line-height: 1.2em;
+				color: #333;
+			}
+		}
+	}
+	
+	#past_workshops{
+		
+		h3{
+			padding: 2em 0;
+			@include whitney-book;
+			color: #ccc;	
+			font-size: 1em;
+			text-transform: uppercase;
+		}
+		
+	}
+
+	#other_workshops{
+
+		p{
+			margin: 2em auto;
+			font-size: 1.4em;
+			@include whitney-semi-bold;	
+		}
+
+		ul{
+			@include sentinel;
+			font-size: 1.4em;
+			list-style: circle;
+			padding-left: 2em;
+
+			li{
+				margin: 1em 0;
+			}
+		}
+	}
+
+	.custom-workshop{
+  			background: $nkblue;
+  			color: #fff;
+  			padding: 3%;
+  			margin-bottom: 4em;
+
+  			h3{
+  				@include sentinel;
+  				font-size: 2em;
+  				line-height: 1.2em;
+  				margin-bottom: .5em;
+  			}
+
+  			p{
+  				@include whitney_book;
+  				border-bottom: 2px dotted #ddd;
+  				padding-bottom: 1em;
+  			}
+
+  			.not-scheduled-email{
+  				border-bottom: none;
+  				margin-top: 1em;
+  				padding-left: 3em;
+  				padding-bottom: 0;
+  				font-size: 1.2em;
+  				background: url(../assets/images/workshops/email_icon.png) no-repeat left center;
+
+  				a{
+  					@include whitney_semi_bold;
+
+  					&:hover{
+  						color: #fff;
+  						border-bottom: 2px dotted #ddd;
+  					}
+  				}
+  			}
+		}
+
+	#workshop_quote{
+		text-align: center;
+		padding-bottom: 2em;
+
+		blockquote{ 
+			font-size: 2.25em;
+			width: 60%;
+			@include sentinel;
+			margin: 1em auto;
+
+			dl{
+				margin-top: 1em;
+				font-size: .5em;
+				@include whitney_book;
+				
+				dt{ @include whitney_semi_bold; }
+				
+				dd{ font-size: .9em; margin-top: .5em;}
+			}
+		}
+
+		img{
+			width: 15%;
+		}
+
+	}
+	
+	@media screen and (max-width:925px){
+		#workshops_intro{
+			p{
+				width: 90%;
+				font-size: 2em;
+			}
+		}
+	}
+	
+	@media screen and (max-width: 768px){
+		
+		#workshops_intro p{
+			font-size: 1.25em;
+			width: 100%;
+		}
+		
+		#workshops_overview{
+			p, p:last-child{
+				font-size: 1.25em;
+			}
+		}
+		
+		#upcoming_workshops .workshop h4{
+			width: 320px;
+			height: 200px;
+		}
+		
+		#workshop_quote{
+			blockquote{
+				width: 90%;
+			}
+			img{
+				width: 35%;
+			}
+		}
+	}
+	
+	@media screen and (max-width: 550px){
+		#upcoming_workshops .workshop{ 
+			text-align: center;
+			
+			h4{
+				float: none;
+				margin: 1em auto 2em;
+				width: 100%;
+			}
+		}
+	}
+	
+	
+}
