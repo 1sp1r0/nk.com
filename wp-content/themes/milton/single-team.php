@@ -13,8 +13,10 @@
 		<dl>
 			<dt>email</dt>
 			<dd><a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a></dd>
-			<dt>phone</dt>
-			<dd><?php the_field('phone'); ?></dd>
+			<?php if(get_field('phone') != null){
+				echo '<dt>phone</dt>';
+				echo '<dd>'.get_field('phone').'</dd>';
+			} ?>
 			<?php
 				//a loop for the non-required fields to ensure no output of blank info
 				
