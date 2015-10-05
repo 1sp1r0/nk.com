@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><?php bloginfo('name'); ?></title>
+	<title><?php bloginfo('name').wp_title(' - '); ?></title>
 	<meta charset="UTF-8">
 	<meta name="description" content="<?php bloginfo('description'); ?>">
 	<meta name="keywords" content="Branding, Content, Agency, Design, Marketing, Community, Innovation, Creation">
