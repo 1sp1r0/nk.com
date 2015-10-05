@@ -71,6 +71,8 @@
 				$pageType = 'contact';
 		}elseif(is_single()){
 			$pageType = 'blog_article';
+		}elseif(is_page('brand-positioning')){
+			$pageType = 'adventure-guide';
 		}elseif(is_page()){
 			$pageType = 'page';
 		}elseif(is_archive()){

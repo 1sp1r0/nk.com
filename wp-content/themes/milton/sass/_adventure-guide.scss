@@ -1,0 +1,128 @@
+.adventure-guide{
+
+	.takeover-title{
+		padding: 8em 0;
+		background-position: center;
+		background-repeat: no-repeat;
+		text-align: center;
+
+		.wrapper{
+			max-width: 1200px;
+		}
+
+		h2{
+			font-size: 2em;
+			@include chronicle-italic;
+		}
+
+		h3{
+			font-size: 3.5em;
+			margin-top: 1em;
+			@include leviathan;
+			text-transform: uppercase;
+		}
+
+		.arrow{
+			font-size: 3em;
+			padding-top: 1em;
+			display: block;
+		}
+	}
+
+	.takeover-content{
+		margin: 6em auto;
+		@include pie-clearfix;
+	
+		p, .button, input{
+			@include whitney-book;
+		}
+
+	}
+
+	.takeover-content-left{
+		float: left;
+		width: 35%;
+		margin-right: 5%;
+
+		.adventure-guide-callout{
+			background: #eee;
+			padding: 2em;
+
+			h4{
+				@include chronicle;
+				font-size: 1.4em;
+				margin-bottom: 1em;
+				color: $nkblue;
+			}
+
+			img{ 
+				width: 100%; 
+				margin-bottom: 2em;
+			}
+		}
+
+		.newsletter-signup{
+			margin-top: 4em;
+			background: $nkblue;
+			padding: 2em;
+
+			h4{
+				@include chronicle;
+				color: #fff;
+				font-size: 1.4em;
+				margin-bottom: 1em;
+				line-height: 1.2em;
+			}
+
+			input[type="email"]{
+				width: 100%;
+				border: none;
+				padding: .5em;
+				font-size: 1em;
+				box-sizing: border-box;
+			}
+
+			input[type="submit"]{
+				background: $nkblue;
+				color: #fff;
+				border: 2px solid #fff;
+				font-size: 1em;
+				padding: .25em 1.5em;
+				margin-top: .5em;
+			}
+		}
+	}
+
+	.takeover-content-right{
+		width: 60%;
+		padding-left: 40%;
+
+		.blog-post{
+			margin-bottom: 4em;
+
+			.sub-title{
+				color: $nkblue;
+				@include sentinel-italic;
+				display: block;
+			}
+
+			.sub-title-desc{
+				@include whitney-book;
+				font-size: .8em;
+				color: $nkblue;
+				margin: .2em 0 1em;
+				display: block;
+			}
+
+			h3{
+				@include chronicle;
+				font-size: 1.6em;
+				line-height: 1.4em;
+				margin-bottom: .5em;
+			}
+		}
+
+		.button{ float: right; }
+	}
+
+}
