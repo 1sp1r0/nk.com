@@ -74,7 +74,7 @@
 
 		<div class="about-adventure-week wrapper">
 			<h4>What is &ldquo;Adventure Week&rdquo;?</h4>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+			<p><?php echo category_description(get_category_by_slug('adventure-week')->cat_ID); ?></p>	
 		</div>
 
 		<div class="newsletter-signup wrapper">
