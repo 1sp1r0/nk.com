@@ -13,7 +13,7 @@
 	<div class="author-bio">
 		<a href="<?php the_author_meta('user_url'); ?>">
 
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/<?php the_author_meta('first_name'); ?>.jpg" />
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/<?php the_author_meta('nickname'); ?>.jpg" />
 			<h4><?php the_author_meta('display_name'); ?></h4>
 			<p><?php the_author_meta('job_title'); ?></p>
 			<p class="bio-text">Bio &rarr;</p>
