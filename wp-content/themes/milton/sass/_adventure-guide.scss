@@ -1,24 +1,45 @@
 .adventure-guide{
 
+	.photo-filter{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,179,227,.25);
+	}
+
+
+
 	.takeover-title{
+		position: relative;
 		padding: 8em 0;
 		background-position: center;
 		background-repeat: no-repeat;
+		background-size: cover;
 		text-align: center;
+		color: #fff;
+		//@include text-shadow(0 0 10px #000);
+	
 
 		.wrapper{
 			max-width: 1200px;
+			z-index: 1;
+			position: relative;
 		}
 
 		h2{
 			font-size: 2em;
-			@include chronicle-italic;
+			font-family:"Maison Neue Light", serif; 
+			font-weight:200; 
+			font-style:normal;
+			margin-bottom: .5em;
 		}
 
 		h3{
-			font-size: 3.5em;
+			font-size: 4em;
 			margin-top: 1em;
-			@include leviathan;
+			font-family: "Maison Neue Bold";
 			text-transform: uppercase;
 		}
 
@@ -29,8 +50,63 @@
 		}
 	}
 
+	.takeover-nav{
+		@include clearfix;
+		margin-top: 4em;
+
+		li{
+			a{
+				padding: 2em;
+				width: 20%;
+				display: block;
+				@include sentinel-italic;
+				float: left;
+				background: rgba(0,0,0,.25);
+				@include box-sizing('border-box');
+				text-align: center;
+				position: relative;
+				font-size: 1.4em;
+
+				span{ 
+					display: block; 
+					opacity: 0; 
+					position: absolute; 
+					font-family: "Maison Neue Light";
+					line-height: 1.4em;
+					font-size: .8em;
+					top: 0; 
+					left: 0;
+					height: 100%;
+					width: 100%;
+					padding: 2em;
+					box-sizing: border-box;
+					background: rgba(0,0,0,.75);
+					color: $nkblue;
+					@include transition(opacity, .5s);
+				}
+
+				&:hover{
+					span{ 
+						opacity: 1; 
+					}
+				}
+			}
+		}
+		
+	}
+
+	.day-name{
+		font-family: "Maison Neue Light";
+		font-size: 2em;
+		color: #fff;
+		background: $nkblue;
+		border-bottom: 4px solid #fff;
+		text-align: center;
+		padding: .5em 0;
+	}
+
 	.takeover-content{
-		margin: 6em auto;
+		margin: 4em auto;
 		@include pie-clearfix;
 	
 		p, .button, input{
@@ -39,90 +115,493 @@
 
 	}
 
-	.takeover-content-left{
-		float: left;
-		width: 35%;
-		margin-right: 5%;
+	.blog-tabs{
+			@include clearfix;
 
-		.adventure-guide-callout{
-			background: #eee;
-			padding: 2em;
+			li{
+				float: left;
+				box-sizing: border-box;
+				width: 16.66667%;	
+
+				&.no-link{
+					color: #999;
+					@include sentinel-italic;
+					display: block;
+					text-align: center;
+					padding: .5em;
+				}
+
+				a{
+					color: $nkblue;
+					@include sentinel-italic;
+					display: block;
+					text-align: center;
+					padding: .5em;
+					@include transition(background, .5s);
+
+					&:hover{
+						background: rgba(0,0,0,.25);
+					}
+
+					&.is-active{
+						background: $nkblue;
+						color: #fff;
+					}
+				}
+
+				
+			}
+			
+
+		}
+
+	
+
+	.takeover-content-left{
+		width: 60%;
+		margin-right: 10%;
+		float: left;
+
+		p{
+			margin-bottom: 2em;
+		}
+
+		
+	}
+
+	.post_nav{
+		margin: 0 auto 4em;
+		@include clearfix;
+		border-top: 1px solid $nkblue;
+		padding-top: 1em;
+	}
+
+	.blog-post{
+		position: relative;
+
+		.sub-title-desc{
+			color: $nkblue;
+			@include whitney-book;
+			font-size: .8em;
+		}
+
+		.wp-caption, img{
+			max-width: 100%;
+			height: auto;
+
+			.wp-caption-text{
+				@include sentinel-italic;
+
+				&:before{
+					content: '';
+					display: block;
+					height: 1px;
+					width: 100px;
+					background: $nkblue;
+					margin-top: .5em;
+				}
+			}
+		}
+
+
+		a{
+			border-bottom: 1px dotted $nkblue;
+		}
+
+		.editors-note{
+			font-size: .8em;
+			color: #aaa;
+			display: inline-block;
+		}
+
+		.lead{
+			font-size: 1.4em;
+			font-family: "Maison Neue Light";
+			margin-bottom: 1.5em;
+			margin-top: 0;
+		}
+
+		.extra-info{
+			position: absolute;
+			width: 50%;
+			right: -70%;
+			margin-top: -.5em;
+			@include sentinel-italic;
+
+			p{
+				@include sentinel-italic;
+			}
+			
+			&:before{
+				height: 1px;
+				width: 25%;
+				content: '';
+				background: $nkblue;
+				display: block;
+				margin-bottom: .5em;
+			}
+
+			img{
+				width: 100%;
+			}
+		}
+
+		.inline-img{
+			width: 100%;
+			margin-bottom: 2em;
+		}
+
+		.img-caption{
+			@extend .extra-info;
+			position: static;
+			margin-top: -1em;
+
+
+		}
+
+		.author-bio{
+			width: 40%;
+			margin-left: -50%;
+			float: left;
+			margin-right: 10%;
+			text-align: right;
+			box-sizing: border-box;
+
+			.bio-text{ opacity: 0; @include transition(opacity, .5s); }
+
+			a:hover{
+				.bio-text{
+					opacity: 1;
+				}
+
+				color: #111;
+			} 
+
+			h3{
+				font-size: 1.2em;
+			}
 
 			h4{
-				@include chronicle;
+				font-family: "Maison Neue Bold";
+				font-size: 1em;
+				color: $nkblue;
+				margin-top: 2em;
+				margin-bottom: 0;
+			}
+
+			p{
+				font-size: .8em;
+				margin: 0;
+			}
+
+			img{ 
+				width: 40%;
+				margin-bottom: 2em;
+				@include border-radius(100%);
+				float: right;
+				margin-left: 1em;
+			}
+		}
+
+		h3{
+			font-family: "Maison Neue Light";
+			font-size: 2.4em;
+			line-height: 1.4em;
+			margin-bottom: 1em;
+		}
+
+		h4{
+			font-family: "Maison Neue Bold";
+			color: $nkblue;
+			margin-bottom: 2em
+		}
+
+		p{
+			font-family: "Maison Neue Book";
+		}
+
+		strong, b{
+			font-family: "Maison Neue Bold";
+		}
+
+		em, i{
+			font-style: italic;
+		}
+
+		ol{
+			padding: 1em 0 2em 4em;
+			box-sizing: border-box;
+
+			li{
+				list-style: decimal;
+				margin-bottom: 1em;
+				font-family: "Maison Neue Book";
+				line-height: 1.4em;
+			}
+		}
+
+		blockquote{
+			padding: 1em 0;
+    		line-height: 1.6em;
+    		font-size: 2.4em;
+    		width: 150%;
+    		color: $nkblue;
+			font-family: "Maison Neue Bold";
+
+			p{
+				font-family: "Maison Neue Bold";
+			}
+		}
+	}
+
+	.guide-note{
+			margin-bottom: 2em;
+			background: #eee;
+			padding: 2em;
+			display: block;
+
+			p{
+				@include sentinel-italic;
+				line-height: 1.6em;
+				margin-bottom: 0;
+
+				& + p{
+					margin-top: 1em;
+				}
+			}
+			
+
+			h4{
+				@include sentinel-italic;
+				color: $nkblue;
+				font-size: 1.2em;
+				margin-bottom: 1em;
+			}
+		}
+
+
+
+	.takeover-content-right{
+		@include clearfix;
+
+		
+
+		.adventure-guide-callout{
+			padding: 2em;
+			margin-bottom: 2em;
+			border: 1px dotted #ccc;
+			box-sizing: border-box;
+
+			h4{
+				font-family: "Maison Neue Light";
 				font-size: 1.4em;
 				margin-bottom: 1em;
 				color: $nkblue;
+			}
+
+			p{
+				margin-bottom: 1em;
 			}
 
 			img{ 
 				width: 100%; 
 				margin-bottom: 2em;
 			}
+
+			.button{
+				width: 100%;
+				box-sizing: border-box;
+				text-align: center;
+			}
 		}
 
-		.newsletter-signup{
-			margin-top: 4em;
-			background: $nkblue;
-			padding: 2em;
+		
+	}
+
+	.takeover-content-bottom{
+		clear: both;
+		padding: 6em 0;
+		background: #0b495a;
+	}
+
+	.about-adventure-week{
+		color: #fff;
+		margin-bottom: 4em;
+
+		h4{ 
+			font-family: "Maison Neue Light";
+			font-size: 1.4em;
+			margin-bottom: 1em;
+		}
+
+		p{
+			@include whitney-book;
+		}
+	}
+
+	.newsletter-signup{
+			box-sizing: border-box;
 
 			h4{
-				@include chronicle;
+				font-family: "Maison Neue Light";
 				color: #fff;
 				font-size: 1.4em;
 				margin-bottom: 1em;
 				line-height: 1.2em;
 			}
 
+			label{
+				display: none;
+			}
+
 			input[type="email"]{
-				width: 100%;
+				width: 50%;
 				border: none;
 				padding: .5em;
 				font-size: 1em;
 				box-sizing: border-box;
+				@include input-placeholder{
+					color: #fff;
+				}
+
 			}
 
 			input[type="submit"]{
-				background: $nkblue;
+				background: #0b495a;
 				color: #fff;
 				border: 2px solid #fff;
 				font-size: 1em;
-				padding: .25em 1.5em;
-				margin-top: .5em;
+				padding: .4em 1.5em;
+				margin-top: 1em;
+				cursor: pointer;
+				@include transition(background .5s);
+
+				&:hover{
+					background: $nkblue;
+				}
+			}
+		}
+
+	.blogs{
+
+		a, .byline{
+			display: block;
+			@include transition(all .5s);
+
+			&:hover{
+				background: $nkblue;
+				color: #fff!important;
+
+				.byline{ color: #fff; }
+			}
+		}
+
+		h2{
+			font-size: 2.6em;
+			background: $nkblue;
+			color: #fff;
+			line-height: 1.4em;
+			font-family: "Maison Neue Bold";
+			border-bottom: 4px solid #fff;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			padding: .5em 0;
+
+		}
+
+		.blog-post{
+			padding: 3em 0;
+			border-bottom: 1px solid #ccc;
+			list-style: none;
+
+			h3{
+				margin: 0;
+				font-family: "Maison Neue Light";
+			}
+
+			.byline{
+				@include whitney-book;
+				font-size: .8em;
+				color: $nkblue;
+				margin: .2em 0 .5em;
+				display: block;
+			}
+
+		}
+	}
+
+	@media screen and (max-width: 1400px){
+		.blog-post .author-bio{
+			float: right;
+			box-sizing: content-box;
+			margin: 0 2em 2em;
+			@include clearfix;
+			text-align: left;
+
+			img{
+				float: left;
+				margin: .25em 1em 0 0;
 			}
 		}
 	}
 
-	.takeover-content-right{
-		width: 60%;
-		padding-left: 40%;
+	@media screen and (max-width: 1000px){
 
-		.blog-post{
-			margin-bottom: 4em;
 
-			.sub-title{
-				color: $nkblue;
-				@include sentinel-italic;
-				display: block;
-			}
+		.takeover-content-left, .takeover-content-right{
+			width: 100%;
+			float: none;
+			margin: 0;
+		}
 
-			.sub-title-desc{
-				@include whitney-book;
-				font-size: .8em;
-				color: $nkblue;
-				margin: .2em 0 1em;
-				display: block;
-			}
+		.adventure-guide-callout{
+			max-width: 400px;
+			margin: 2em auto;
+		}
 
-			h3{
-				@include chronicle;
+		.extra-info{
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 700px){
+		.takeover-title{
+			font-size: .75em;
+
+			h2{
 				font-size: 1.6em;
-				line-height: 1.4em;
-				margin-bottom: .5em;
+			}
+
+			hr{ display: none; }
+		}
+
+		.blog-post h3, .blogs h2{
+			font-size: 1.8em;
+		}
+
+		.day-name{
+			font-size: 1.6em;
+		}
+
+		.newsletter-signup input[type="email"]{
+			width: 100%;
+		}
+
+	}
+
+	@media screen and (max-width: 500px){
+
+		.blog-post .author-bio{
+			float: none;
+			margin: 2em 0;
+			width: 100%;
+			max-width: 300px;
+
+			img{
+				max-width: 100px;
 			}
 		}
 
-		.button{ float: right; }
 	}
 
 }

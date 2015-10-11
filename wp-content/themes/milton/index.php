@@ -1,40 +1,114 @@
-<?php get_header(); //cachebreaker ?>
+<?php /* THIS IS THE TAKEOVER PROTOTYPE */ ?>
 
-<section class="page_section">
-	
-	<h2 class="page_title dark">Blog</h2>
-	
-	<section class="page_wrapper dark">
-	
-		<div class="blog_list">
-			<ul>
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				    
-				<li>
-					<a href="<?php the_permalink(); ?>">
-						<dl class="show">
-							<dt><?php the_title(); ?></dt>
-							<dd><?php echo get_the_excerpt(); ?></dd>
-							<dd class="byline">Posted by <?php the_author(); ?> in <?php the_date('F, Y'); ?></dd>
-						</dl>
-					</a>
-				</li>
-				
-				
-					
-				<?php endwhile; endif; ?>
-				
-			</ul>
-			
-		</div><!--.blog_list-->
-	
-	
-		<div class="post_nav">
-			<div class="prev_link"><?php previous_posts_link('&larr; Newer Posts'); ?></div> 
-			<div class="next_link"><?php next_posts_link('Older Posts &rarr;'); ?></div>
+<?php get_header(); ?>
+
+	<section class="takeover-title" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/blog/mountain2.png');">
+		<div class="photo-filter"></div>
+		<div class="wrapper">
+			<h2>A New Kind Adventure Week Series</h2>
+			<hr />
+			<h3>Conquering Brand Positioning</h3>
 		</div>
+		
+	</section>
+
+	
+	
+
+
+
+
+
+		<?php 
+
+			$idObj = get_category_by_slug('brand-positioning');
+			$include = $idObj->cat_ID;
+			$exclude = '-'.$include;
+			$query = new WP_Query( 'cat='.$include);
+			$postCount = 0;
+
+			if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); 
+
+			
+				if($postCount == 0) : 
+					$dayCount = get_field('post_day');
+					echo '<h3 class="day-name">'.$dayCount.'</h3>';
+					echo '<section class="takeover-content wrapper">';
+					echo '<section class="takeover-content-left">';
+					get_template_part( 'content-expanded', get_post_format() );
+					echo '</section>';
+					echo '<section class="takeover-content-right">';
+					get_template_part( 'content-adventure-guide' );
+					echo '</section>';
+					echo '</section>';
+					echo '<div class="blogs">';
+					
+				else : 
+
+					
+					if( $dayCount == get_field('post_day')){
+						get_template_part( 'content' ); 
+					}else{
+						$dayCount = get_field('post_day');
+						echo '<h3 class="day-name">'.$dayCount.'</h3>';
+						get_template_part( 'content' );
+						
+					}
+
+					
+				endif; 
+	 
+				$postCount++;
+
+			endwhile; endif; 
+
+				echo '</div>';
+			
+ 			wp_reset_postdata(); 
+ 		?>
+
+
+
+
+	<section class="takeover-content-bottom">
+
+		<div class="about-adventure-week wrapper">
+			<h4>What is &ldquo;Adventure Week&rdquo;?</h4>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+		</div>
+
+		<div class="newsletter-signup wrapper">
+			<h4>Sign up below to receive updates on future Adventure Guides.</h4>
+			<!--[if lte IE 8]>
+			<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+			<![endif]-->
+			<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+			<script>
+			  hbspt.forms.create({ 
+			    css: '',
+			    portalId: '532381',
+			    formId: 'f973d960-0653-42cd-a2a1-256f4361d284'
+			  });
+			</script>
+		</div>
+
+	</section>
+
+	<section class="blogs">
+		<h2><span class="wrapper">More from our Blog</span></h2>
+		<ul id="infinite-scroll-content">
+
+		<?php 
+			$query = new WP_Query( 'cat='.$exclude); 
+			
+			if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+				
+			<?php get_template_part( 'content', get_post_format() ); ?>
+					
+		<?php endwhile; endif; ?>
+		<?php wp_reset_postdata(); ?>
+		</ul>
 	</section>
 	
-</section>
-
+	
 <?php get_footer(); ?>

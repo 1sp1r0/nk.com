@@ -61,6 +61,23 @@ function create_post_type() {
 	flush_rewrite_rules( false );
 }
 
+/* category blog templates */
+
+add_filter('single_template', 'check_for_category_single_template');
+function check_for_category_single_template( $t )
+{
+  foreach( (array) get_the_category() as $cat ) 
+  { 
+    if ( file_exists(TEMPLATEPATH . "/single-category-{$cat->slug}.php") ) return TEMPLATEPATH . "/single-category-{$cat->slug}.php"; 
+    if($cat->parent)
+    {
+      $cat = get_the_category_by_ID( $cat->parent );
+      if ( file_exists(TEMPLATEPATH . "/single-category-{$cat->slug}.php") ) return TEMPLATEPATH . "/single-category-{$cat->slug}.php";
+    }
+  } 
+  return $t;
+}
+
 
 /* register nav menu */
 
@@ -78,7 +95,7 @@ register_nav_menus( array(
 /* shorten excerpt length & edit ending character */
 
 function custom_excerpt_length( $length ) {
-	return 25;
+	return 50;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
@@ -97,5 +114,35 @@ function modify_contact_methods($profile_fields) {
 	return $profile_fields;
 }
 add_filter('user_contactmethods', 'modify_contact_methods');
+
+//INFINITE SCROLL
+
+add_theme_support( 'infinite-scroll', array(
+  'container' => 'infinite-scroll-content',
+  //'render' => 'mytheme_infinite_scroll_render',
+) );
+
+
+// SHORTCODES!
+
+function extrainfo( $atts, $content ) {
+  $atts = shortcode_atts( array(
+  ), $atts, 'extrainfo' );
+
+  return "<span class='extra-info'>".$content."</span>";
+}
+add_shortcode( 'extrainfo', 'extrainfo' );
+
+function guidevoice( $atts, $content ) {
+  $atts = shortcode_atts( array(
+  ), $atts, 'guidevoice' );
+
+  return "<div class='guide-note'>".$content."</div>";
+}
+add_shortcode( 'guidevoice', 'guidevoice' );
+
+
+
+
 
 ?>
