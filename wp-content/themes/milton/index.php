@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-	<section class="takeover-title" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/blog/mountain2.png');">
+	<section class="takeover-title">
 		<div class="photo-filter"></div>
 		<div class="wrapper">
 			<h2>A New Kind Adventure Week</h2>

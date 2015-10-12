@@ -20,6 +20,7 @@
 		text-align: center;
 		background-color: #004f63;
 		color: #fff;
+		background-image: url('../assets/images/blog/mountain2.png');
 	
 
 		.wrapper{
@@ -551,6 +552,12 @@
 		}
 	}
 
+	@media screen and (max-width: 1200px){
+		.takeover-title{
+			background-image: url('../assets/images/blog/mountain2-1200.jpg');
+		}
+	}
+
 	@media screen and (max-width: 1000px){
 
 
@@ -572,6 +579,12 @@
 
 		.extra-info{
 			display: none;
+		}
+	}
+
+	@media screen and (max-width: 800px){
+		.takeover-title{
+			background-image: url('../assets/images/blog/mountain2-800.jpg');
 		}
 	}
 
@@ -617,6 +630,12 @@
 			}
 		}
 
+	}
+
+	@media screen and (max-width: 500px){
+		.takeover-title{
+			background-image: url('../assets/images/blog/mountain2-500.jpg');
+		}
 	}
 
 }
