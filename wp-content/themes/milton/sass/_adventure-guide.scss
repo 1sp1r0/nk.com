@@ -208,13 +208,7 @@
 			border-bottom: 1px dotted $nkblue;
 		}
 
-		.editors-note{
-			font-size: .8em;
-			color: #aaa;
-			display: inline-block;
-		}
-
-		.posted-date{
+		.posted-date, .original-date{
 			font-size: .8em;
 			color: #999;
 			margin-top: -2em;
