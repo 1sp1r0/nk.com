@@ -38,17 +38,14 @@
 					get_template_part( 'content-expanded', get_post_format() );
 					echo '</section>';
 					echo '<section class="takeover-content-right">';
+					get_template_part('content-intro-post');
 					get_template_part( 'content-adventure-guide' );
 					echo '</section>';
 					echo '</section>';
 					echo '<div class="blogs">';
 					
-					/*if( ( $postCount == 1 ) && ( $dayCount == get_field('post_day')) ){ 
-						echo '<h3 class="day-name">More from '.$dayCount.'</h3>'; 
-					}*/
-
-					
 					if( $dayCount == get_field('post_day')){
+						echo '<h3 class="day-name">More from '.$dayCount.'</h3>'; 
 						get_template_part( 'content' ); 
 					}else{
 						$dayCount = get_field('post_day');
@@ -73,6 +70,7 @@
 
 
 	<section class="takeover-content-bottom">
+
 
 		<?php get_template_part('content-about-adventure-week'); ?>
 

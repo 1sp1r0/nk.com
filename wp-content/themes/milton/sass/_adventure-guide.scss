@@ -418,6 +418,25 @@
 			}
 		}
 
+
+		.adventure-week-intro{
+			background: #eee;
+			padding: 2em;
+			@include sentinel-italic;
+			margin-bottom: 2em;
+
+			h4{
+				font-size: 1.4em;
+				line-height: 1.4em;
+			}
+
+			.button{
+				width: 100%;
+				box-sizing: border-box;
+				text-align: center;
+			}
+		}
+
 		
 	}
 
