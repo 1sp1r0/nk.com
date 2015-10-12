@@ -29,20 +29,9 @@
 
 	<section class="takeover-content-bottom">
 
-		<div class="about-adventure-week wrapper">
-			<h4>What is an Adventure Week?</h4>
-			<p><?php echo category_description( get_category_by_slug('adventure-week') -> term_id );?></p>
-		</div>
+		<?php get_template_part('content-about-adventure-week'); ?>
 
-		<div class="newsletter-signup wrapper">
-			<h4>Sign up below to receive updates from New Kind.</h4>
-			<form>
-				<fieldset>
-					<input type="email" name="email" placeholder="Email Address" />
-					<input type="submit" name="submit" val="Subscribe" />
-				</fieldset>
-			</form>
-		</div>
+		<?php get_template_part('content-newsletter-signup'); ?>
 
 	</section>
 
