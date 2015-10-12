@@ -47,6 +47,8 @@
 
 					
 					if( $dayCount == get_field('post_day')){
+
+						echo '<h3 class="day-name">More from '.$dayCount.'</h3>';
 						get_template_part( 'content' ); 
 					}else{
 						$dayCount = get_field('post_day');
