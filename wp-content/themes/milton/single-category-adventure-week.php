@@ -13,7 +13,7 @@
 
 		<section class="takeover-content-right">
 
-
+			<?php get_template_part('content-intro-post'); ?>
 			<?php get_template_part('content-adventure-guide'); ?>
 
 		</section>
