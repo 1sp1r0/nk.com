@@ -43,6 +43,8 @@
 					echo '</section>';
 					echo '</section>';
 					echo '<div class="blogs">';
+
+				else:
 					
 					if( $dayCount == get_field('post_day')){
 						echo '<h3 class="day-name">More from '.$dayCount.'</h3>'; 
