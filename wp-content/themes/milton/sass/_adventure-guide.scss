@@ -559,6 +559,11 @@
 			margin: 0;
 		}
 
+		.blog-post blockquote{
+			width: 100%;
+			font-size: 2em;
+		}
+
 		.adventure-guide-callout{
 			max-width: 400px;
 			margin: 2em auto;
@@ -582,6 +587,10 @@
 
 		.blog-post h3, .blogs h2{
 			font-size: 1.8em;
+		}
+
+		.blog-post blockquote{
+			font-size: 1.6em;
 		}
 
 		.day-name{
