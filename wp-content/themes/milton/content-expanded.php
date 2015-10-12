@@ -2,6 +2,7 @@
 				
 	<h3 class="blog-title"><?php the_title(); ?></h3>
 	
+	<p class="posted-date"><?php the_date(); ?> at <?php the_time(); ?></p>
 
 	<?php if( get_field('repost') == true ) : ?>
 		<p class="editors-note"><em>Originally posted in the <?php echo get_field('original_post_season'); ?> of <?php echo get_field('original_post_year'); ?>.</em></p>
