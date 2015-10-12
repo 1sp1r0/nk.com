@@ -5,7 +5,7 @@
 	<section class="takeover-title" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/blog/mountain2.png');">
 		<div class="photo-filter"></div>
 		<div class="wrapper">
-			<h2>A New Kind Adventure Week Series</h2>
+			<h2>A New Kind Adventure Week</h2>
 			<hr />
 			<h3>Conquering Brand Positioning</h3>
 		</div>
@@ -73,7 +73,7 @@
 	<section class="takeover-content-bottom">
 
 		<div class="about-adventure-week wrapper">
-			<h4>What is &ldquo;Adventure Week&rdquo;?</h4>
+			<h4>What is an &ldquo;Adventure Week&rdquo;?</h4>
 			<p><?php echo category_description(get_category_by_slug('adventure-week')->cat_ID); ?></p>	
 		</div>
 
