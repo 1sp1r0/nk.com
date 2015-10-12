@@ -457,6 +457,11 @@
 				display: none;
 			}
 
+			input{
+				-webkit-appearance: none;
+    			border-radius: 0;
+			}
+
 			input[type="email"]{
 				width: 50%;
 				border: none;
