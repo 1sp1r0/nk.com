@@ -192,6 +192,8 @@
 			position: relative;
 			display: block;
 			color: #fff;
+			cursor: pointer;
+			border: none;
 
 			&:before{
 				content: '';
@@ -209,9 +211,25 @@
 				background: rgba(0,0,0, .3);
 			}
 
+			span{
+				display: block;
+				position: relative;
 
-			h3{
-				padding: 0 1em;
+				&.sub-title{
+
+					background: $nkblue;
+					padding: 1em 2em;
+				}
+
+				&.title{
+					font-size: 2em;
+					padding: 1em;
+					line-height: 1.4em;
+				}
+			}
+
+
+			.sub-title{
 				position: relative;
 
 				span{
