@@ -1,4 +1,6 @@
 
+
+
 	<a href="<?php the_permalink(); ?>">
 		<li class="blog-post">
 			<div class="wrapper">

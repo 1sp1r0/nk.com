@@ -186,6 +186,44 @@
 			font-size: .8em;
 		}
 
+		.img-link{
+			background-size: cover;
+			background-position: center;
+			position: relative;
+			display: block;
+			color: #fff;
+
+			&:before{
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				background: rgba(0,0,0,.5);
+				@include transition(background .5s);
+			}
+
+			&:hover:before{
+				background: rgba(0,0,0, .3);
+			}
+
+
+			h3{
+				padding: 0 1em;
+				position: relative;
+
+				span{
+					display: block;
+					font-size: .5em;
+					background: $nkblue;
+					padding: 0 2em;
+					margin: 0 -2em 1;
+				}
+			}
+		}
+
 		.wp-caption, img{
 			max-width: 100%;
 			height: auto;
