@@ -191,7 +191,6 @@
 			background-position: center;
 			position: relative;
 			display: block;
-			color: #fff;
 			cursor: pointer;
 			border: none;
 
@@ -203,12 +202,16 @@
 				left: 0;
 				height: 100%;
 				width: 100%;
-				background: rgba(0,0,0,.5);
+				background: rgba(255,255,255,.85);
 				@include transition(background .5s);
 			}
 
 			&:hover:before{
-				background: rgba(0,0,0, .3);
+				background: rgba(255,255,255, .75);
+			}
+
+			&:hover{
+				color: #111;
 			}
 
 			span{
@@ -219,6 +222,7 @@
 
 					background: $nkblue;
 					padding: 1em 2em;
+					color: #fff;
 				}
 
 				&.title{
