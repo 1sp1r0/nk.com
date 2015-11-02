@@ -1,6 +1,6 @@
 <?php /* THIS IS THE TAKEOVER PROTOTYPE */ ?>
 
-<?php get_header(); /*
+<?php get_header(); ?>
 
 	<section class="takeover-title">
 		<div class="photo-filter"></div>
@@ -42,33 +42,15 @@
 					get_template_part( 'content-adventure-guide' );
 					echo '</section>';
 					echo '</section>';
-					echo '<div class="blogs">';
+					
 
 				else:
-					
-					if( ( $postCount == 1 ) && ( $dayCount == get_field('post_day')) ){
-						echo '<h3 class="day-name">More from '.$dayCount.'</h3>'; 
-						get_template_part( 'content' ); 
-					}elseif( $dayCount == get_field('post_day')){
-
-						get_template_part( 'content' );
-
-
-					}else{
-						$dayCount = get_field('post_day');
-						echo '<h3 class="day-name">'.$dayCount.'</h3>';
-						get_template_part( 'content' );
-						
-					}
-
 					
 				endif; 
 	 
 				$postCount++;
 
 			endwhile; endif; 
-
-				echo '</div>';
 			
  			wp_reset_postdata(); 
  		?>
@@ -83,7 +65,7 @@
 
 		<?php get_template_part('content-newsletter-signup'); ?>
 
-	</section> */?>
+	</section>
 
 	<section class="blogs">
 		<h2><span class="wrapper">More from our Blog</span></h2>

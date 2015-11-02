@@ -157,6 +157,16 @@
 	
 }
 
+.blog-nav{
+	text-align: center;
+	margin: .5em 0;
+
+	a{
+		color: $nkblue;
+		@include whitney_book;
+	}
+}
+
 @media screen and (max-width: 880px){
 	.blog{
 		.blog_list{
