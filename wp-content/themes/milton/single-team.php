@@ -43,7 +43,7 @@
 							break;
 							
 					}
-					if($username != null){
+					if($username != null && $link != null){
 						echo '<dt>'.$contact.'</dt>';
 						echo '<dd><a href="'.$link.'">'.$username.'</a></dd>';
 					}
