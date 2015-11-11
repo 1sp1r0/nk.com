@@ -122,6 +122,10 @@
 		margin: 0 2% 2% 0;
 		float: left;
 		text-align: left;
+
+		&:nth-child(3n+1){
+			clear: left;
+		}
 		
 		&.work-item{ height: 270px; }
 		
