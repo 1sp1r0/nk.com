@@ -59,7 +59,7 @@
 		}elseif(is_singular('work')){
 			$pageType = 'work';
 		}elseif(is_singular('team')){
-			$pageType = 'team';
+			$pageType = 'new-wrapper';
 		}elseif(is_post_type_archive('team')){
 			$pageType = 'the_team';
 		}elseif(is_post_type_archive('work')){

@@ -1,0 +1,226 @@
+.new-wrapper{
+	@include whitney-book;
+}
+
+.profile-intro-image, .profile-outtro-image{
+	background-image: url('https://drscdn.500px.org/photo/51207604/m%3D900_s%3D1_k%3D2_b%3D2_attachment%3D1/86f5f15ad6a02d207571efec4bc68183');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 200px;
+}
+
+.profile{
+	@include clearfix;
+
+	.profile-bio{
+		float: right;
+		width: 66.6666%;
+
+		h2{
+			font-weight: bold;
+			font-size: 3em;
+			line-height: 1.4em;
+		}
+
+		h3{
+			font-weight: bold;
+			font-size: 1.8em;
+			color: $nkblue;
+			letter-spacing: 2px;
+			line-height: 1.4em;
+			position: relative;
+			padding-bottom: 1em;
+			margin-bottom: 2em;
+
+			&:after{
+				content: '';
+				height: 1px;
+				width: 100px;
+				background: $nkblue;
+				display: block;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+		}
+	}
+
+	.profile-contact{
+		float: left;
+		width: 33.3333%;
+		background: #eee;
+		position: relative;
+		box-sizing: border-box;
+
+		img{
+			width: 100%;
+		}
+
+		dl{
+			margin: 4em;
+
+			dt{
+				font-size: 1.4em;
+				color: $nkblue;
+				position: relative;
+				padding-bottom: .5em;
+				margin-bottom: 1em;
+				letter-spacing: 2px;
+
+				&:after{
+					content: '';
+					height: 1px;
+					width: 60px;
+					background: $nkblue;
+					display: block;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+				}
+			}
+
+			dd{
+				line-height: 1.4em;
+
+				&.social{
+					margin-top: 1em;
+					display: inline-block;
+				}
+
+				a{
+					display: inline-block;
+					background: $nkblue;
+					width: 20px;
+					height: 20px;
+					text-indent: -9999em;
+
+				}
+			}
+		}
+	}
+
+	.profile-bio{
+		padding: 4em;
+		box-sizing: border-box;
+	}
+}
+
+.featured-work{
+	height: 24em;
+	position: relative;
+	@include clearfix;
+
+	h3{
+		float: left;
+		width: 33.3333%;
+		background: #111;
+		font-size: 2em;
+		color: #fff;
+		padding: 1.5em 2em;
+		height: 8em;
+		box-sizing: border-box;
+	}
+
+	.tile{
+		width: 33.3333%;
+		height: 12em;
+		float: left;
+		padding: 5em 4em;
+		background-position: center;
+		background-size: cover;
+		color: #fff;
+		display: block;
+		position: relative;
+		box-sizing: border-box;
+
+		&:before{
+			content: '';
+			height: 100%;
+			width: 100%;
+			display: block;
+			top: 0;
+			left: 0;
+			position: absolute;
+			@include transition(all .5s);
+		}
+
+		&:hover{
+			color: $nkblue;
+
+			&:before{
+				background: rgba( 0,0,0,.5 );
+			}
+		}
+
+		h4{
+			font-size: 1.4em;
+		}
+
+		h4, h5{
+			position: relative;
+			z-index: 1;
+		}
+
+		&:nth-child(2){
+			padding-top: 11em;
+			height: 24em;
+			padding-bottom: 7em;
+			background: #eee;
+		}
+
+		&:nth-child(5){
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 16em;
+			padding-top: 7em;
+		}
+	}
+}
+
+.recent-posts{
+	@include clearfix;
+
+	h3{
+		width: 33.3333%;
+		float: left;
+		box-sizing: border-box;
+		padding: 2em;
+		font-size: 2em;
+		letter-spacing: 2px;
+		color: $nkblue;
+	}
+
+	.post{
+		width: 33.3333%;
+		float: left;
+		box-sizing: border-box;
+		padding: 4em;
+
+		&:nth-child(2){
+			width: 66.6666%;
+			font-size: 1.5em;
+			padding: 2.75em;
+
+			p{
+				max-width: 800px;
+			}
+
+			.timestamp{
+				font-size: .5em;
+			}
+		}
+
+		.timestamp{
+			font-size: .8em;
+			margin: 0;
+			color: #aaa;
+		}
+
+		p{
+			margin: 0;
+		}
+	}
+
+}
