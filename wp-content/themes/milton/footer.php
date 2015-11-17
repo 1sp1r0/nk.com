@@ -1,5 +1,25 @@
 </section><!--#main-->
 
+<section class="newsletter-signup">
+	<div class="wrapper">
+		<h3>Subscribe to Updates from New Kind</h3>
+		
+		<!--[if lte IE 8]>
+		<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+		<![endif]-->
+		<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+		<script>
+		  hbspt.forms.create({ 
+		    css: '',
+		    portalId: '532381',
+		    formId: 'e4ff35ab-4eeb-44b8-94e7-62f9a6207200'
+		  });
+		</script>
+
+
+	</div>
+</section>
+
 <footer id="site_footer">
 	<div class="wrapper">
 		<h1 class="site_title">New Kind</h1>
@@ -13,18 +33,6 @@
 		</section>
 		
 		<section class="one_third right contact_info">
-
-			<!--[if lte IE 8]>
-			<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-			<![endif]-->
-			<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-			<script>
-			  hbspt.forms.create({ 
-			    css: '',
-			    portalId: '532381',
-			    formId: 'f973d960-0653-42cd-a2a1-256f4361d284'
-			  });
-			</script>
 			
 			<p class="footer_contact">105 Brooks Avenue | Raleigh, NC 27607<br />(919) 807-1785 | <a href="mailto:hello@newkind.com">hello@newkind.com</a></p>
 			<?php //get_search_form( ); ?>
