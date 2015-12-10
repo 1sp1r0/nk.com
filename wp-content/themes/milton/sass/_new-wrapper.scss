@@ -15,7 +15,8 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	height: 200px;
+	height: 160px;
+	@include filter(grayscale(100%));
 }
 
 .profile-outtro-image{
@@ -259,19 +260,21 @@ a.tile{
 		margin: 2% 0;
 
 		&:before{
-			content: '"';
+			content: '';
 			display: block;
 			position: absolute;
-			top: .25em;
-			margin-left: -.5em;
-			font-size: 2em;
-			color: $nkblue;
+			height: 15px;
+			width: 20px;
+			top: .5em;
+			margin-left: -1.6em;
+			background: url('../assets/images/social-icons/quotation.svg');
+			background-size: cover;
 		}
 
 		&:after{
 			content: '';
 			height: 2px;
-			width: 50px;
+			width: 30px;
 			background: $nkblue;
 			display: block;
 			position: absolute;
