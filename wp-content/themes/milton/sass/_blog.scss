@@ -55,7 +55,7 @@
 		}
 	}
 	
-	.page_title{ font-size: 2em; margin-bottom: 1em; line-height: 1.4em; }
+	.page_title{ font-size: 2em; margin-bottom: 1em; line-height: 1.4em; text-align: left;}
 
 
 	.article_summary{
@@ -85,8 +85,8 @@
 		}
 
 		ul{
-			margin-left: 1em;
-
+			margin: 1em;
+			
 			li{
 				margin-left: 1em;
 				list-style: disc;

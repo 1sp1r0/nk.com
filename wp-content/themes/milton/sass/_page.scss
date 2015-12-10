@@ -60,9 +60,9 @@
 	padding: .5em 12.5%;
 	width: 75%;
 	margin-bottom: 1em;
-	@include sentinel-italic;
+	@include whitney-book;
 	text-transform: uppercase;
-	letter-spacing: 8px;
+	letter-spacing: 4px;
 	
 	&.dark{ background: rgba(0,0,0,.6); color: #fff; }
 }
