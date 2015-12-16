@@ -59,7 +59,7 @@
 						echo '</div>';
 					}else{
 						echo '<div class="sub_section wrapper '.$content['image_width'].'">';
-						echo '<img class="right" src="'.$content['content_image']['sizes']['large'].'" />';
+						echo '<img class="right" src="'.$content['content_image']['url'].'" />';
 						if( $content['content_image']['caption'] != null ){
 							echo '<span class="caption">' . $content['content_image']['caption'] . '</span>';
 						}
