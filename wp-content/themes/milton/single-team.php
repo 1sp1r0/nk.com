@@ -56,7 +56,7 @@
 
 			<div class="image tile" style="background-image: url(<?php the_field('headshot'); ?>);"></div>
 
-			<div class="work image tile" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/team-profiles/elise-secondary.jpg'; ?>);"></div>
+			<div class="work image tile" style="background-image: url(<?php the_field('secondary-headshot'); ?>);"></div>
 
 		</div><!--.profile-contact-->
 
@@ -65,6 +65,31 @@
 	<div class="featured-work">
 
 		<div class="container">
+
+			<?php
+				$featuredWorkCount = 1;
+				$featuredWorkTotal = sizeof( get_field('featured-work') );
+
+				foreach( get_field('featured-work') as $work ){
+					
+					if( ( $featuredWorkTotal == 5 || $featuredWorkTotal == 4 ) && ( $featuredWorkCount == 1 ) ){
+						$flexCount = 'flex2';
+					}elseif( ( $featuredWorkTotal == 5 ) && ( $featuredWorkCount == 5 ) ){
+						$flexCount = 'flex2';
+					}else{
+						$flexCount = '';
+					}
+
+					echo '<a class="tile ' . $flexCount . '" href="' . $work['url'] .'">';
+					echo '<span style="background-image: url(' . $work['image'] . ');"></span>';
+					echo '<h4>' . $work['title'] . '</h4>';
+					echo '<h5>' . $work['subtitle'] . '</h5>';
+					echo '</a>';
+
+					$feturedWorkCount++;
+				}
+
+			?>
 
 			<a class="tile flex2" href="#">
 				<span style="background-image: url('http://localhost:8888/newkind/wp-content/themes/milton/assets/images/blog/mountain2-500.jpg');"></span>
