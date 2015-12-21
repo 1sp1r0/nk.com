@@ -58,6 +58,8 @@
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/scripts.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/adventure-guide.js"></script>
 
+<script src="<?php echo get_template_directory_uri(); ?>/js/slack.js"></script>
+
 <!-- Start of Async HubSpot Analytics Code -->
  <script type="text/javascript">
    (function(d,s,i,r) {
