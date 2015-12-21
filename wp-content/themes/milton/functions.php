@@ -141,8 +141,116 @@ function guidevoice( $atts, $content ) {
 }
 add_shortcode( 'guidevoice', 'guidevoice' );
 
+// CUSTOM IMAGES SIZES AND CROPS
+
+add_image_size( 'small', 320, 320 );
+add_image_size( 'med-large', 800, 800 );
+add_image_size( 'x-large', 1600, 1600 );
+add_image_size( 'phone', 320, 400 );
+add_image_size( 'medium-head', 800);
+add_image_size( 'large-head', 1024 );
+add_image_size( 'x-large-head', 1600 );
 
 
+function nk_custom_header_image_sizes( $imageObj , $selector ){
+
+
+  $phoneImage = $imageObj['sizes']['phone'];
+  $medImage = $imageObj['sizes']['medium-head'];
+  $largeImage = $imageObj['sizes']['large-head'];
+  $xlargeImage = $imageObj['sizes']['x-large-head'];
+  $mediaQueries = array(
+    '500'  => $medImage,
+    '800'  => $largeImage, 
+    '1600' => $xlargeImage
+  );
+
+  echo '<style>';
+  echo $selector . '{';
+  echo 'background-image: url(' . esc_url( $phoneImage ) . ');';
+  echo '}';
+  foreach( $mediaQueries as $px => $url ){
+    echo '@media screen and (min-width: ' . esc_html( $px ) . 'px){';
+    echo esc_html( $selector ) . '{';
+    echo 'background-image: url(' . esc_url( $url ) . ');';
+    echo '}';
+    echo '}';
+  }  
+  echo '</style>';
+}
+
+function nk_custom_profile_image_sizes( $imageObj , $selector ){
+
+
+  $phoneImage = $imageObj['sizes']['phone'];
+  $medImage = $imageObj['sizes']['med-large'];
+  $largeImage = $imageObj['sizes']['large'];
+  $xlargeImage = $imageObj['sizes']['x-large'];
+  $mediaQueries = array(
+    '340'  => $medImage
+  );
+
+  echo '<style>';
+  echo $selector . '{';
+  echo 'background-image: url(' . esc_url( $phoneImage ) . ');';
+  echo '}';
+  foreach( $mediaQueries as $px => $url ){
+    echo '@media screen and (min-width: ' . esc_html( $px ) . 'px){';
+    echo esc_html( $selector ) . '{';
+    echo 'background-image: url(' . esc_url( $url ) . ');';
+    echo '}';
+    echo '}';
+  }  
+  echo '</style>';
+}
+
+function nk_custom_crop_image_sizes( $imageObj , $selector ){
+
+
+  $phoneImage = $imageObj['sizes']['phone'];
+  $medImage = $imageObj['sizes']['med-large'];
+  $largeImage = $imageObj['sizes']['large'];
+  $xlargeImage = $imageObj['sizes']['x-large'];
+  $mediaQueries = array(
+    '340'  => $medImage,
+    '800'  => $largeImage, 
+    '1600' => $xlargeImage
+  );
+
+  echo '<style>';
+  echo $selector . '{';
+  echo 'background-image: url(' . esc_url( $phoneImage ) . ');';
+  echo '}';
+  foreach( $mediaQueries as $px => $url ){
+    echo '@media screen and (min-width: ' . esc_html( $px ) . 'px){';
+    echo esc_html( $selector ) . '{';
+    echo 'background-image: url(' . esc_url( $url ) . ');';
+    echo '}';
+    echo '}';
+  }  
+  echo '</style>';
+}
+
+function nk_custom_image_sizes( $imageObj ){
+
+    $phoneImage = $imageObj['sizes']['phone'];
+    $medImage = $imageObj['sizes']['med-large'];
+    $largeImage = $imageObj['sizes']['large'];
+    $xlargeImage = $imageObj['sizes']['x-large'];
+    $mediaQueries = array(
+      '340'  => $medImage,
+      '800'  => $largeImage,
+      '1600' => $xlargeImage
+    );
+
+    echo '<picture>';
+    foreach( $mediaQueries as $px => $url ){
+      echo '<source media="(min-width: ' . esc_html( $px ) . 'px" srcset="' . esc_url( $url ) . '">';
+    }
+    echo '<source srcset="' . esc_url( $phoneImage ) . '">';
+    echo '<img src="' . esc_url( $phoneImage ) . '" alt="">';
+    echo '</picture>';
+}
 
 
 ?>

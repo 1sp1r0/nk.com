@@ -21,6 +21,7 @@
 
 .profile-outtro-image{
 	background-image: url('http://localhost:8888/newkind/wp-content/themes/milton/assets/images/blog/mountain2-1600.jpg');
+	height: 320px;
 }
 
 .profile{
@@ -77,17 +78,13 @@
 
 				a{
 					display: inline-block;
-					background: $nkblue;
 					width: 25px;
 					height: 25px;
-					text-indent: -9999em;
 					@include border-radius( 100% );
 					@include transition( all .5s );
 					position: relative;
-	
-					&:hover{
-						background: lighten( $nkblue, 10% );
-					}
+
+					img{ width: 100%; }
 				}
 			}
 		}
@@ -110,7 +107,7 @@
 			background-position: center;
 		}
 
-		.work{
+		.secondary{
 			flex: 1;
 		}
 	}
@@ -140,6 +137,10 @@
 		@include display-flex;
 		@include flex-direction(column);
 		flex: 1;
+
+		&.flex2{
+			flex: 2;
+		}
 
 		.tile{
 			flex: 1;
@@ -172,10 +173,15 @@ a.tile{
 	}
 
 	&:hover{
-		color: $nkblue;
+		color: #fff;
+
+		span{
+
+			@include filter(grayscale(100%));
+		}
 
 		&:before{
-			background: rgba( 0,0,0,.5 );
+			background: rgba( 0,179,227,.5 );
 		}
 	}
 }
@@ -235,41 +241,48 @@ a.tile{
 	}
 }
 
+h3.tab{
+	background: $nkblue;
+	position: absolute;
+	color: #fff;
+	top: 0;
+	left: 0;
+	padding: .5em 3.25%;
+	width: 33.333%;
+	box-sizing: border-box;
+
+	span{
+		font-size: .5em;
+		margin-left: 1em;
+		display: inline-block;
+	}
+}
+
 .recent-posts{
 	@include clearfix;
 	@include display-flex;
 	@include flex-wrap( wrap );
 	justify-content: center;
-	padding: 2.5% 0;
+	position: relative;
+	padding: 2.5em 0;
 
-	h3{
-		font-size: 2em;
-		padding-left: 1.25em;
-		box-sizing: border-box;
-		letter-spacing: 2px;
-		color: $nkblue;
-		flex: 1 33.3333%;
-		align-self: center;
+	.tab .slack{
+		background: url('../assets/team-profiles/slack_monochrome_white.png') no-repeat right center;
+		text-indent: -9999em;
+		width: 40px;
+		height: 11px;
+		position: relative;
+		top: -2px;
+		left: 3px;
+		margin: 0;
 	}
 
 	.post{
 		box-sizing: border-box;
 		flex: 1 33.3333%;
-		padding: .5em 2.5%;
+		padding: .5em 3.25%;
 		position: relative;
 		margin: 2% 0;
-
-		&:before{
-			content: '';
-			display: block;
-			position: absolute;
-			height: 15px;
-			width: 20px;
-			top: .5em;
-			margin-left: -1.6em;
-			background: url('../assets/images/social-icons/quotation.svg');
-			background-size: cover;
-		}
 
 		&:after{
 			content: '';
@@ -279,15 +292,6 @@ a.tile{
 			display: block;
 			position: absolute;
 			top: 0;
-		}
-
-		&.first{
-			flex: 2 66.6666%;
-			font-size: 1.4em;
-
-			.slack-meta{
-				font-size: .6em;
-			}
 		}
 
 		img{
@@ -350,7 +354,9 @@ a.tile{
 
 @media screen and (max-width: 800px){
 
-	.profile-intro-image, .profile-outtro-image{ display: none; }
+	.profile-intro-image{ display: none; }
+
+	.profile-outtro-image{ height: 200px; }
 
 	.featured-work{
 		@include flex-direction( column );
@@ -381,7 +387,7 @@ a.tile{
 		}
 
 		.profile-bio{
-			padding: 2em 10vw;
+			padding: 10vw;
 
 			h2{
 				font-size: 2em;
@@ -410,19 +416,19 @@ a.tile{
 		}
 	}
 
+	h3.tab{
+		padding: .5em 10%;
+		width: 100%;
+	}
+
 	.recent-posts{
 		@include flex-direction( column );
-		margin-bottom: 4em;
-
-		h3{
-			padding: 2em 10% 0;
-			text-align: left;
-			align-self: flex-start;
-
-		}
+		margin-bottom: 5vw;
+		padding-top: 15vw;
+		padding-bottom: 0;
 
 		.post{
-			padding: .5em 10%;
+			padding: .5em 10vw 5vw;
 			position: relative;
 
 			
@@ -432,8 +438,7 @@ a.tile{
 					width: 100%;
 					display: block;
   					overflow: hidden;
-  					white-space: nowrap;
-  					text-overflow: ellipsis;
+  					height: 1.25em;
 				}
 				
 			}

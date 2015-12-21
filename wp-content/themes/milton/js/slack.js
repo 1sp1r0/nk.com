@@ -9,14 +9,16 @@ $( document ).ready( function() {
   		console.log( data.messages );
 
   		var counter = 0;
+
+      var user = $('.recent-posts.slack').data('user');
   		
   		$.each( data.messages, function( key, val ) {
 
-  			if( counter == 7 ){
+  			if( counter == 6 ){
   				return false;
   			}
 
-  			if( val.user != 'U09355FUZ' ){
+  			if( val.user != user ){
   				return true; // testing for elise!
   			}
 
@@ -95,6 +97,11 @@ $( document ).ready( function() {
   		});
 
   		$( '.recent-posts' ).append( items );
+
+      $('.slack-link-wrapper a').each( function () { 
+        var short = $(this).text().substring( 0 , 30 );
+        $(this).text( short + '...');
+      });
 
 	});
 
