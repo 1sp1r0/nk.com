@@ -72,14 +72,15 @@
 						$flexCount = '';
 					}
 
-
-					if( ( $featuredWorkTotal <= 3 ) ){
-						if( $featuredWorkCount == 2) {
+					if( ( $featuredWorkTotal < 3 ) ){
+						if( ( $featuredWorkCount == 2 )){
 							echo '<div class="container tall flex2">';
 						}else{
 							echo '<div class="container tall">';
 						}
-						
+					}
+					elseif( ( $featuredWorkTotal == 3 ) ){					
+							echo '<div class="container tall">';
 					}elseif( $featuredWorkTotal == 4 ){
 						if( $featuredWorkCount == 1){
 							echo '<div class="container">';
