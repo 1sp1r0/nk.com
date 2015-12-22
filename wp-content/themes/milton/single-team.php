@@ -60,10 +60,9 @@
 							}else{
 								$url = $info['url'];
 							}
-
-							if( $info['contact_type'] != 'skype' ){
-								echo '<a target="_blank" href="' . $url . '"><img src="' . get_template_directory_uri() . '/assets/team-profiles/' . $info['contact_type'] . '.svg" /></a>';
-							}
+							
+							echo '<a target="_blank" href="' . $url . '"><img src="' . get_template_directory_uri() . '/assets/team-profiles/' . $info['contact_type'] . '.svg" /></a>';
+							
 						}
 
 					}
