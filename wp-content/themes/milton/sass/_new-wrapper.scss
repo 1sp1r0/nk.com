@@ -410,12 +410,12 @@ h3.tab{
 	.profile-outtro-image{ height: 200px; }
 
 	.featured-work{
-		@include flex-direction( column );
-		height: 100vh;
+		display: block;
+		height: auto;
 
 		.tile{
-			justify-content: center!important;
-			padding-top: 0!important;
+			padding-top: 4em;
+			padding-bottom: 4em;
 
 			h4, h5{
 
