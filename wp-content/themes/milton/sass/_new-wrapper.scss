@@ -46,22 +46,23 @@
 		position: absolute;
 		top: 2vw;
 		left: 2vw;
-		padding: 1.25vw;
-		background: rgba(0,0,0,.5);
 		color: #fff;
 
 		.bird-info-link{
 			display: block;
+			padding: 1.25vw;
 			text-indent: -9999em;
-			background: url('../assets/team-profiles/feather_icon.svg') no-repeat 0 0;
-			background-size: 100%;
+			background: rgba( 0,0,0,.5 ) url('../assets/team-profiles/feather_icon.svg') no-repeat center;
+			background-size: 40px;
 			height: 40px;
 			width: 40px;
+			margin-bottom: 1em;
 		}
 
 		.bird-info-text{
 			display: none;
-			padding-top: 1em;
+			padding: 1.25vw;
+			background: rgba(0,0,0,.5);
 
 			p{
 				margin: 0 0 .5em;

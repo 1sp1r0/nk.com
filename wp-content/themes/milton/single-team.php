@@ -177,7 +177,7 @@
 			<a href="#" class="bird-info-link">About the bird</a>
 			<div class="bird-info-text">
 				<p>Every New Kinder is given a spirit bird name within a few  months of joining the team.</p>
-				<p>It’s a long story why, but hey, its fun and we like it.</p>
+				<p>It’s a long story why, but hey, it's fun and we like it.</p>
 			</div>
 		</div>
 	</div>
