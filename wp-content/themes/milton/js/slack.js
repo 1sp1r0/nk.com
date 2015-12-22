@@ -6,6 +6,8 @@ $( document ).ready( function() {
   		
   		var items = [];
 
+  		console.log( data.messages );
+
   		var counter = 0;
 
       var user = $('.recent-posts.slack').data('user');
@@ -30,7 +32,7 @@ $( document ).ready( function() {
 
   				var item = '<div class="post">';
 
-  				if( val.subtype != 'file_share' ){
+  				if( val.subtype == null ){
   					var text = val.text;
   					var link = text.match('<(.*)>');
   					item += '<p class="slack-text">' + text;
