@@ -38,7 +38,7 @@ $( document ).ready( function() {
   					item += '<p class="slack-text">' + text;
 
   					if( link ){
-  						item += '<div class="slack-link-wrapper"><a href="' + link[1] + '">' + link[1] + '</a></div>';
+  						item += '<div class="slack-link-wrapper"><a target="_blank" href="' + link[1] + '">' + link[1] + '</a></div>';
   					}
 
   					item += '</p>';
