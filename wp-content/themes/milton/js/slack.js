@@ -32,7 +32,7 @@ $( document ).ready( function() {
 
   				var item = '<div class="post">';
 
-  				if( val.subtype != null ){
+  				if( val.subtype == null ){
   					var text = val.text;
   					var link = text.match('<(.*)>');
   					item += '<p class="slack-text">' + text;
