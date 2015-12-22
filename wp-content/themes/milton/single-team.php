@@ -133,7 +133,7 @@
 					}
 
 					echo '<a class="tile ' . $flexCount . '" href="' . $work['url'] .'">';
-					nk_custom_crop_image_sizes( $work['photo'], '#count-' . $featuredWorkCount );
+					nk_custom_profile_image_sizes( $work['photo'], '#count-' . $featuredWorkCount );
 					echo '<span id="count-' . $featuredWorkCount . '"></span>';
 					echo '<h4>' . $work['title'] . '</h4>';
 					echo '<h5>' . $work['sub_title'] . '</h5>';
