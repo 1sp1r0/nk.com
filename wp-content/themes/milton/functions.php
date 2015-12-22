@@ -147,18 +147,16 @@ add_image_size( 'small', 320, 320 );
 add_image_size( 'med-large', 800, 800 );
 add_image_size( 'x-large', 1600, 1600 );
 add_image_size( 'phone', 320, 400 );
-add_image_size( 'medium-head', 800);
 add_image_size( 'large-head', 1024 );
-add_image_size( 'x-large-head', 1600 );
 
 
 function nk_custom_header_image_sizes( $imageObj , $selector ){
 
 
   $phoneImage = $imageObj['sizes']['phone'];
-  $medImage = $imageObj['sizes']['medium-head'];
+  $medImage = $imageObj['sizes']['medium-large'];
   $largeImage = $imageObj['sizes']['large-head'];
-  $xlargeImage = $imageObj['sizes']['x-large-head'];
+  $xlargeImage = $imageObj['sizes']['x-large'];
   $mediaQueries = array(
     '500'  => $medImage,
     '800'  => $largeImage, 
