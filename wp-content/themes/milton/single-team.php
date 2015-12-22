@@ -139,8 +139,17 @@
 
 	<?php endif; ?>
 
-	<?php nk_custom_header_image_sizes( get_field('spirit_bird'), '.profile-outtro-image' ); ?>
-	<div class="profile-outtro-image"></div>
+	<?php nk_custom_header_image_sizes( get_field('spirit_bird'), '.bird-photo' ); ?>
+	<div class="profile-outtro-image">
+		<div class="bird-photo"></div>
+		<div class="bird-info">
+			<a href="#" class="bird-info-link">About the bird</a>
+			<div class="bird-info-text">
+				<p>Every New Kinder is given a spirit bird name within a few  months of joining the team.</p>
+				<p>It’s a long story why, but hey, its fun and we like it.</p>
+			</div>
+		</div>
+	</div>
 	
 </div><!--.new-wrapper-->
 

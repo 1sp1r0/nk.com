@@ -169,5 +169,14 @@ $(document).ready(function(){
 	if (screen && screen.width > 480) {
 		loadImages();
 	}
+
+	function birdInfo(){
+		$('.bird-info-link').click( function(event){
+			event.preventDefault();
+			$('.bird-info-text').fadeToggle();
+		});
+	}
+
+	if( $('.bird-info-link') ){ birdInfo(); }
 	
 });

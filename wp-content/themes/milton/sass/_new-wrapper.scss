@@ -16,12 +16,59 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 160px;
+}
+
+.profile-intro-image{
 	@include filter(grayscale(100%));
 }
 
-.profile-outtro-image{
+
+
+.bird-photo{
 	background-image: url('http://localhost:8888/newkind/wp-content/themes/milton/assets/images/blog/mountain2-1600.jpg');
+	@include filter(grayscale(100%));
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+}
+
+.profile-outtro-image{
 	height: 320px;
+	position: relative;
+
+	.bird-info{
+		position: absolute;
+		top: 2vw;
+		left: 2vw;
+		padding: 1.25vw;
+		background: rgba(0,0,0,.5);
+		color: #fff;
+
+		.bird-info-link{
+			display: block;
+			text-indent: -9999em;
+			background: url('../assets/team-profiles/feather_icon.svg') no-repeat 0 0;
+			background-size: 100%;
+			height: 40px;
+			width: 40px;
+		}
+
+		.bird-info-text{
+			display: none;
+			padding-top: 1em;
+
+			p{
+				margin: 0 0 .5em;
+				font-size: .8em;
+			}
+		}
+	}
 }
 
 .profile{
@@ -83,6 +130,7 @@
 					@include border-radius( 100% );
 					@include transition( all .5s );
 					position: relative;
+					margin-right: 5px;
 
 					img{ width: 100%; }
 				}
@@ -352,6 +400,8 @@ h3.tab{
 
 }
 
+
+
 @media screen and (max-width: 800px){
 
 	.profile-intro-image{ display: none; }
@@ -443,6 +493,11 @@ h3.tab{
 				
 			}
 		}
+	}
+
+	.profile-outtro-image .bird-info{
+		top: 0;
+		left: 0;
 	}
 
 }
