@@ -30,7 +30,19 @@
 							
 							
 						}else{
-							echo '<a href="#"><img src="' . get_template_directory_uri() . '/assets/team-profiles/' . $info['contact_type'] . '.svg" /></a>';
+
+							if( $info['username'] != null ){
+								if( $info['contact_type'] == 'spotify' ){
+									$url = 'https://open.spotify.com/user/' . $info['uername'];
+								}elseif( $info['contact_type'] == 'twitter' ){
+									$url = 'https://twitter.com/' . $info['username'];
+								}elseif( $info['contact_type'] == 'behance' ){
+									$url = 'https://behance.com/' . $info['username'];
+								}
+							}else{
+								$url = $info['url'];
+							}
+							echo '<a href="' . $url . '"><img src="' . get_template_directory_uri() . '/assets/team-profiles/' . $info['contact_type'] . '.svg" /></a>';
 					
 						}
 
