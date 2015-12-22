@@ -11,12 +11,6 @@ $( document ).ready( function() {
   		var counter = 0;
 
       var user = $('.recent-posts.slack').data('user');
-
-      $.each( data.messages, function(key, val) {
-        if( val.subtype != null ){
-          $(this).remove();
-        }
-      });
   		
   		$.each( data.messages, function( key, val ) {
 
@@ -38,7 +32,7 @@ $( document ).ready( function() {
 
   				var item = '<div class="post">';
 
-  				if( val.subtype != 'file_share' ){
+  				if( val.subtype != null ){
   					var text = val.text;
   					var link = text.match('<(.*)>');
   					item += '<p class="slack-text">' + text;
@@ -48,7 +42,9 @@ $( document ).ready( function() {
   					}
 
   					item += '</p>';
-  				}
+  				}else{
+            counter--;
+          }
 
   				if( val.attachments ){
 
