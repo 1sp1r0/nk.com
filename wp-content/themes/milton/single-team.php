@@ -21,8 +21,10 @@
 			<dl>
 				<dt class="screen-reader">Contact Info</dt>
 				<dd><a href="mailto:<?php echo $email['email']; ?>"><?php echo $email['email']; ?></a></dd>
-				<dd class="divider">//</dd>
-				<dd><?php echo $phone['number']; ?></dd>
+				<?php if( $phone['number'] != null ) : ?>
+					<dd class="divider">//</dd>
+					<dd><?php echo $phone['number']; ?></dd>
+				<?php endif; ?>
 				<div class="social">
 				<?php
 					foreach( $contact as $info ){
