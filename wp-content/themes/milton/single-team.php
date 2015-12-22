@@ -33,7 +33,7 @@
 
 							if( $info['username'] != null ){
 								if( $info['contact_type'] == 'spotify' ){
-									$url = 'https://open.spotify.com/user/' . $info['uername'];
+									$url = 'https://open.spotify.com/user/' . $info['username'];
 								}elseif( $info['contact_type'] == 'twitter' ){
 									$url = 'https://twitter.com/' . $info['username'];
 								}elseif( $info['contact_type'] == 'behance' ){
