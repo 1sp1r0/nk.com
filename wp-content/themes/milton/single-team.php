@@ -38,6 +38,22 @@
 									$url = 'https://twitter.com/' . $info['username'];
 								}elseif( $info['contact_type'] == 'behance' ){
 									$url = 'https://behance.com/' . $info['username'];
+								}elseif( $info['contact_type'] == 'bitbucket' ){
+									$url = 'https://bitbucket.org/' . $info['username'];
+								}elseif( $info['contact_type'] == 'dribble' ){
+									$url = 'https://dribbble.com/' . $info['username'];
+								}elseif( $info['contact_type'] == 'facebook' ){
+									$url = 'https://facebook.com/' . $info['username'];
+								}elseif( $info['contact_type'] == 'flickr' ){
+									$url = 'https://flickr.com/' . $info['username'];
+								}elseif( $info['contact_type'] == 'github' ){
+									$url = 'https://github.com/' . $info['username'];
+								}elseif( $info['contact_type'] == 'instagram' ){
+									$url = 'https://instagram.com/' . $info['username'];
+								}elseif( $info['contact_type'] == 'pinterest' ){
+									$url = 'https://pinterest.com/' . $info['username'];
+								}elseif( $info['contact_type'] == 'skype' ){
+									$url = 'skype:' . $info['username'];
 								}
 							}else{
 								$url = $info['url'];
