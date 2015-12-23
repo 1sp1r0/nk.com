@@ -128,7 +128,7 @@
 						}
 					}
 
-					if( $work['nk_content'] == true ){
+					if( $work['nk_content'] == '1' ){
 						$work['url'] = $work['content']->guid;
 					}else{
 						$target = 'target="_blank"';
