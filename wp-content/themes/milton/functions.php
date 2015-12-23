@@ -155,7 +155,7 @@ function nk_custom_header_image_sizes( $imageObj , $selector ){
 
   $phoneImage = $imageObj['sizes']['phone'];
   $medImage = $imageObj['sizes']['medium-large'];
-  $largeImage = $imageObj['sizes']['large-head'];
+  $largeImage = $imageObj['sizes']['large'];
   $xlargeImage = $imageObj['sizes']['x-large'];
   $mediaQueries = array(
     '500'  => $medImage,
