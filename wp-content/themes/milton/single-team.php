@@ -133,7 +133,6 @@
 					}else{
 						$target = 'target="_blank"';
 					}
-					echo '<!--testing force deployments-->';
 					echo '<a class="tile ' . $flexCount . '" ' . $target . ' href="' . $work['url'] .'">';
 					nk_custom_profile_image_sizes( $work['photo'], '#count-' . $featuredWorkCount );
 					echo '<span id="count-' . $featuredWorkCount . '"></span>';
