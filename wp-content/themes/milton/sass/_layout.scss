@@ -8,9 +8,10 @@
 .wrapper{
 	max-width: 980px;
 	margin: 0 auto;
+	display: block;
 }
 
-.button{
+.button, .hs-button{
 	background: $nkblue;
 	color: #fff;
 	padding: .5em 2em;

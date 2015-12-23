@@ -1,40 +1,25 @@
-<?php get_header(); //cachebreaker ?>
+<?php /* THIS IS THE TAKEOVER PROTOTYPE */ ?>
 
-<section class="page_section">
-	
-	<h2 class="page_title dark">Blog</h2>
-	
-	<section class="page_wrapper dark">
-	
-		<div class="blog_list">
-			<ul>
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				    
-				<li>
-					<a href="<?php the_permalink(); ?>">
-						<dl class="show">
-							<dt><?php the_title(); ?></dt>
-							<dd><?php echo get_the_excerpt(); ?></dd>
-							<dd class="byline">Posted by <?php the_author(); ?> in <?php the_date('F, Y'); ?></dd>
-						</dl>
-					</a>
-				</li>
-				
-				
-					
-				<?php endwhile; endif; ?>
-				
-			</ul>
+<?php get_header(); ?>
+
+	<section class="blogs">
+		<h2><span class="wrapper">Blog</span></h2>
+		<ul id="infinite-scroll-content">
+
+		<?php 
 			
-		</div><!--.blog_list-->
-	
-	
-		<div class="post_nav">
-			<div class="prev_link"><?php previous_posts_link('&larr; Newer Posts'); ?></div> 
-			<div class="next_link"><?php next_posts_link('Older Posts &rarr;'); ?></div>
-		</div>
+			
+			if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				
+			<?php get_template_part( 'content', get_post_format() ); ?>
+					
+		<?php endwhile; endif; ?>
+		</ul>
 	</section>
-	
-</section>
 
+	<div class="blog-nav">
+		<?php posts_nav_link(' - ','Newer Posts','Older Posts'); ?>
+	</div>
+	
+	
 <?php get_footer(); ?>

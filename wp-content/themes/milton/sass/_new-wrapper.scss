@@ -1,0 +1,509 @@
+//GLOBALS
+
+.screen-reader{
+	position: absolute;
+	top: 0;
+	left: -9999em;
+}
+
+.new-wrapper{
+	@include whitney-book;
+}
+
+.profile-intro-image, .profile-outtro-image{
+	background-image: url('http://localhost:8888/newkind/wp-content/themes/milton/assets/team-profiles/elise-top.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 160px;
+}
+
+.profile-intro-image{
+	@include filter(grayscale(100%));
+}
+
+
+
+.bird-photo{
+	background-image: url('http://localhost:8888/newkind/wp-content/themes/milton/assets/images/blog/mountain2-1600.jpg');
+	@include filter(grayscale(100%));
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+}
+
+.profile-outtro-image{
+	height: 320px;
+	position: relative;
+
+	.bird-info{
+		position: absolute;
+		top: 2vw;
+		left: 2vw;
+		color: #fff;
+
+		.bird-info-link{
+			display: block;
+			padding: 1.25vw;
+			text-indent: -9999em;
+			background: rgba( 0,0,0,.5 ) url('../assets/team-profiles/feather_icon.svg') no-repeat center;
+			background-size: 25px;
+			height: 25px;
+			width: 25px;
+			margin-bottom: 1em;
+		}
+
+		.bird-info-text{
+			display: none;
+			padding: 1.25vw;
+			background: rgba(0,0,0,.5);
+
+			p{
+				margin: 0 0 .5em;
+				font-size: .8em;
+			}
+		}
+	}
+}
+
+.profile{
+	@include clearfix;
+	position: relative;
+	@include display-flex;
+	flex-direction: row-reverse;
+
+	.profile-bio{
+		width: 66.6666%;
+		box-sizing: border-box;
+
+		h2{
+			font-weight: bold;
+			font-size: 3em;
+			line-height: 1.4em;
+			margin-left: -2px;
+		}
+
+		h3{
+			font-weight: bold;
+			font-size: 1.8em;
+			color: $nkblue;
+			letter-spacing: 2px;
+			line-height: 1em;
+			position: relative;
+			margin-top: -.25em;
+			margin-bottom: .5em;
+		}
+
+		dl{
+			position: relative;
+			padding-bottom: 2em;
+			margin-bottom: .5em;
+
+			dd{
+				display: inline-block;
+				margin-right: .5em;
+
+				&.divider{
+					font-weight: bold;
+				}
+
+				
+			}
+
+			.social{
+				display: block;
+				margin-top: 1.25em;
+
+				dd{
+					display: inline-block;
+				}
+
+				a{
+					display: inline-block;
+					width: 25px;
+					height: 25px;
+					@include border-radius( 100% );
+					@include transition( all .5s );
+					position: relative;
+					margin-right: 5px;
+
+					img{ width: 100%; }
+				}
+			}
+		}
+
+		p{
+			max-width: 800px;
+		}
+	}
+
+	.profile-feature{
+		position: relative;
+		@include display-flex;
+		@include flex-direction(column);
+		box-sizing: border-box;
+		width: 33.3333%;
+
+		.image{
+			flex: 2;
+			background-size: cover;
+			background-position: center;
+		}
+
+		.secondary{
+			flex: 1;
+		}
+	}
+
+	.profile-bio{
+		padding: 4em;
+		box-sizing: border-box;
+	}
+}
+
+.featured-work{
+	position: relative;
+	@include clearfix;
+	@include display-flex;
+	height: 50vh;
+	justify-content: center;
+  	text-align: center;
+
+	h3{
+		background: #111;
+		font-size: 2em;
+		color: #fff;
+		box-sizing: border-box;
+	}
+
+	.container{
+		@include display-flex;
+		@include flex-direction(column);
+		flex: 1;
+
+		&.flex2{
+			flex: 2;
+		}
+
+		.tile{
+			flex: 1;
+
+			&.flex1{
+				flex: 1;
+			}
+		
+			&.flex2{
+				flex: 2;
+			}
+		}
+	}
+
+	
+}
+
+a.tile{
+	&:before{
+		content: '';
+		height: 100%;
+		width: 100%;
+		display: block;
+		top: 0;
+		left: 0;
+		position: absolute;
+		z-index: 1;
+		@include transition( all .5s );
+		background: rgba( 0,0,0,.35 );
+	}
+
+	&:hover{
+		color: #fff;
+
+		span{
+
+			@include filter(grayscale(100%));
+		}
+
+		&:before{
+			background: rgba( 0,179,227,.5 );
+		}
+	}
+}
+
+.tile{
+	overflow: hidden;
+	color: #fff;
+	display: block;
+	position: relative;
+	box-sizing: border-box;
+	@include display-flex;
+	@include flex-direction(column);
+	align-items: flex-start;
+	justify-content: center;
+	padding-left: 10%;
+	text-align: left;
+
+	h4, h5{
+		line-height: 1.2em;
+		width: 90%;
+	}
+
+	span{
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		@include transition(all 1s ease);
+	}
+
+	
+
+	&:hover{
+
+		span{
+			@include scale( 1.05,1.05 );
+		}
+		
+	}
+
+	h4{
+		font-size: 1.4em;
+	}
+
+	h5{
+		margin-top: .25em;
+	}
+
+	h4, h5{
+		position: relative;
+		z-index: 1;
+	}
+}
+
+h3.tab{
+	background: $nkblue;
+	position: absolute;
+	color: #fff;
+	top: 0;
+	left: 0;
+	padding: .5em 3.25%;
+	width: 33.333%;
+	box-sizing: border-box;
+
+	span{
+		font-size: .5em;
+		margin-left: 1em;
+		display: inline-block;
+	}
+}
+
+.recent-posts{
+	@include clearfix;
+	@include display-flex;
+	@include flex-wrap( wrap );
+	justify-content: center;
+	position: relative;
+	padding: 2.5em 0;
+
+	.tab .slack{
+		background: url('../assets/team-profiles/slack_monochrome_white.png') no-repeat right center;
+		text-indent: -9999em;
+		width: 40px;
+		height: 11px;
+		position: relative;
+		top: -2px;
+		left: 3px;
+		margin: 0;
+	}
+
+	.post{
+		box-sizing: border-box;
+		flex: 1 33.3333%;
+		padding: .5em 3.25%;
+		position: relative;
+		margin: 2% 0;
+
+		&:after{
+			content: '';
+			height: 2px;
+			width: 30px;
+			background: $nkblue;
+			display: block;
+			position: absolute;
+			top: 0;
+		}
+
+		img{
+			width: 100%;
+		}
+
+		.timestamp{
+			font-size: .8em;
+			margin: 0;
+			color: #aaa;
+		}
+
+		p{
+			margin: 0;
+		}
+		
+
+		a{
+			word-wrap: break-word;
+			color: $nkblue;
+			display: block;
+			padding-bottom: .25em;
+
+			&:hover{
+				color: darken($nkblue, 10%);
+			}
+		}
+
+		.meta-image-link{
+			float: left;
+			width: 100px;
+			margin-right: 20px;
+
+			img{ width: 100%; }
+		}
+
+		.meta-wrapper{
+			padding-left: 20px;
+			margin-left: 120px;
+			border-left: 2px solid #aaa;
+			margin-top: 2em;
+			font-size: .8em;
+			box-sizing: border-box;
+		
+			.meta-title{
+				font-size: 1.2em;
+				margin-bottom: 1em;
+				line-height: 1.2em;
+			}
+
+			.meta-text{
+				font-size: .8em;
+				color: #aaa;
+				margin-bottom: 1em;
+			}
+		}
+	}
+
+}
+
+
+
+@media screen and (max-width: 800px){
+
+	.profile-intro-image{ display: none; }
+
+	.profile-outtro-image{ height: 200px; }
+
+	.featured-work{
+		display: block;
+		height: auto;
+
+		.tile{
+			padding-top: 4em;
+			padding-bottom: 4em;
+
+			h4, h5{
+
+				bottom: 0!important;
+			}
+		}
+	}
+
+	.profile{
+		@include flex-direction( column-reverse );
+
+		.profile-feature, .profile-bio{
+			width: auto;
+		}
+
+		.profile-feature{
+			height: 50vh;
+
+			.secondary{ display: none; }
+		}
+
+		.profile-bio{
+			padding: 10vw;
+
+			h2{
+				font-size: 2em;
+			}
+
+			h3{
+				font-size: 1.4em;
+				letter-spacing: 1px;
+			}
+
+			dl dd{
+				display: block;
+				margin-bottom: .5em;
+
+				&.divider{
+					display: none;
+				}
+
+				&.social{
+					display: block;
+					margin-top: 1em;
+					position: relative;
+					left: -10px;
+				}
+			}
+		}
+	}
+
+	h3.tab{
+		padding: .5em 10%;
+		width: 100%;
+	}
+
+	.recent-posts{
+		@include flex-direction( column );
+		margin-bottom: 5vw;
+		padding-top: 15vw;
+		padding-bottom: 0;
+		display: block;
+
+		.post{
+			padding: .5em 10vw .5em;
+			position: relative;
+
+			
+
+			.slack-link-wrapper{
+				a{
+					width: 100%;
+					display: block;
+  					overflow: hidden;
+  					height: 1.25em;
+				}
+				
+			}
+		}
+	}
+
+	.profile-outtro-image .bird-info{
+		top: 0;
+		left: 0;
+
+		.bird-info-text{
+			padding: 1em 10%;
+		}
+	}
+
+}

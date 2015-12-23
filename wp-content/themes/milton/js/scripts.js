@@ -112,7 +112,7 @@ $(document).ready(function(){
 		var $allVideos = $("iframe[src^='http://www.youtube.com'], iframe[src^='https://www.youtube.com'], iframe[src^='//player.vimeo.com'], iframe[src^='https://player.vimeo.com'], iframe[src^='http://player.vimeo.com']"),
 
 		    // The element that is fluid width
-		    $fluidEl = $(".sub_section.no-image p");
+		    $fluidEl = $(".sub_section.no-image p, .blog_article p");
 
 		// Figure out and save aspect ratio for each video
 		$allVideos.each(function() {
@@ -169,5 +169,14 @@ $(document).ready(function(){
 	if (screen && screen.width > 480) {
 		loadImages();
 	}
+
+	function birdInfo(){
+		$('.bird-info-link').click( function(event){
+			event.preventDefault();
+			$('.bird-info-text').fadeToggle();
+		});
+	}
+
+	if( $('.bird-info-link') ){ birdInfo(); }
 	
 });

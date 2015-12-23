@@ -1,3 +1,64 @@
+.newsletter-signup{
+	background: $nkblue;
+	padding: 2em 0;
+	@include whitney-book;
+
+	h3{
+		color: #fff;
+		font-size: 1.2em;
+		margin-bottom: 1em;
+	}
+
+	label{
+		color: #fff;
+		font-size: 1.2em;
+		margin-bottom: .5em;
+		display: block;
+		position: absolute;
+		left: -9999em;
+
+
+		.hs-form-required{
+			display: none;
+		}
+	}
+
+	input[type="text"], input[type="email"]{
+		font-size: 1em;
+		padding: .5em;
+		border: none;
+		font-weight: 200;
+		letter-spacing: 1px;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	.submitted-message{
+		color: #111;
+	}
+
+	.hs-form-field{
+		float: left;
+		width: 48%;
+		margin-right: 2%;
+		display: block;
+	}
+
+	.hs-error-msgs label{
+		font-size: .8em;
+		color: #111;
+		margin-top: .5em;
+		position: absolute;
+		left: auto;
+	}
+
+	.hs-button{
+		border: 1px solid #fff;
+		font-size: 1em;
+		cursor: pointer;
+	}
+}
+
 #site_footer{
 	background: #363636;
 	color: #fff;
@@ -93,4 +154,22 @@
 		.footer_contact{ text-align: center; }
 		.copyright{ text-align: center; }
 	}
+}
+
+@media screen and (max-width: 500px){
+
+	.newsletter-signup{
+		
+		.hs-form-field{
+			float: none;
+			width: 100%;
+			margin: 1em 0;
+			display: block;
+		}
+
+		.hs-error-msgs label{
+			position: static;
+		}
+	}
+
 }

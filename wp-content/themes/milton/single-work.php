@@ -53,13 +53,16 @@
 				
 				foreach($section['case_study_content'] as $content){
 					
-					if($content['content_image'] == null){
+					if( $content['content_image'] == null ){
 						echo '<div class="sub_section wrapper no-image">';
 						echo $content['written_content'];
 						echo '</div>';
 					}else{
 						echo '<div class="sub_section wrapper '.$content['image_width'].'">';
-						echo '<img class="right" src="'.$content['content_image'].'" />';
+						echo '<img class="right" src="'.$content['content_image']['url'].'" />';
+						if( $content['content_image']['caption'] != null ){
+							echo '<span class="caption">' . $content['content_image']['caption'] . '</span>';
+						}
 						echo $content['written_content'];
 						echo '</div>';
 					}

@@ -1,5 +1,4 @@
 .work{
-
 	
 	.case_study{
 		margin: 2em 0 6em;;
@@ -40,7 +39,15 @@
 		img{ 
 			margin: 0 0 2em 2em; 
 		}
-		
+
+		.caption{
+			clear: both;
+    		top: -2em;
+    		position: relative;
+    		font-size: .8em;
+    		color: #aaa;
+		}
+			
 		.sub_section{ 
 			clear: both;
 			

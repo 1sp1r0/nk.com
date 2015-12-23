@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><?php bloginfo('name').wp_title(' - '); ?></title>
+	<title><?php bloginfo('name'); ?><?php wp_title('-'); ?></title>
 	<meta charset="UTF-8">
 	<meta name="description" content="<?php bloginfo('description'); ?>">
 	<meta name="keywords" content="Branding, Content, Agency, Design, Marketing, Community, Innovation, Creation">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/70540/772064/css/fonts.css" />
+	<link rel="stylesheet" href="//f.fontdeck.com/s/css/9FRVfkomeCh4H19B/qGVFg41Ywo/<?php echo $_SERVER['SERVER_NAME']; ?>/60449.css" type="text/css" />
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/assets/images/favicon.ico" />
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/screen.css?a" />
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/screen.css?12.22.2015v1.5" />
 	<link rel="stylesheet" type="text/css" media="print" href="<?php bloginfo('template_directory'); ?>/css/print.css" />
 	
 	<!-- Google Analytics -->
@@ -52,19 +53,21 @@
 		if(is_page('home')){
 			$pageType = 'home';
 		}elseif(is_home()){
-			$pageType = 'blog';
+			$pageType = 'adventure-guide';
 		}elseif(is_singular('workshops')){
 			$pageType = 'workshop';
 		}elseif(is_singular('work')){
 			$pageType = 'work';
 		}elseif(is_singular('team')){
-			$pageType = 'team';
+			$pageType = 'new-wrapper';
 		}elseif(is_post_type_archive('team')){
 			$pageType = 'the_team';
 		}elseif(is_post_type_archive('work')){
 			$pageType = 'our_purpose';
 		}elseif(is_page('workshops')){
 			$pageType = 'workshop_landing';
+		}elseif(has_category('adventure-week')){
+			$pageType = 'adventure-guide';
 		}elseif(is_page('blog')){
 			$pageType = 'blog';
 		}elseif(is_page('get-in-touch')){
