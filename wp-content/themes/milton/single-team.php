@@ -130,9 +130,11 @@
 
 					if( $work['nk_content'] == true ){
 						$work['url'] = $work['content']->guid;
+					}else{
+						$target = 'target="_blank"';
 					}
 
-					echo '<a class="tile ' . $flexCount . '" href="' . $work['url'] .'">';
+					echo '<a class="tile ' . $flexCount . '" ' . $target . ' href="' . $work['url'] .'">';
 					nk_custom_profile_image_sizes( $work['photo'], '#count-' . $featuredWorkCount );
 					echo '<span id="count-' . $featuredWorkCount . '"></span>';
 					echo '<h4>' . $work['title'] . '</h4>';
