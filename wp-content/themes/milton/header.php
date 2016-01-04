@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="description" content="<?php bloginfo('description'); ?>">
 	<meta name="keywords" content="Branding, Content, Agency, Design, Marketing, Community, Innovation, Creation">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/70540/772064/css/fonts.css" />
 	<link rel="stylesheet" href="//f.fontdeck.com/s/css/9FRVfkomeCh4H19B/qGVFg41Ywo/<?php echo $_SERVER['SERVER_NAME']; ?>/60449.css" type="text/css" />
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/assets/images/favicon.ico" />
