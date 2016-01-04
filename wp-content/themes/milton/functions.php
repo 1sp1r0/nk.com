@@ -27,7 +27,6 @@ function create_post_type() {
       ),
 	'supports' => array('title'),
     'public' => true,
-    'has_archive' => true,
 	'rewrite' => array( 'slug' => 'the-team' )
     )
   );

@@ -10,12 +10,20 @@
 	@include whitney-book;
 }
 
-.profile-intro-image, .profile-outtro-image{
+.a11y{
+	text-indent: -9999em;
+}
+
+.profile-intro-image, .profile-outtro-image, .page-intro-image, .page-outtro-image{
 	background-image: url('http://localhost:8888/newkind/wp-content/themes/milton/assets/team-profiles/elise-top.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 160px;
+}
+
+.page-intro-image, .page-outtro-image{
+	height: 240px;
 }
 
 .profile-intro-image{
@@ -399,6 +407,68 @@ h3.tab{
 		}
 	}
 
+}
+
+.cards{
+	@include self-clear;
+	margin-top: 1em;
+
+	li{
+		width: 25%;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		float: left;
+
+		img{
+			width: 100%;
+		}
+
+		&:nth-child(4n+1){
+			clear: left;
+		}
+
+		dl{
+			line-height: 1em;
+			padding-bottom: .5em;
+			padding-left: .5em;
+
+			dt{
+				font-size: .9em;
+			}
+
+			dd{
+				font-size: .7em;
+			}
+		}
+	}
+}
+
+.join-us{
+	background: #eee;
+	padding: 5%;
+
+	h3{
+		font-size: 2em;
+		width: 50%;
+		float: left;
+		text-align: center;
+	}
+
+	.posts{
+
+		h4{
+			font-size: 1.1em;
+			a{
+				color: $nkblue;
+			}
+		}
+
+		p{
+			font-size: .7em;
+			color: #aaa;
+		}
+	}
 }
 
 
