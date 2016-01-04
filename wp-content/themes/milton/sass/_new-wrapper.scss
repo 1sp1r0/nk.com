@@ -412,6 +412,7 @@ h3.tab{
 .cards{
 	@include self-clear;
 	margin-top: 1em;
+	margin-bottom: 1em;
 
 	li{
 		width: 25%;
