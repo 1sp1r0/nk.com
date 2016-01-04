@@ -6,6 +6,7 @@
 	<?php 
 		nk_custom_header_image_sizes( get_field( 'intro_image' ), '.page-intro-image' ); 
 		nk_custom_header_image_sizes( get_field( 'outtro_image'), '.page-outtro-image' );
+		$tommy = get_field('tommy_image')['sizes']['med-large'];
 	?>
 	<div class="page-intro-image"><h2 class="a11y">The Team</h2></div>
 
@@ -28,7 +29,7 @@
 
 			if( $count % 4  != 0 ){
 				echo '<li>';
-				echo '<img src="' . get_field('tommy_image')['sizes']['med-large'] . '" />';
+				echo '<img src="' . $tommy . '" />';
 				echo '<dl><dt>Tommy the Platypus</dt><dd>Mascot</dd></dl>';
 				echo '</li>';
 			}
