@@ -19,7 +19,7 @@
 			if ( $loop -> have_posts() ) : while ( $loop -> have_posts() ) : $loop -> the_post();
 				//the_title();
 					echo '<li>';
-					echo '<a href="'.get_the_permalink().'"><img src="'.get_field('headshot')['sizes']['medium'].'" />';
+					echo '<a href="'.get_the_permalink().'"><img src="'.get_field('headshot')['sizes']['med-large'].'" />';
 					echo '<dl><dt>'.get_field('first_name').' '.get_field('last_name').'</dt><dd>'.get_field('job_title').'</dd></dl></a>';
 					echo '</li>';
 			endwhile;endif;
