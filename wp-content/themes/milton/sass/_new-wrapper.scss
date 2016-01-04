@@ -646,17 +646,10 @@ h3.tab{
 	}
 }
 
-/*@media screen and (max-width: 400px){
+@media screen and (max-width: 400px){
 
-	.cards{
-
-		li{
-			width: 100%;
-
-			&:nth-child(2n+1){
-				clear: none;
-			}
-		}
+	.page-intro-image, .page-outtro-image{
+		height: 160px;
 	}
 
-}*/
+}
