@@ -28,7 +28,7 @@
 			endwhile;endif;
 
 			if( $count % 4  != 0 ){
-				echo '<li>';
+				echo '<li class="tommy">';
 				echo '<img src="' . $tommy . '" />';
 				echo '<dl><dt>Tommy the Platypus</dt><dd>Mascot</dd></dl>';
 				echo '</li>';
