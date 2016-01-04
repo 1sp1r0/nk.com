@@ -660,3 +660,9 @@ h3.tab{
 	}
 
 }
+
+@media screen and (min-width: 2000px){
+	.page-intro-image, .page-outtro-image{
+		height: 400px;
+	}
+}
