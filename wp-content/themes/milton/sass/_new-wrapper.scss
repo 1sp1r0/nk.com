@@ -409,7 +409,7 @@ h3.tab{
 
 }
 
-.cards{
+.cards.tiles{
 	@include self-clear;
 	margin-top: 1em;
 	margin-bottom: 1em;
@@ -481,9 +481,9 @@ h3.tab{
 }
 
 @media screen and (max-width: 950px){
-	.cards{
+	.cards.tiles{
 
-		li{
+		.tile{
 			width: 33.333%;
 
 			&:nth-child(4n+1){
@@ -635,7 +635,7 @@ h3.tab{
 
 	.cards{
 
-		li{
+		.tile{
 			width: 50%;
 
 			&:nth-child(3n+1){
