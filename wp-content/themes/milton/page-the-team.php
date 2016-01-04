@@ -26,7 +26,7 @@
 					$count++;
 			endwhile;endif;
 
-			if( $count !% 4 ){
+			if( $count % 4  != 0 ){
 				echo '<li>';
 				echo '<img src="' . get_field('tommy_image')['sizes']['med-large'] . '" />';
 				echo '<dl><dt>Tommy the Platypus</dt><dd>Mascot</dd></dl>';
