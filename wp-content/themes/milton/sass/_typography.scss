@@ -15,7 +15,7 @@ a{
 	@include transition(color .5s);
 	
 	&:hover{
-		color: #0af;
+		color: $nkblue;
 	}
 }
 
