@@ -441,7 +441,8 @@ h3.tab{
 			background: #fff;
 			position: absolute;
 			bottom: 0;
-			max-width: 90%;
+			width: 100%;
+			box-sizing: border-box;
 
 			dt{
 				font-size: .9em;
