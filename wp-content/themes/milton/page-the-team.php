@@ -16,7 +16,7 @@
 
 			$args = array( 'post_type' => 'team' );
 			$loop = new WP_Query( $args );
-			$count = 1;
+			$count = 0;
 			if ( $loop -> have_posts() ) : while ( $loop -> have_posts() ) : $loop -> the_post();
 				//the_title();
 					echo '<li>';
