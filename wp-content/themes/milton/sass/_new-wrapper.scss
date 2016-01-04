@@ -475,7 +475,7 @@ h3.tab{
 	.cards{
 
 		li{
-			width: 33%;
+			width: 33.333%;
 
 			&:nth-child(4n+1){
 				clear: none;
@@ -613,7 +613,7 @@ h3.tab{
 	}
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 400px){
 
 	.cards{
 
