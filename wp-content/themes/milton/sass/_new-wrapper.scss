@@ -414,13 +414,15 @@ h3.tab{
 	margin-top: 1em;
 	margin-bottom: 1em;
 
-	li{
+	.tile{
 		width: 25%;
 		box-sizing: border-box;
 		margin: 0;
 		padding: 0;
 		float: left;
+		height: 35vh;
 		border: 2px solid #fff;
+		padding-bottom: 3.5em!important;
 
 		img{
 			width: 100%;
@@ -432,8 +434,13 @@ h3.tab{
 
 		dl{
 			line-height: 1em;
-			padding-bottom: .5em;
-			padding-left: .5em;
+			padding: .5em;
+			width: 100%;
+			color: #000;
+			z-index: 4;
+			background: #fff;
+			position: absolute;
+			bottom: 0;
 
 			dt{
 				font-size: .9em;
