@@ -422,7 +422,8 @@ h3.tab{
 		float: left;
 		height: 35vh;
 		border: 2px solid #fff;
-		padding-bottom: 3.5em!important;
+		justify-content: flex-end;
+
 
 		img{
 			width: 100%;
@@ -435,12 +436,12 @@ h3.tab{
 		dl{
 			line-height: 1em;
 			padding: .5em;
-			width: 100%;
 			color: #000;
 			z-index: 4;
 			background: #fff;
 			position: absolute;
 			bottom: 0;
+			max-width: 90%;
 
 			dt{
 				font-size: .9em;
