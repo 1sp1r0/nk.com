@@ -124,6 +124,11 @@ header{
 }
 
 @media screen and (max-width: 720px){
+
+	header{
+		padding: .5em 0;
+	}
+
 	.site_title{
 		text-align: left;
 		width: 200px;
