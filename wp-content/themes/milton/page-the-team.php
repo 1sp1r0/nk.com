@@ -16,13 +16,22 @@
 
 			$args = array( 'post_type' => 'team' );
 			$loop = new WP_Query( $args );
+			$count = 1;
 			if ( $loop -> have_posts() ) : while ( $loop -> have_posts() ) : $loop -> the_post();
 				//the_title();
 					echo '<li>';
 					echo '<a href="'.get_the_permalink().'"><img src="'.get_field('headshot')['sizes']['med-large'].'" />';
 					echo '<dl><dt>'.get_field('first_name').' '.get_field('last_name').'</dt><dd>'.get_field('job_title').'</dd></dl></a>';
 					echo '</li>';
+					$count++;
 			endwhile;endif;
+
+			if( $count !% 4 ){
+				echo '<li>';
+				echo '<img src="' . get_field('tommy_image')['sizes']['med-large'] . '" />';
+				echo '<dl><dt>Tommy the Platypus</dt><dd>Mascot</dd></dl>';
+				echo '</li>';
+			}
 			?>
 
 		</ul>
