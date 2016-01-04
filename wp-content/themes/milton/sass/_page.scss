@@ -181,7 +181,7 @@
 		width: 75%;
 	}
 	
-	.cards ul li{
+	.old-cards ul li{
 		width: 45%;
 		margin: 0 5% 5% 0;
 		
@@ -195,7 +195,7 @@
 }
 
 @media screen and (max-width: 880px){
-	.cards ul li.work-item{ height: 280px; }
+	.old-cards ul li.work-item{ height: 280px; }
 	
 	.bordered{
 		min-width: inherit;
@@ -222,7 +222,7 @@
 
 @media screen and (max-width: 560px){
 	
-	.cards ul li{
+	.old-cards ul li{
 		float: none;
 		width: 100%;
 		margin: 0 0 4em!important;
