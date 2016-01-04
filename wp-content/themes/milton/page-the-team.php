@@ -11,7 +11,7 @@
 	?>
 	<div class="page-intro-image"><h2 class="a11y">The Team</h2></div>
 
-	<div class="cards">
+	<div class="cards tiles">
 		<ul>
 
 			<?php
