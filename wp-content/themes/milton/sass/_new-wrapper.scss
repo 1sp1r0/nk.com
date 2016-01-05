@@ -424,6 +424,14 @@ h3.tab{
 		border: 2px solid #fff;
 		justify-content: flex-end;
 
+		&:before{
+			background: rgba(0,0,0,0);
+		}
+
+		&:hover:before{
+			background: rgba( 0,179,227,.5 )
+		}
+
 
 		img{
 			width: 100%;
