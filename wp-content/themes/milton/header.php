@@ -33,6 +33,10 @@
 			<a href="<?php bloginfo('url'); ?>"><h1 class="site_title">New Kind</h1></a>
 			<a href="#" class="menu_hamburger">Menu</a>
 			<nav class="global_nav" role="navigation">
+				<div class="nav_utilities">
+					<a href="#" id="close-link">Close</a>
+					<a href="<?php echo bloginfo('url'); ?>" id="home-link">Home</a>
+				</div>
 				<ul>
 				<?php 
 					$args = array(

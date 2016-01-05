@@ -151,8 +151,14 @@ $(document).ready(function(){
 	
 	function expandMenu(){
 		
-		$('.menu_hamburger').click(function(){
+		$('.menu_hamburger').click(function(event){
+			event.preventDefault();
 			$('.global_nav').toggleClass('visible');
+
+			$('.global_nav #close-link').click(function(event){
+				event.preventDefault();
+				$('.global_nav').removeClass('visible');
+			});
 		});
 		
 	}
