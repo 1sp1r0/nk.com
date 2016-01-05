@@ -21,11 +21,11 @@
 			$count = 0;
 			if ( $loop -> have_posts() ) : while ( $loop -> have_posts() ) : $loop -> the_post();
 				//the_title();
-					echo '<li class="tile">';
+					echo '<li>';
 					nk_custom_profile_image_sizes( get_field('headshot'), '#count-' . $count );
-					echo '<a href="'.get_the_permalink().'"><span id="count-' . $count . '"></span></a>';
+					echo '<a class="tile" href="'.get_the_permalink().'"><span id="count-' . $count . '"></span>';
 					echo '<dl><dt>'.get_field('first_name').' '.get_field('last_name').'</dt><dd>'.get_field('job_title').'</dd></dl></a>';
-					echo '</li>';
+					echo '</a></li>';
 					$count++;
 			endwhile;endif;
 
