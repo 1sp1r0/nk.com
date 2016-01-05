@@ -6,8 +6,6 @@ $( document ).ready( function() {
   		
   		var items = [];
 
-  		console.log( data.messages );
-
   		var counter = 0;
 
       var user = $('.recent-posts.slack').data('user');
