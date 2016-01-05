@@ -31,8 +31,6 @@
 
 		<?php get_template_part('content-about-adventure-week'); ?>
 
-		<?php get_template_part('content-newsletter-signup'); ?>
-
 	</section>
 
 <?php endwhile; endif; ?>
