@@ -46,7 +46,7 @@
 			
 		</section>
 		
-		<p class="copyright">&copy; 2015 New Kind</p>
+		<p class="copyright">&copy; <?php echo date('Y'); ?> New Kind</p>
 		
 	</div>
 </footer>
