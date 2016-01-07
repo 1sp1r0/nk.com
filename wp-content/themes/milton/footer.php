@@ -56,7 +56,7 @@
 <script type="text/javsacript" src="<?php bloginfo('template_directory'); ?>/js/html5shiv.min.js"></script>
 <?php /*<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/imagesLoaded.js"></script>*/ ?>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/scripts.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/adventure-guide.js"></script>
+<?php /*<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/adventure-guide.js"></script>*/ ?>
 
 <script src="<?php echo get_template_directory_uri(); ?>/js/slack.js"></script>
 

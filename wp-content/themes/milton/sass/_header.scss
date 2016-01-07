@@ -49,6 +49,11 @@ header{
 	text-transform: uppercase;
 	padding-top: .75em;
 	font-size: .9em;
+
+	.nav_utilities{
+		display: none;
+	}
+
 	ul li{
 		display: inline-block;
 		list-style: none;
@@ -126,44 +131,100 @@ header{
 @media screen and (max-width: 720px){
 
 	header{
-		padding: .5em 0;
+		padding: 0;
 	}
 
 	.site_title{
 		text-align: left;
-		width: 200px;
+		width: 100px;
 		float: left;
+		background-size: 100%;
+		position: relative;
+		top: .5em;
 	}
 	
 	.menu_hamburger{
 		display: block;
 		position: absolute;
 		right: 2em;
-		margin-top: 1em;
+		margin-top: 1.25em;
 		text-indent: -9999em;
-		height: 30px;
-		width: 30px;
-		background: url('../assets/images/menu-hamburger.png') no-repeat 0 0;
+		height: 25px;
+		width: 25px;
+		background: url('../assets/images/header/nk_nav_icons_menu.svg') no-repeat 0 0;
 		background-size: cover;
 		
 	}
 	
 	.global_nav{
 		clear: both;
-		height: 0;
+		height: 100vh;
+		width: 100vw;
 		margin: 0;
 		padding: 0;
-		overflow: hidden;
+		position: fixed;
+		top: 0;
+		left: -100vw;
+		background: $nkblue;
 		@include transition(all .5s);
+		z-index: 9999;
+
+		.nav_utilities{
+			display: block;
+			@include clearfix;
+			padding: .5em 0;
+		}
+
+		.nav_utilities a{
+			display: block;
+			text-indent: -9999em;
+			background-size: 25px;
+			background-position: center;
+			width: 25px;
+			height: 25px;
+			margin: 1em 0;
+			float: left;
+
+			&#close-link{
+				margin-left: 10vw;
+				background-image: url('../assets/images/header/nk_nav_icons_back.svg');
+			}
+
+			&#home-link{
+				float: right;
+				margin-right: 10vw;
+				background-image: url('../assets/images/header/nk_nav_icons_home.svg');
+			}
+		}
 		
 		&.visible{
-			height: 200px;
-			padding-top: 2em;
+			left: 0;
 		}
 		
 		ul li{
 			display: block;
-			margin-bottom: 1.5em;
+			margin: 0;
+			
+			a, &:last-child a{ 
+				box-sizing: border-box;
+				display: block;
+				padding: 1em 10vw;
+				font-size: 1.2em;
+				text-align: left;
+				color: #eee; 
+				width: 100%;
+				@include transition(all .5s);
+
+				&:hover{
+					color: #fff;
+				}
+			}
+
+			&.current-menu-item a{
+				color: #fff;
+				position: relative;
+				background: lighten( $nkblue, 2% );
+			}
 		}
 	}
 }

@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/70540/772064/css/fonts.css" />
 	<link rel="stylesheet" href="//f.fontdeck.com/s/css/9FRVfkomeCh4H19B/qGVFg41Ywo/<?php echo $_SERVER['SERVER_NAME']; ?>/60449.css" type="text/css" />
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/assets/images/favicon.ico" />
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/screen.css?1.5.2016" />
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/screen.css?1.7.2016v1.0" />
 	<link rel="stylesheet" type="text/css" media="print" href="<?php bloginfo('template_directory'); ?>/css/print.css" />
 	
 	<!-- Google Analytics -->
@@ -33,6 +33,10 @@
 			<a href="<?php bloginfo('url'); ?>"><h1 class="site_title">New Kind</h1></a>
 			<a href="#" class="menu_hamburger">Menu</a>
 			<nav class="global_nav" role="navigation">
+				<div class="nav_utilities">
+					<a href="#" id="close-link">Close</a>
+					<a href="<?php echo bloginfo('url'); ?>" id="home-link">Home</a>
+				</div>
 				<ul>
 				<?php 
 					$args = array(
