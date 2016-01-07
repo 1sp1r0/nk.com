@@ -223,7 +223,7 @@ header{
 			&.current-menu-item a{
 				color: #fff;
 				position: relative;
-				border-bottom: 2px dashed darken($nkblue, 5%);
+				background: lighten( $nkblue, 2% );
 			}
 		}
 	}
