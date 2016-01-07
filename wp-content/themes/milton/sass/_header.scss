@@ -178,11 +178,23 @@ header{
 		.nav_utilities a{
 			display: block;
 			text-indent: -9999em;
-			background: yellow;
+			background-size: 30px;
+			background-position: center;
 			width: 30px;
 			height: 30px;
-			margin: 1em -5vw 1em 10vw;
+			margin: 1em 0;
 			float: left;
+
+			&#close-link{
+				margin-left: 10vw;
+				background-image: url('../assets/images/header/nk_nav_icons_back.svg');
+			}
+
+			&#home-link{
+				float: right;
+				margin-right: 10vw;
+				background-image: url('../assets/images/header/nk_nav_icons_home.svg');
+			}
 		}
 		
 		&.visible{
@@ -211,17 +223,7 @@ header{
 			&.current-menu-item a{
 				color: #fff;
 				position: relative;
-
-				&:before{
-					content: '';
-					display: block;
-					height: 10px;
-					width: 10px;
-					background: yellow;
-					position: absolute;
-					left: 5vw;
-					top: 1.35em;
-				}
+				border-bottom: 2px dashed darken($nkblue, 5%);
 			}
 		}
 	}
