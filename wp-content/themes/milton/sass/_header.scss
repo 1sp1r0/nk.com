@@ -187,8 +187,7 @@ header{
 
 			&#close-link{
 				margin-right: 10vw;
-				background-image: url('../assets/images/header/nk_nav_icons_back.svg');
-				@include transform(rotate(180deg));
+				background-image: url('../assets/images/header/nk_nav_icons_close.svg');
 			}
 
 			&#home-link{
