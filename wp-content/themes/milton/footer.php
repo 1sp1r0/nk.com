@@ -58,7 +58,7 @@
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/scripts.js?1.7.2016"></script>
 <?php /*<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/adventure-guide.js"></script>*/ ?>
 
-<script src="<?php echo get_template_directory_uri(); ?>/js/slack.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/slack.js?1.9.2016"></script>
 
 <!-- Start of Async HubSpot Analytics Code -->
  <script type="text/javascript">
