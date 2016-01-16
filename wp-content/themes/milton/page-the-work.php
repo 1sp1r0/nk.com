@@ -23,7 +23,7 @@
 				while ( $loop->have_posts() ) : $loop->the_post();
 					//the_title();
 					echo '<li>';
-					nk_custom_profile_image_sizes( get_field('case_study_image'), '#count-' . $count );
+					nk_custom_profile_image_sizes( get_field('case_study_thumbnail'), '#count-' . $count );
 					echo '<a class="tile" id="count-' . $count . '" href="'.get_the_permalink().'"><img src="'.get_field('case_study_thumbnail').'" />';
 					echo '<dl><dt>'.get_field('case_study_organization').'</dt><dd>'.get_field('case_study_description').'</dd></dl></a>';
 					echo '</li>';
