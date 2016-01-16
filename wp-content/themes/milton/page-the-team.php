@@ -9,7 +9,7 @@
 		$tommy = get_field('tommy_image');
 		nk_custom_profile_image_sizes( $tommy, '.tommy span');
 	?>
-	<div class="page-intro-image"><h2 class="a11y">The Team</h2></div>
+	<div class="page-intro-image"><h2 class="a11y"><?php esc_html( the_title() ); ?></h2></div>
 
 	<div class="cards tiles">
 		<ul>

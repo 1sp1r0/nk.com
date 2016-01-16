@@ -16,19 +16,12 @@
 	<meta property="og:url" content="<?php echo get_the_permalink(); ?>" />
 	<meta property="og:description" content="We bring people together to share in the adventure of creating the future. We're a New Kind of agency." />
 	
-	<!-- Google Analytics -->
-		<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    	
-		ga('create', 'UA-7648699-1', 'auto');
-		ga('send', 'pageview');
-    	
-		</script>
-	<!-- End Google Analytics -->
-	<!-- verifying successful git deployment -->
+	<?php
+		if( get_bloginfo('url') == 'http://newkind.com' ){
+			// only include analytics if on production
+			include_once(get_template_directory_uri() . '/includes/ga-tracking.php');
+		}
+	?>
 </head>
 <body>
 	
@@ -71,7 +64,7 @@
 		}elseif(is_post_type_archive('team')){
 			$pageType = 'the_team';
 		}elseif(is_post_type_archive('work')){
-			$pageType = 'our_purpose';
+			$pageType = 'new-wrapper';
 		}elseif(is_page('workshops')){
 			$pageType = 'workshop_landing';
 		}elseif(has_category('adventure-week')){

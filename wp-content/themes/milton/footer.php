@@ -54,21 +54,14 @@
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/modernizr.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery-1.11.1.min.js"></script>
 <script type="text/javsacript" src="<?php bloginfo('template_directory'); ?>/js/html5shiv.min.js"></script>
-<?php /*<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/imagesLoaded.js"></script>*/ ?>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/scripts.js?1.7.2016"></script>
-<?php /*<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/adventure-guide.js"></script>*/ ?>
-
 <script src="<?php echo get_template_directory_uri(); ?>/js/slack.js?1.9.2016"></script>
 
-<!-- Start of Async HubSpot Analytics Code -->
- <script type="text/javascript">
-   (function(d,s,i,r) {
-     if (d.getElementById(i)){return;}
-     var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
-     n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/532381.js';
-     e.parentNode.insertBefore(n, e);
-   })(document,"script","hs-analytics",300000);
- </script>
-<!-- End of Async HubSpot Analytics Code -->
+<?php
+	if( get_bloginfo('url') == 'http://newkind.com' ){
+		// only include hubspot if on production
+		include_once(get_template_directory_uri() . '/includes/hubspot-tracking.php');
+	}
+?>
 </body>
 </html>
