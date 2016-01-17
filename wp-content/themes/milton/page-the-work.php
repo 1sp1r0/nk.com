@@ -24,7 +24,7 @@
 					//the_title();
 					echo '<li>';
 					nk_custom_profile_image_sizes( get_field('case_study_thumbnail'), '#count-' . $count );
-					echo '<a class="tile" id="count-' . $count . '" href="'.get_the_permalink().'"><img src="'.get_field('case_study_thumbnail').'" />';
+					echo '<a class="tile" href="'.get_the_permalink().'"><span id="count-' . $count . '"></span>';
 					echo '<dl><dt>'.get_field('case_study_organization').'</dt><dd>'.get_field('case_study_description').'</dd></dl></a>';
 					echo '</li>';
 					$count++;
