@@ -93,7 +93,7 @@
 					
 					<p class="whitney_semi_bold largest">Then New Kind is ready to make the journey with you.</p>
 					
-					<a href="<?php bloginfo('url'); ?>/get-in-touch" class="button clear">Say Hello</a>
+					<a href="<?php bloginfo('url'); ?>/get-in-touch" class="button clear">Request a Consultation</a>
 				</div>
 			</section>
 	</section><!--#who_we_work_with-->	
