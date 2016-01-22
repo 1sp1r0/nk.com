@@ -49,7 +49,7 @@
 				$name = get_the_author_meta('display_name',$userID);
 				$title = get_the_author_meta('job_title',$userID);
 				$description = get_the_author_meta('description',$userID);
-				$headshot = get_avatar_url(get_avatar($userID));
+				$headshot = get_avatar_url( $userID);
 				$organization = "New Kind";
 				
 				
