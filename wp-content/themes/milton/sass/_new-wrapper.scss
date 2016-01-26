@@ -6,6 +6,8 @@
 	left: -9999em;
 }
 
+/* NEW FOR COMPILE - DELETE LATER */
+
 .new-wrapper{
 	@include whitney-book;
 }
@@ -488,6 +490,59 @@ h3.tab{
 			color: #aaa;
 		}
 	}
+}
+
+/* CASE STUDIES */
+
+.new-wrapper{
+
+	&.case-study{
+
+		.header{
+			padding: 5%;
+
+			h2{
+				margin-bottom: .5em;
+			}
+
+			h2, p{
+				width: auto;
+				text-align: left;
+				padding: 0;
+			}
+		}
+
+		.text{
+			padding: 4em 5%;
+
+			h2{
+				color: $nkblue;
+				font-size: 1.4em;
+				text-transform: uppercase;
+			}
+		}
+
+		.image, .text-on-image{
+			img{
+				width: 100%;
+			}
+		}
+
+		.text-on-image{
+			position: relative;
+			background-size: cover;
+			background-position: center;
+
+			.text{
+				background: rgba(255,255,255,.95);
+				padding: 5%;
+				width: 40%;
+				box-sizing: border-box;
+			}
+		}
+
+	}
+
 }
 
 @media screen and (max-width: 950px){

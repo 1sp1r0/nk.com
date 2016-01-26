@@ -1,4 +1,63 @@
 <?php get_header(); ?>
+
+<?php if( get_field('layout') != null ): ?>
+
+	<div class="new-wrapper case-study">
+
+		<div class="header">
+
+			<h2 class="page_title"><?php the_title(); ?></h2>
+	
+			<p class="case_summary"><?php echo get_field('case_study_subtitle'); ?></p>
+
+		</div>
+
+	<?php
+
+	$data = get_field('layout');
+
+	foreach( $data as $layouts ){
+
+		$layout = $layouts['acf_fc_layout'];
+
+
+
+		if( $layout == 'text' ){
+			echo '<div class="text">' . $layouts['text'] . '</div>';
+		}
+
+		if( $layout == 'text_on_image' ){
+
+			echo '<div class="text-on-image" style="background-image:url(' . $layouts['image']['sizes']['x-large'] . ');" />';
+			if( $layouts['image_caption'] != null){
+				echo '<p class="image-caption">' . $layouts['image_caption'] . '</p>';
+			}
+			echo '<div class="text">' . $layouts['text'] . '</div>';
+
+			echo '</div>';
+		}
+
+		if( $layout == 'image' ){
+
+			echo '<div class="image">';
+			echo '<img src="' . $layouts['image']['sizes']['x-large'] . '" />';
+			if( $layouts['image_caption'] != null){
+				echo '<p class="image-caption">' . $layouts['image_caption'] . '</p>';
+			}
+
+			echo '</div>';
+
+
+		}
+	} 
+
+
+
+	?>
+
+	</div>
+
+<?php else: ?>
 <nav class="sub_nav" role="navigation">
 	<ul class="wrapper">
 		<?php 
@@ -94,5 +153,7 @@
 	
 
 </section>
+
+<?php endif; ?>
 
 <?php get_footer(); ?>
