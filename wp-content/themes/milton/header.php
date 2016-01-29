@@ -82,6 +82,8 @@
 				$pageType = 'contact';
 		}elseif(is_single()){
 			$pageType = 'blog_article';
+		}elseif(is_page('technology')){
+			$pageType = 'landing';
 		}elseif(is_page()){
 			$pageType = 'page';
 		}elseif(is_archive()){
