@@ -84,11 +84,13 @@
 
 	.container{
 		flex-direction: column;
+		-webkit-display: flex;
 		display: flex;
 
 		.tile{
-			flex: 1 50%;
+			flex: 1;
 			padding: 2em;
+			//height: 400px;
 			color: $white;
 			text-align: center;
 			justify-content: flex-start;
