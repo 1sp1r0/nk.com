@@ -1,6 +1,11 @@
 .landing{
 	@extend .new-wrapper;
 
+	.page-intro-image{
+		background: url('http://www.redhat.com/cms/public/video-still-red-hat-broll-400x225_0.jpg') no-repeat center;
+		background-size: cover;
+	}
+
 
 	h3{
 		line-height: 1.4em;
@@ -9,13 +14,11 @@
 
 	section{
 		padding: 4em 0;
-	}
+		@include clearfix;
 
-	.red-hat{
-		background: url('../assets/logos/redhat.png') no-repeat top center;
-		background-size: 160px;
-		padding-top: 100px;
-		margin-top: 2em;
+		&.no-padding{
+			padding: 0;
+		}
 	}
 
 	.bg-gray{
@@ -25,8 +28,29 @@
 	.bg-blue{
 		background: $nkblue;
 		color: $white;
+	}
+
+	.intro{
+
 		padding: 2em 0;
 		font-size: 1.4em;
+	}
+
+	.align-left{
+		float: left;
+		width: 50%;
+		padding-right: 10%;
+		@include box-sizing(border-box);
+
+		h3{
+			color: $nkblue;
+			font-size: 1.2em;
+		}
+	}
+
+	.align-right{
+		float: right;
+		width: 50%;
 	}
 
 	.logos{
@@ -44,7 +68,7 @@
 			float: left;
 			text-indent: -9999em;
 			height: 100px;
-			background-size: 50%;
+			background-size: 70%;
 			background-position: center;
 			background-repeat: no-repeat;
 
@@ -92,7 +116,6 @@
 			padding: 2em;
 			//height: 400px;
 			color: $white;
-			text-align: center;
 			justify-content: flex-start;
 
 			span{ z-index: -1; }
@@ -105,18 +128,27 @@
 				background: rgba( 0,179,227,.5 );
 			}
 
-			h4{
-				width: 100%;
-				text-indent: -9999em;
-				background-size: 300px;
-				height: 200px;
-				background-position: center;
-				background-size: 200px;
-				background-repeat: no-repeat;
-			}
+			
 
 			h5{
 				width: 100%;
+			}
+
+			&.image{
+
+				h4, h5{
+					text-align: center;
+				}
+
+				h4{
+					width: 100%;
+					text-indent: -9999em;
+					background-size: 300px;
+					height: 200px;
+					background-position: center;
+					background-size: 200px;
+					background-repeat: no-repeat;
+				}	
 			}
 		}
 
@@ -142,30 +174,28 @@
 
 .landing{
 
-	.red-hat{
-		background-position: left center;
-		padding-left: 200px;
-		padding-top: 0;
-
-		h3{
-			padding-left: 200px;
-		}
-	}
-
 	.bg-gray h3{ padding-left: 200px; }
 
 	.container{
 		flex-direction: row;
 	}
 
-	.bg-blue{
+	.intro{
 		font-size: 2em;
 	}
 
 	.logos{
 
 		li{
-			width: 25%;
+			width: 12.5%;
+		}
+	}
+
+	.container .tile{
+		min-height: 200px;
+
+		h4,h5{
+			text-align: left;
 		}
 	}
 
