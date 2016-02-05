@@ -2,9 +2,9 @@
 	@extend .new-wrapper;
 
 	.page-intro-image{
-		background: url('http://www.redhat.com/cms/public/video-still-red-hat-broll-400x225_0.jpg') no-repeat center;
+		background: url('../assets/images/blog/mountain2-1600.jpg') no-repeat center 45%;
 		background-size: cover;
-		height: 150px;
+		@include filter(grayscale(100%));
 	}
 
 

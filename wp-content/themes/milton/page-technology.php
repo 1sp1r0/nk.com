@@ -13,7 +13,7 @@ get_header();
 		
 		<div class="wrapper">
 		
-			<h3>New Kind is a proven branding firm for technology companies inventing or reinventing themselves.</h3>
+			<h3>A branding firm for technology companies inventing or reinventing themselves.</h3>
 		
 		</div>
 		
@@ -25,7 +25,7 @@ get_header();
 
 			<div class="align-left">
 			
-				<h3><strong>We know what it takes to build a successful technology company because we’ve done it ourselves.</strong></h3>
+				<h3><strong>We know what it takes to build a successful technology brand because we’ve done it ourselves.</strong></h3>
 			
 			</div><!--.align-left-->
 
@@ -34,9 +34,7 @@ get_header();
 				<p class="red-hat">The founders of New Kind played key roles at Red Hat
 				   as the company—and the broader open source
 				   software movement—revolutionized the technology
-				   industry. Through shared experience leading
-				   communications, brand, and community efforts, we
-				   helped Red Hat grow from one office in Durham, NC
+				   industry. We <a href="<?php echo get_bloginfo('url'); ?>/our-story">helped Red Hat grow</a> from one office in North Carolina
 				   to a global $1 billion industry leader.</p>
 
 			</div><!--.align-right-->
@@ -47,19 +45,19 @@ get_header();
 		
 	</section>
 	
-	
+	<h2>Case Studies</h2>
 	<div class="container">
 
 		<a href="#" class="tile ansible image">
 			<span></span>
 			<h4>Ansible</h4>
-			<h5>Brand story, positioning, identity development. Acquired by Red Hat in 2015 for over $100m.</h5>
+			<h5>Ansible was acquired by Red Hat in 2015 for over $100m.</h5>
 		</a>
 
 		<a href="#" class="tile nginx image">
 			<span></span>
 			<h4>Nginx</h4>
-			<h5>Brand story, positioning, ongoing  research, design, campaigns.</h5>
+			<h5>NGINX powers half the world's busiest sites.</h5>
 		</a>
 
 	</div>
