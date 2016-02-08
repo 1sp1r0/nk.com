@@ -286,6 +286,16 @@
 
 	.container{
 		flex-direction: row;
+
+		&.column{
+			flex-direction: column;
+
+			h4,h5{
+				width: 100%;
+				max-width: 980px;
+				margin: 0 auto;
+			}
+		}
 	}
 
 	.intro{
@@ -297,26 +307,6 @@
 		li{
 			width: 12.5%;
 		}
-	}
-
-	.container .tile{
-		min-height: 200px;
-
-		&.cta{
-			text-align: right;
-			h4,h5{
-				width: 100%;
-			}
-		}
-
-		&.adventure-guide{
-			background-position: 2em center;
-				background-size: 160px;
-				padding-left: 240px;
-				background-image: url('http://cdn2.hubspot.net/hub/532381/hubfs/brandpositioning.png?t=1454966187423&width=332');
-				background-repeat: no-repeat;
-		}
-
 	}
 
 	.services{

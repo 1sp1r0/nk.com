@@ -13,7 +13,7 @@ get_header();
 		
 		<div class="wrapper">
 		
-			<h3>A branding firm for technology companies inventing or reinventing themselves.</h3>
+			<h3>We are a branding firm for technology companies inventing or reinventing themselves.</h3>
 		
 		</div>
 		
@@ -25,7 +25,7 @@ get_header();
 
 			<div class="align-left">
 			
-				<h3><strong>We know what it takes to build a successful technology brand because we’ve done it ourselves.</strong></h3>
+				<h3><strong>We know what it takes to build a successful technology brand because we’ve been there.</strong></h3>
 			
 			</div><!--.align-left-->
 
@@ -43,7 +43,7 @@ get_header();
 		
 	</section>
 		
-	<h2 class="section-header"><div class="wrapper">Case Studies</div></h2>
+	<h2 class="section-header"><div class="wrapper">Case Stories</div></h2>
 
 	<div class="container">
 
@@ -147,7 +147,7 @@ get_header();
 	
 	</section><!--.services-->
 
-	<section class="container no-padding">
+	<section class="container column no-padding">
 
 	<a href="#" class="tile bg-blue cta">
 
@@ -161,9 +161,7 @@ get_header();
 	<a href="#" class="tile bg-gray adventure-guide">
 		<span></span>
 
-		<h4>The 4 Critical Building Blocks of Great Brand Positioning</h4>
-
-		<h5><i class="button">Download the adventure guide</i></h5>
+		<h4>Newsletter Form Here</h4>
 
 	</a><!--.tile-->
 
