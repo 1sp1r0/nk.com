@@ -154,16 +154,16 @@ get_header();
 		<span></span>
 		<h4>Ready to chat?</h4>
 
-		<h5>Request a Consultation &rarr;</h5>
+		<h5><i class="button bg-black">Request a Consultation</i></h5>
 
 	</a><!--.tile-->
 
-	<a href="#" class="tile bg-gray">
+	<a href="#" class="tile bg-gray adventure-guide">
 		<span></span>
 
 		<h4>The 4 Critical Building Blocks of Great Brand Positioning</h4>
 
-		<h5>Download the adventure guide &rarr;</h5>
+		<h5><i class="button">Download the adventure guide</i></h5>
 
 	</a><!--.tile-->
 
