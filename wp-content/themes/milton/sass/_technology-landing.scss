@@ -22,13 +22,26 @@
 		}
 	}
 
+	.section-header{
+		text-align: left;
+		color:#fff;
+		padding: .5em 0;
+		font-family: 'Maison Neue Book';
+		font-size: 1.2em;
+		background: #bbb;
+	}
+
 	.bg-gray{
-		background: #ccc;
+		background: #aaa;
 	}
 
 	.bg-blue{
 		background: $nkblue;
 		color: $white;
+	}
+
+	.bg-black{
+		background: #111;
 	}
 
 	.intro{
@@ -38,10 +51,7 @@
 	}
 
 	.align-left{
-		float: left;
-		width: 50%;
-		padding-right: 10%;
-		@include box-sizing(border-box);
+		margin-bottom: 1em;
 
 		h3{
 			color: $nkblue;
@@ -49,29 +59,29 @@
 		}
 	}
 
-	.align-right{
-		float: right;
-		width: 50%;
-	}
-
 	.logos{
 		@include clearfix;
+		padding-top: 2em;
 
-		h2{
-			text-align: center;
-			text-transform: uppercase;
+		h3{
+			color: #ccc;
+			font-size: .8em;
+			font-family: "Maison Neue Book";
+			margin-top: 2em;
+
 		}
 
-		ul{ margin-top: 2em; }
 
 		li{
-			width: 50%;
+			width: 25%;
 			float: left;
 			text-indent: -9999em;
-			height: 100px;
+			height: 70px;
 			background-size: 70%;
-			background-position: center;
+			background-position: left center;
 			background-repeat: no-repeat;
+			-webkit-filter: grayscale(1);
+			filter: grayscale(1);
 
 			&.ibm{
 				background-image: url('../assets/logos/ibm.png');
@@ -89,8 +99,8 @@
 				background-image: url('../assets/logos/alfresco.png');
 			}
 
-			&.pantaho{
-				background-image: url('../assets/logos/pantaho.png');
+			&.pentaho{
+				background-image: url('../assets/logos/pentaho.png');
 			}
 
 			&.lulu{
@@ -107,29 +117,90 @@
 		}
 	}
 
+	.services{
+		padding: 1em 0;
+		background: #111;
+		color: #fff;
+
+		h2{
+			text-align: center;
+			font-size: 1.2em;
+			margin-top: 2em;
+		}
+
+		dl{
+			float: left;
+			width: 45%;
+			margin: 0 5% 2em 0;
+			margin-top: 2em;
+			border-top: 2px solid $nkblue;
+			padding-top: .5em;
+
+			&:nth-child(3){
+				clear: left;
+			}
+
+			&.is-shown dd{
+				display: block;
+			}
+			
+		}
+
+		dt{
+			margin-bottom: 1em;
+		}
+
+		dd{
+			//display: none;
+			font-size: .7em;
+			text-indent: -1.1em;
+			padding-left: 1.1em;
+			line-height: 1.2em;
+			margin-bottom: .4em;
+			color: #aaa;
+
+			&:before{
+				content: '+';
+				margin-right: .5em;
+			}
+		}
+
+		#services-expand{
+			clear: both;
+			display: block;
+			padding: 0 1em;
+			font-size: .8em;
+			color: $nkblue;
+			border-top: 1px dashed $nkblue;
+			text-align: center;
+		}
+	}
+
 	.container{
 		flex-direction: column;
 		-webkit-display: flex;
 		display: flex;
 
+
 		.tile{
 			flex: 1;
 			padding: 2em;
-			//height: 400px;
 			color: $white;
 			justify-content: flex-start;
 
-			span{ z-index: -1; }
+			span{ 
+				z-index: -1; 
+				filter: none;
+				-webkit-filter: none;
+			}
 
 			&:before{
-				background: rgba(0,0,0,0);
+				opacity: 0;
 			}
 
 			&:hover:before{
-				background: rgba( 0,179,227,.5 );
+				opacity: 0;
 			}
-
-			
 
 			h5{
 				width: 100%;
@@ -151,19 +222,29 @@
 					background-repeat: no-repeat;
 				}	
 			}
+
+			&:hover{
+				h4{
+				//	-webkit-filter: brightness(100);
+				//	filter: brightness(100);
+				}
+			}
 		}
 
 		.ansible{
 
-			span{ background: #ff524d; }
+			span{ background: #5bbdbf; }
 
-			h4{ background-image: url('../assets/logos/ansible.png');}
+			h4{ 
+				background-size: 150px!important;
+				background-image: url('../assets/logos/ansible.png');
+			}
 		}
 
 
 		.nginx{
 
-			span{ background: url('../assets/logos/nginx_background.png'); }
+			span{ background: url('../assets/logos/nginx-pattern.png'); }
 
 			h4{ background-image: url('../assets/logos/nginx.png'); }
 		}
@@ -174,6 +255,21 @@
 @media screen and (min-width: 800px){
 
 .landing{
+
+	.align-left{
+
+		float: left;
+		width: 50%;
+		padding-right: 10%;
+		@include box-sizing(border-box);
+	}
+
+
+
+	.align-right{
+		float: right;
+		width: 50%;
+	}
 
 	.bg-gray h3{ padding-left: 200px; }
 
@@ -195,10 +291,27 @@
 	.container .tile{
 		min-height: 200px;
 
-		h4,h5{
-			text-align: left;
+		&.cta{
+			text-align: right;
+			h4,h5{
+				width: 100%;
+			}
 		}
+
 	}
+
+	.services{
+
+		dl{
+			width: 20%;
+
+			&:nth-child(3){
+				clear: none;
+			}
+		}
+
+	}
+
 
 }
 

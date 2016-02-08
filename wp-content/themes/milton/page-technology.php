@@ -39,13 +39,12 @@ get_header();
 
 			</div><!--.align-right-->
 
-
-
 		</div>
 		
 	</section>
-	
-	<h2>Case Studies</h2>
+		
+	<h2 class="section-header"><div class="wrapper">Case Studies</div></h2>
+
 	<div class="container">
 
 		<a href="#" class="tile ansible image">
@@ -64,38 +63,107 @@ get_header();
 
 	<section class="logos">
 
-		<h2>Additional Technology Clients</h2>
+		<div class="wrapper">
+
+		<h3>Additional Technology Clients</h3>
+
 
 		<ul>
 			<li class="ibm">IBM</li>
 			<li class="avid">Avid</li>
 			<li class="lenovo">Lenovo</li>
 			<li class="alfresco">Alfresco</li>
-			<li class="pantaho">Pantaho</li>
+			<li class="pentaho">Pentaho</li>
 			<li class="lulu">Lulu</li>
 			<li class="pspdfkit">PSPDFkit</li>
 			<li class="progress">Progress</li>
 		</ul>
 
+		</div>
+
 	</section>
+
+
+
+	
+	<h2 class="section-header"><div class="wrapper">Services</div></h2>
+
+	<section class="services">
+
+
+
+		<div class="wrapper">
+	
+			<dl>
+				<dt>Strategy</dt>
+				<dd>Brand Strategy</dd>
+				<dd>Campaign Strategy</dd>
+				<dd>Company &amp; Product Naming</dd>
+				<dd>Executive Coaching</dd>
+				<dd>Culture &amp; Brand Alignment</dd>
+				<dd>Team &amp; Community Development</dd>
+				<dd>Digital Strategy</dd>
+			</dl>
+	
+			<dl>
+				<dt>Research<dt>
+				<dd>Brand Surveys</dd>
+				<dd>Engagement Surveys</dd>
+				<dd>Facilitated Workshops</dd>
+				<dd>Brand Tracking Studies</dd>
+				<dd>Persona Development</dd>
+				<dd>Market Research</dd>
+				<dd>Customer &amp; Community Interviews</dd>
+				<dd>User Research</dd>
+			</dl>
+	
+			<dl>
+				<dt>Content</dt>
+				<dd>Storytelling</dd>
+				<dd>Messaging Architecture</dd>
+				<dd>Marketing Campaigns</dd>
+				<dd>Presentations</dd>
+				<dd>Web Content</dd>
+				<dd>Inbound Marketing</dd>
+				<dd>Case Stories</dd>
+			</dl>
+	
+			<dl>
+				<dt>Design</dt>
+				<dd>Graphic Design</dd>
+				<dd>Brand Identity</dd>
+				<dd>Web Development</dd>
+				<dd>Animation</dd>
+				<dd>Video</dd>
+				<dd>Marketing Campaigns</dd>
+				<dd>Product Packaging</dd>
+				<dd>Event Design</dd>
+				<dd>User Experience Design</dd>
+			</dl>
+	
+			<?php /*<a href="#" id="services-expand" class="more">See More</a> */ ?>
+
+		</div><!--.wrapper-->
+	
+	</section><!--.services-->
 
 	<section class="container no-padding">
 
-	<a href="#" class="tile bg-blue">
+	<a href="#" class="tile bg-blue cta">
 
 		<span></span>
 		<h4>Ready to chat?</h4>
 
-		<h5>Lorem ipsum sit amet dolor...</h5>
+		<h5>Request a Consultation &rarr;</h5>
 
 	</a><!--.tile-->
 
 	<a href="#" class="tile bg-gray">
 		<span></span>
 
-		<h4>Want to dig deeper?</h4>
+		<h4>The 4 Critical Building Blocks of Great Brand Positioning</h4>
 
-		<h5>Lorem ipsum sit amet dolor...</h5>
+		<h5>Download the adventure guide &rarr;</h5>
 
 	</a><!--.tile-->
 
