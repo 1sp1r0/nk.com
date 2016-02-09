@@ -38,6 +38,7 @@
 	.bg-blue{
 		background: $nkblue;
 		color: $white;
+		display: block;
 	}
 
 	.bg-black{
@@ -51,7 +52,7 @@
 	}
 
 	.align-left{
-		margin-bottom: 1em;
+		margin-bottom: 2em;
 
 		h3{
 			color: $nkblue;
@@ -80,7 +81,7 @@
 			background-size: 70%;
 			background-position: left center;
 			background-repeat: no-repeat;
-			-webkit-filter: grayscale(1);
+			-webkit-filter: brightness(-100) opacity(.5);
 			filter: grayscale(1);
 
 			&.ibm{
@@ -123,9 +124,11 @@
 		color: #fff;
 
 		h2{
-			text-align: center;
 			font-size: 1.2em;
 			margin-top: 2em;
+			font-weight: 100;
+			font-family: "Maison Neue Light";
+			color: #ccc;
 		}
 
 		dl{
@@ -136,7 +139,7 @@
 			border-top: 2px solid $nkblue;
 			padding-top: .5em;
 
-			&:nth-child(3){
+			&:nth-child(4){
 				clear: left;
 			}
 
@@ -273,6 +276,11 @@
 		width: 50%;
 		padding-right: 10%;
 		@include box-sizing(border-box);
+
+		h3{
+			font-size: 1.6em;
+		}
+	
 	}
 
 
@@ -305,7 +313,8 @@
 	.logos{
 
 		li{
-			width: 12.5%;
+			//width: 12.5%;
+			background-size: 40%;
 		}
 	}
 
@@ -314,7 +323,7 @@
 		dl{
 			width: 20%;
 
-			&:nth-child(3){
+			&:nth-child(4){
 				clear: none;
 			}
 		}

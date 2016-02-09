@@ -1,5 +1,33 @@
 </section><!--#main-->
 
+
+<section class="newsletter-signup">
+	<div class="wrapper">
+		<a class="hs-button" href="http://info.newkind.com/consultation">Request a Consultation</a>
+	</div>
+</section>
+
+<section class="newsletter-signup">
+	<div class="wrapper">
+
+		<h3>Subscribe to Updates from New Kind</h3>
+		
+		<!--[if lte IE 8]>
+		<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+		<![endif]-->
+		<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+		<script>
+		  hbspt.forms.create({ 
+		    css: '',
+		    portalId: '532381',
+		    formId: 'e4ff35ab-4eeb-44b8-94e7-62f9a6207200'
+		  });
+		</script>
+
+
+	</div>
+</section>
+
 <footer id="site_footer">
 	<div class="wrapper">
 		<h1 class="site_title">New Kind</h1>

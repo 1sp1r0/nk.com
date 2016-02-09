@@ -37,13 +37,13 @@ get_header();
 				   industry. We <a href="<?php echo get_bloginfo('url'); ?>/our-story">helped Red Hat grow</a> from one office in North Carolina
 				   to a global $1 billion industry leader.</p>
 
+				   <p>Today, New Kind helps technology companies build brand and culture through an open, collaborative approach to strategy, research, content, and design. We help young companies build brands from the ground up. We help established organizations stay fit for the future.</p>
+
 			</div><!--.align-right-->
 
 		</div>
 		
 	</section>
-		
-	<h2 class="section-header"><div class="wrapper">Case Stories</div></h2>
 
 	<div class="container">
 
@@ -65,7 +65,7 @@ get_header();
 
 		<div class="wrapper">
 
-		<h3>Additional Technology Clients</h3>
+		<h3>We also work with</h3>
 
 
 		<ul>
@@ -85,15 +85,13 @@ get_header();
 
 
 
-	
-	<h2 class="section-header"><div class="wrapper">Services</div></h2>
 
 	<section class="services">
 
-
-
 		<div class="wrapper">
 	
+
+		<h2>Services</h2>
 			<dl>
 				<dt>Strategy</dt>
 				<dd>Brand Strategy</dd>
@@ -146,27 +144,6 @@ get_header();
 		</div><!--.wrapper-->
 	
 	</section><!--.services-->
-
-	<section class="container column no-padding">
-
-	<a href="#" class="tile bg-blue cta">
-
-		<span></span>
-		<h4>Ready to chat?</h4>
-
-		<h5><i class="button bg-black">Request a Consultation</i></h5>
-
-	</a><!--.tile-->
-
-	<a href="#" class="tile bg-gray adventure-guide">
-		<span></span>
-
-		<h4>Newsletter Form Here</h4>
-
-	</a><!--.tile-->
-
-
-</section><!--.container-->
 
 </div>
 

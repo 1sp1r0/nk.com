@@ -149,10 +149,22 @@
 @media screen and (max-width: 880px){
 	
 	#site_footer{
-		.one_third{ width: 100%; text-align: center; }
+		.one_third{ width: 100%; text-align: left; }
 		.contact_info{ margin-top: 2em; }
-		.footer_contact{ text-align: center; }
-		.copyright{ text-align: center; }
+		.footer_contact{ 
+			text-align: left; 
+		}
+
+		br{
+			display: block;
+		}
+
+		.footer_social li a{
+			margin-left: 0;
+			margin-right: .5em;
+		}
+		
+		.copyright{ text-align: left; }
 	}
 }
 
