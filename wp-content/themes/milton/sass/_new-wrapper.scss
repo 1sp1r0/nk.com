@@ -500,14 +500,6 @@ h3.tab{
 			width: 33.333%;
 			height: 40vh;
 
-			&:nth-child(4n+1){
-				clear: none;
-			}
-
-			&:nth-child(3n+1){
-				clear: left;
-			}
-
 			&.tommy{
 				display: none;
 			}
@@ -648,14 +640,6 @@ h3.tab{
 		.tile{
 			width: 50%;
 			height: 40vh;
-
-			&:nth-child(3n+1){
-				clear: none;
-			}
-
-			&:nth-child(2n+1){
-				clear: left;
-			}
 
 			&.tommy{
 				display: block;
