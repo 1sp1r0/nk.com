@@ -28,7 +28,10 @@
 
 		if( $layout == 'text_on_image' ){
 
-			echo '<div class="text-on-image" style="background-image:url(' . $layouts['image']['sizes']['x-large'] . ');" />';
+			echo '<div class="text-on-image" style="background-image:url(' . $layouts['image']['sizes']['x-large'] . ');" >';
+
+
+			echo '<img src="' . $layouts['image']['sizes']['large'] . '" />';
 			if( $layouts['image_caption'] != null){
 				echo '<p class="image-caption">' . $layouts['image_caption'] . '</p>';
 			}
