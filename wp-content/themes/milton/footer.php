@@ -54,7 +54,7 @@
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/modernizr.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery-1.11.1.min.js"></script>
 <script type="text/javsacript" src="<?php bloginfo('template_directory'); ?>/js/html5shiv.min.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/scripts.js?1.7.2016"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/scripts.js?2.10.2016"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/slack.js?1.9.2016"></script>
 
 <?php
