@@ -54,12 +54,14 @@ get_header();
 			<span></span>
 			<h4>Ansible</h4>
 			<h5>Ansible was acquired by Red Hat in 2015 for over $100m.</h5>
+			<i class="button">Read the Story</i>
 		</a>
 
 		<a href="#" class="tile nginx image">
 			<span></span>
 			<h4>Nginx</h4>
 			<h5>NGINX powers half the world's busiest sites.</h5>
+			<i class="button">Read the Story</i>
 		</a>
 
 	</div>
