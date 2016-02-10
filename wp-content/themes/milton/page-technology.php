@@ -37,8 +37,11 @@ get_header();
 				   industry. We <a href="<?php echo get_bloginfo('url'); ?>/our-story">helped Red Hat grow</a> from one office in North Carolina
 				   to a global $1 billion industry leader.</p>
 
-				   <p>Today, New Kind helps technology companies build brand and culture through an open, collaborative approach to strategy, research, content, and design. We help young companies build brands from the ground up. We help established organizations stay fit for the future.</p>
+				 <p>Today, New Kind helps technology companies build brand and culture through an open, collaborative approach to strategy, research, content, and design. We help young companies build brands from the ground up. We help established organizations stay fit for the future.</p>
 
+
+
+				<p><a class="button dark" href="http://info.newkind.com/consultation">Request a Consultation</a></p>
 			</div><!--.align-right-->
 
 		</div>
@@ -65,7 +68,7 @@ get_header();
 
 		<div class="wrapper">
 
-		<h3>We also work with</h3>
+		<h3>We've also worked with</h3>
 
 
 		<ul>
@@ -150,7 +153,7 @@ get_header();
 <?php
 
 
-get_footer('landing');
+get_footer();
 
 
 ?>

@@ -1,12 +1,5 @@
 </section><!--#main-->
 
-
-<section class="newsletter-signup">
-	<div class="wrapper">
-		<a class="hs-button" href="http://info.newkind.com/consultation">Request a Consultation</a>
-	</div>
-</section>
-
 <section class="newsletter-signup">
 	<div class="wrapper">
 

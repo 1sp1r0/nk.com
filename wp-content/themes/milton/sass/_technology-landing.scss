@@ -8,6 +8,21 @@
 	}
 
 
+
+	.button{
+		border: 2px solid #fff;
+		padding: .25em .5em;
+		font-size: .8em;
+		background: none;
+		margin: 0;
+
+		&.dark{
+			border-color: $nkblue;
+			color: $nkblue;
+		}
+	}
+
+
 	h3{
 		line-height: 1.4em;
 		font-family: 'Maison Neue Bold';
@@ -195,13 +210,6 @@
 				z-index: -1; 
 				filter: none;
 				-webkit-filter: none;
-			}
-
-			.button{
-				border: 2px solid #fff;
-				padding: .25em .5em;
-				font-size: .8em;
-				background: none;
 			}
 
 			&:before{
