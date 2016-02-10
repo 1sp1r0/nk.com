@@ -4,6 +4,10 @@
 
 	&.case-study{
 
+		.case-study-content div:first-child{
+			padding-top: 0;
+		}
+
 		img{
 			vertical-align: bottom;
 		}
@@ -17,7 +21,7 @@
 		.header{
 			max-width: 980px;
 			width: 90%;
-			margin: 2em auto 0;
+			margin: 4em auto;
 
 			h2{
 				margin-bottom: .5em;

@@ -12,6 +12,8 @@
 
 		</div>
 
+		<div class="case-study-content">
+
 	<?php
 
 	$data = get_field('layout');
@@ -58,6 +60,7 @@
 
 	?>
 
+		</div>
 	</div>
 
 <?php else: ?>
