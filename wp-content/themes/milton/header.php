@@ -14,7 +14,7 @@
 	<meta property="og:title" content="<?php bloginfo('name'); ?><?php wp_title('-'); ?>" />
 	<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/social-icons/facebook-og.png" />
 	<meta property="og:url" content="<?php echo get_the_permalink(); ?>" />
-	<meta property="og:description" content="We bring people together to share in the adventure of creating the future. We're a New Kind of agency." />
+	<meta property="og:description" content="We bring people together to share in the adventure of creating the future." />
 	
 	<?php
 		if( get_bloginfo('url') == 'http://newkind.com' ){
