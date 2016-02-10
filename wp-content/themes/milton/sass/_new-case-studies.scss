@@ -72,6 +72,31 @@
 			}
 		}
 
+		.new-quote{
+			padding: 4em 5%;
+			font-size: 1.4em;
+			color: $nkblue;
+
+			p{
+				margin-top: 0;
+			}
+
+			.quote-text{
+				margin-bottom: 1em;
+			}
+
+			span{
+				font-size: .6em;
+				display: block;
+				line-height: 1.2em;
+				color: #111;
+
+				&.title{
+					color: #ccc;
+				}
+			}
+		}
+
 	}
 
 }
@@ -103,6 +128,17 @@
 				margin: 0;
 			}
 
+		}
+
+		.new-quote{
+			font-size: 2em;
+			padding: 2em 5%;
+			max-width: 980px;
+			margin: 0 auto;
+
+			p{
+				max-width: 800px;
+			}
 		}
 
 	}

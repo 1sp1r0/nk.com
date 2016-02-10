@@ -54,6 +54,13 @@
 
 
 		}
+
+		if( $layout == 'quote' ){
+			echo '<div class="new-quote">';
+			echo '<p class="quote-text">' . $layouts['text'] . '</p>';
+			echo '<p class="quote-attribution"><span class="name">' . $layouts['name'] . '</span> <span class="title">' . $layouts['title'] . '</p>';
+			echo '</div>';
+		}
 	} 
 
 
