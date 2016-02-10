@@ -4,6 +4,12 @@
 
 	&.case-study{
 
+		h3{
+			font-family: "Maison Neue Bold";
+			font-size: 1.2em;
+			margin-bottom: 1em;
+		}
+
 		.header{
 			max-width: 980px;
 			width: 90%;
@@ -65,7 +71,7 @@
 
 			.text{
 				width: 40%;
-				padding: 5%;
+				padding: 4em 5%;
 			}
 
 		}
