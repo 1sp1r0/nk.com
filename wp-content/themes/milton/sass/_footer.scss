@@ -42,6 +42,10 @@
 		width: 48%;
 		margin-right: 2%;
 		display: block;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		border-radius: 0;
 	}
 
 	.hs-error-msgs label{
@@ -56,6 +60,10 @@
 		border: 1px solid #fff;
 		font-size: 1em;
 		cursor: pointer;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		border-radius: 0;
 	}
 }
 
@@ -149,10 +157,28 @@
 @media screen and (max-width: 880px){
 	
 	#site_footer{
-		.one_third{ width: 100%; text-align: center; }
+		padding-top: 2em;
+
+		.site_title{
+			margin-left: 0;
+		}
+
+		.one_third{ width: 100%; text-align: left; }
 		.contact_info{ margin-top: 2em; }
-		.footer_contact{ text-align: center; }
-		.copyright{ text-align: center; }
+		.footer_contact{ 
+			text-align: left; 
+		}
+
+		br{
+			display: block!important;
+		}
+
+		.footer_social li a{
+			margin-left: 0;
+			margin-right: .5em;
+		}
+
+		.copyright{ text-align: left; }
 	}
 }
 

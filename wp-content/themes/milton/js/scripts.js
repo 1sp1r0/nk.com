@@ -184,5 +184,20 @@ $(document).ready(function(){
 	}
 
 	if( $('.bird-info-link') ){ birdInfo(); }
+
+	function expandServices(){
+		$('#services-expand').click(function(event){
+			event.preventDefault();
+			$('.services dd').fadeToggle();
+			if( $(this).hasClass('more') ){
+				$(this).text('See Less');
+			}else{
+				$(this).text('See More');
+			}
+			$(this).toggleClass('more');
+		});
+	}
+
+	if( $('#services-expand') ){ expandServices(); }
 	
 });

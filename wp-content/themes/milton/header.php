@@ -22,7 +22,7 @@
 			include_once(get_template_directory_uri() . '/includes/ga-tracking.php');
 		}
 	?>
-
+	
 </head>
 <body>
 	
@@ -76,6 +76,8 @@
 				$pageType = 'contact';
 		}elseif(is_single()){
 			$pageType = 'blog_article';
+		}elseif(is_page('technology')){
+			$pageType = 'landing';
 		}elseif(is_page()){
 			$pageType = 'page';
 		}elseif(is_archive()){

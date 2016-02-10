@@ -1,0 +1,360 @@
+.landing{
+	@extend .new-wrapper;
+
+	.page-intro-image{
+		background: url('../assets/images/blog/mountain2-1600.jpg') no-repeat center 45%;
+		background-size: cover;
+		@include filter(grayscale(100%));
+	}
+
+
+
+	.button{
+		border: 2px solid #fff;
+		padding: .25em .5em;
+		font-size: .8em;
+		background: none;
+		margin: 0;
+
+		&.dark{
+			border-color: $nkblue;
+			color: $nkblue;
+		}
+	}
+
+
+	h3{
+		line-height: 1.4em;
+		font-family: 'Maison Neue Bold';
+	}
+
+	section{
+		padding: 4em 0;
+		@include clearfix;
+
+		&.no-padding{
+			padding: 0;
+		}
+	}
+
+	.section-header{
+		text-align: left;
+		color:#fff;
+		padding: .5em 0;
+		font-family: 'Maison Neue Book';
+		font-size: 1.2em;
+		background: #bbb;
+	}
+
+	.bg-gray{
+		background: #aaa;
+	}
+
+	.bg-blue{
+		background: $nkblue;
+		color: $white;
+		display: block;
+	}
+
+	.bg-black{
+		background: #111;
+	}
+
+	.intro{
+
+		padding: 2em 0;
+		font-size: 1.4em;
+	}
+
+	.align-left{
+		margin-bottom: 2em;
+
+		h3{
+			color: $nkblue;
+			font-size: 1.2em;
+		}
+	}
+
+	.logos{
+		@include clearfix;
+		padding-top: 2em;
+
+		h3{
+			color: #ccc;
+			font-size: .8em;
+			font-family: "Maison Neue Book";
+			margin-top: 2em;
+
+		}
+
+
+		li{
+			width: 20%;
+			float: left;
+			text-indent: -9999em;
+			height: 70px;
+			background-size: 80%;
+			background-position: left center;
+			background-repeat: no-repeat;
+			-webkit-filter: brightness(-100) opacity(.5);
+			filter: grayscale(1);
+
+			&.ibm{
+				background-image: url('../assets/logos/ibm.png');
+			}
+
+			&.avid{
+				background-image: url('../assets/logos/avid.png');
+			}
+
+			&.lenovo{
+				background-image: url('../assets/logos/lenovo.png');
+			}
+
+			&.alfresco{
+				background-image: url('../assets/logos/alfresco.png');
+			}
+
+			&.pentaho{
+				background-image: url('../assets/logos/pentaho.png');
+			}
+
+			&.lulu{
+				background-image: url('../assets/logos/lulu.png');
+			}
+
+			&.pspdfkit{
+				background-image: url('../assets/logos/pspdfkit.png');
+			}
+
+			&.progress{
+				background-image: url('../assets/logos/progress.png');
+			}
+
+			&.continuum{
+				background-image: url('../assets/logos/continuum.png');
+			}
+		}
+	}
+
+	.services{
+		padding: 1em 0;
+		background: #111;
+		color: #fff;
+
+		h2{
+			font-size: 1.2em;
+			margin-top: 2em;
+			font-weight: 100;
+			font-family: "Maison Neue Light";
+			color: #ccc;
+		}
+
+		dl{
+			float: left;
+			width: 45%;
+			margin: 0 5% 2em 0;
+			margin-top: 2em;
+			border-top: 2px solid $nkblue;
+			padding-top: .5em;
+
+			&:nth-child(4){
+				clear: left;
+			}
+
+			&.is-shown dd{
+				display: block;
+			}
+			
+		}
+
+		dt{
+			margin-bottom: 1em;
+		}
+
+		dd{
+			//display: none;
+			font-size: .7em;
+			text-indent: -1.1em;
+			padding-left: 1.1em;
+			line-height: 1.2em;
+			margin-bottom: .4em;
+			color: #aaa;
+
+			&:before{
+				content: '+';
+				margin-right: .5em;
+			}
+		}
+
+		#services-expand{
+			clear: both;
+			display: block;
+			padding: 0 1em;
+			font-size: .8em;
+			color: $nkblue;
+			border-top: 1px dashed $nkblue;
+			text-align: center;
+		}
+	}
+
+	.container{
+		flex-direction: column;
+		-webkit-display: flex;
+		display: flex;
+
+
+		.tile{
+			flex: 1;
+			padding: 2em;
+			color: $white;
+			justify-content: flex-start;
+
+			span{ 
+				z-index: -1; 
+				filter: none;
+				-webkit-filter: none;
+			}
+
+			.button{
+				margin: 2em auto;
+			}
+
+			&:before{
+				opacity: 0;
+			}
+
+			&:hover:before{
+				opacity: 0;
+			}
+
+			h5{
+				width: 100%;
+			}
+
+			&.adventure-guide{
+				
+			}
+
+			&.image{
+
+				h4, h5{
+					text-align: center;
+				}
+
+				h4{
+					width: 100%;
+					text-indent: -9999em;
+					background-size: 300px;
+					height: 200px;
+					background-position: center;
+					background-size: 200px;
+					background-repeat: no-repeat;
+				}	
+			}
+
+			&:hover{
+				h4{
+				//	-webkit-filter: brightness(100);
+				//	filter: brightness(100);
+				}
+			}
+		}
+
+		.ansible{
+
+			span{ background: #5bbdbf; }
+
+			h4{ 
+				background-size: 150px!important;
+				background-image: url('../assets/logos/ansible.png');
+			}
+		}
+
+
+		.nginx{
+
+			span{ background: url('../assets/logos/nginx-pattern.png'); }
+
+			h4{ background-image: url('../assets/logos/nginx.png'); }
+		}
+	}
+
+}
+
+@media screen and (min-width: 800px){
+
+.landing{
+
+	.align-left{
+
+		float: left;
+		width: 50%;
+		padding-right: 10%;
+		@include box-sizing(border-box);
+
+		h3{
+			font-size: 1.6em;
+		}
+	
+	}
+
+
+
+	.align-right{
+		float: right;
+		width: 50%;
+	}
+
+	.bg-gray h3{ padding-left: 200px; }
+
+	.container{
+		flex-direction: row;
+
+		&.column{
+			flex-direction: column;
+
+			h4,h5{
+				width: 100%;
+				max-width: 980px;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.intro{
+		font-size: 2em;
+	}
+
+	.logos{
+
+		li{
+			//width: 12.5%;
+			background-size: 50%;
+		}
+	}
+
+	.services{
+
+		dl{
+			width: 20%;
+
+			&:nth-child(4){
+				clear: none;
+			}
+		}
+
+	}
+
+	/*updating css*/
+
+}
+
+
+}
+
+@media screen and (min-width: 1200px){
+	.landing{
+		font-size: 1.2em;
+	}
+}
