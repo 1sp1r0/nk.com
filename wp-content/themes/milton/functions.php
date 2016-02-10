@@ -41,7 +41,6 @@ function create_post_type() {
 	'supports' => array('title'),
 	'taxonomies' => array('post_tag'),
     'public' => true,
-    'has_archive' => true,
 	'rewrite' => array( 'slug' => 'the-work' )
     )
   );

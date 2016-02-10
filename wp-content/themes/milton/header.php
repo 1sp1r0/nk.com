@@ -65,7 +65,7 @@
 		}elseif(is_post_type_archive('team')){
 			$pageType = 'the_team';
 		}elseif(is_post_type_archive('work')){
-			$pageType = 'our_purpose';
+			$pageType = 'new-wrapper';
 		}elseif(is_page('workshops')){
 			$pageType = 'workshop_landing';
 		}elseif(has_category('adventure-week')){

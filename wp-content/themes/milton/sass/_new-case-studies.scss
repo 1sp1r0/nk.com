@@ -1,0 +1,103 @@
+/* CASE STUDIES */
+
+.new-wrapper{
+
+	&.case-study{
+
+		h3{
+			font-family: "Maison Neue Bold";
+			font-size: 1.2em;
+			margin-bottom: 2em;
+		}
+
+		.header{
+			max-width: 980px;
+			width: 90%;
+			margin: 2em auto 0;
+
+			h2{
+				margin-bottom: .5em;
+			}
+
+			.case_summary{ color: $nkblue; }
+
+			h2, p{
+				width: auto;
+				text-align: left;
+				padding: 0;
+				max-width: 800px;
+			}
+		}
+
+		.text{
+			padding: 2em 5%;
+
+			h2{
+				color: $nkblue;
+				font-size: 1.4em;
+				text-transform: uppercase;
+			}
+
+			+ .text{
+				border-top: 1px dotted #ccc;
+			}
+		}
+
+		.image, .text-on-image{
+			img{
+				width: 100%;
+			}
+		}
+
+		.text-on-image{
+			position: relative;
+			background-size: 0;
+			background-position: center;
+			background-repeat: no-repeat;
+
+			.text{
+				background: rgba(0,174,236,.95);
+				color: #fff;
+				padding: 2em 5%;
+				
+				box-sizing: border-box;
+			}
+		}
+
+	}
+
+}
+
+@media screen and (min-width: 800px){
+
+.new-wrapper{
+	
+	&.case-study{
+
+		.text{
+			padding: 6em 5%;
+			max-width: 980px;
+			margin: 0 auto;
+
+			p{
+				max-width: 800px;
+			}
+		}
+
+		.text-on-image{
+			background-size: cover;
+
+			img{ display: none; }
+
+			.text{
+				width: 40%;
+				padding: 4em 5%;
+				margin: 0;
+			}
+
+		}
+
+	}
+
+}
+}
