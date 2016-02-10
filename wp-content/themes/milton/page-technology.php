@@ -50,14 +50,14 @@ get_header();
 
 	<div class="container">
 
-		<a href="#" class="tile ansible image">
+		<a href="http://newkind.com/the-work/a-powerfully-simple-story/" class="tile ansible image">
 			<span></span>
 			<h4>Ansible</h4>
 			<h5>Ansible was acquired by Red Hat in 2015 for over $100m.</h5>
 			<i class="button">Read the Story</i>
 		</a>
 
-		<a href="#" class="tile nginx image">
+		<a href="http://newkind.com/the-work/branding-the-heart-of-the-modern-web/" class="tile nginx image">
 			<span></span>
 			<h4>Nginx</h4>
 			<h5>NGINX powers half the world's busiest sites.</h5>
@@ -78,6 +78,7 @@ get_header();
 			<li class="avid">Avid</li>
 			<li class="lenovo">Lenovo</li>
 			<li class="alfresco">Alfresco</li>
+			<li class="continuum">Continuum</li>
 			<li class="pentaho">Pentaho</li>
 			<li class="lulu">Lulu</li>
 			<li class="pspdfkit">PSPDFkit</li>
