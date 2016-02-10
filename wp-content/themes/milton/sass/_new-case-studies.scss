@@ -34,6 +34,10 @@
 				font-size: 1.4em;
 				text-transform: uppercase;
 			}
+
+			+ .text{
+				border-top: 1px dotted #ccc;
+			}
 		}
 
 		.image, .text-on-image{
