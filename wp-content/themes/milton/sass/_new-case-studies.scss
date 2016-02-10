@@ -1,0 +1,76 @@
+/* CASE STUDIES */
+
+.new-wrapper{
+
+	&.case-study{
+
+		.header{
+			max-width: 980px;
+			width: 90%;
+			margin: 2em auto 0;
+
+			h2{
+				margin-bottom: .5em;
+			}
+
+			h2, p{
+				width: auto;
+				text-align: left;
+				padding: 0;
+			}
+		}
+
+		.text{
+			padding: 2em 5%;
+
+			h2{
+				color: $nkblue;
+				font-size: 1.4em;
+				text-transform: uppercase;
+			}
+		}
+
+		.image, .text-on-image{
+			img{
+				width: 100%;
+			}
+		}
+
+		.text-on-image{
+			position: relative;
+			background-size: 0;
+			background-position: center;
+
+			.text{
+				background: rgba(255,255,255,.95);
+				padding: 2em 5%;
+				
+				box-sizing: border-box;
+			}
+		}
+
+	}
+
+}
+
+@media screen and (min-width: 800px){
+
+.new-wrapper{
+	
+	&.case-study{
+
+		.text-on-image{
+
+			background-size: cover;
+
+			.text{
+				width: 40%;
+				padding: 5%;
+			}
+
+		}
+
+	}
+
+}
+}
