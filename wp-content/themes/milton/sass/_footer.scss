@@ -45,6 +45,7 @@
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		appearance: none;
+		border-radius: 0;
 	}
 
 	.hs-error-msgs label{
@@ -62,6 +63,7 @@
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		appearance: none;
+		border-radius: 0;
 	}
 }
 
@@ -155,6 +157,12 @@
 @media screen and (max-width: 880px){
 	
 	#site_footer{
+		padding-top: 2em;
+		
+		.site_title{
+			margin-left: 0;
+		}
+
 		.one_third{ width: 100%; text-align: left; }
 		.contact_info{ margin-top: 2em; }
 		.footer_contact{ 
