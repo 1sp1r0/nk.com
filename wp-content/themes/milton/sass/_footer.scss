@@ -42,6 +42,7 @@
 		width: 48%;
 		margin-right: 2%;
 		display: block;
+		-webkit-appearance: none;
 	}
 
 	.hs-error-msgs label{
@@ -163,7 +164,7 @@
 			margin-left: 0;
 			margin-right: .5em;
 		}
-		
+
 		.copyright{ text-align: left; }
 	}
 }
