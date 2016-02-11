@@ -83,6 +83,7 @@ get_header();
 			<li class="lulu">Lulu</li>
 			<li class="pspdfkit">PSPDFkit</li>
 			<li class="progress">Progress</li>
+			<li class="globoforce">Globoforce</li>
 		</ul>
 
 		</div>
