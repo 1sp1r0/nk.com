@@ -58,7 +58,7 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/slack.js?1.9.2016"></script>
 
 <?php
-	if( $_SERVER['HTTP_HOST'] == 'localhost:8888' ){
+	if( $_SERVER['HTTP_HOST'] == 'newkind.com' ){
 			// only include analytics if on production
 			include( get_template_directory() . '/includes/hubspot-tracking.php' );
 		}
