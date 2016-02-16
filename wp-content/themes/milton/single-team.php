@@ -39,7 +39,7 @@
 								}elseif( $info['contact_type'] == 'twitter' ){
 									$url = 'https://twitter.com/' . $info['username'];
 								}elseif( $info['contact_type'] == 'behance' ){
-									$url = 'https://behance.com/' . $info['username'];
+									$url = 'https://behance.net/' . $info['username'];
 								}elseif( $info['contact_type'] == 'bitbucket' ){
 									$url = 'https://bitbucket.org/' . $info['username'];
 								}elseif( $info['contact_type'] == 'dribble' ){
