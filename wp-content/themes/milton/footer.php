@@ -58,10 +58,10 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/slack.js?1.9.2016"></script>
 
 <?php
-	if( get_bloginfo('url') == 'http://newkind.com' ){
-		// only include hubspot if on production
-		include_once(get_template_directory_uri() . '/includes/hubspot-tracking.php');
-	}
+	if( $_SERVER['HTTP_HOST'] == 'localhost:8888' ){
+			// only include analytics if on production
+			include( get_template_directory() . '/includes/hubspot-tracking.php' );
+		}
 ?>
 </body>
 </html>

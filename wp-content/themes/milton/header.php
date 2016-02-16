@@ -17,9 +17,9 @@
 	<meta property="og:description" content="We bring people together to share in the adventure of creating the future." />
 	
 	<?php
-		if( $_SERVER['HTTP_HOST'] == 'newkind.com' ){
+		if( $_SERVER['HTTP_HOST'] == 'localhost:8888' ){
 			// only include analytics if on production
-			include_once(get_template_directory_uri() . '/includes/ga-tracking.php');
+			include( get_template_directory() . '/includes/ga-tracking.php' );
 		}
 	?>
 
