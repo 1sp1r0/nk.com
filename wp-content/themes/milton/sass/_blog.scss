@@ -83,6 +83,17 @@
 			line-height: 1.4em;
 		}
 
+		h3{
+			@include sentinel;
+			font-size: 1.2em;
+			margin: 2em 0 1em;
+			line-height: 1.4em;
+		}
+
+		strong,b{
+			font-family: "Maison Neue Bold";
+		}
+
 		ul{
 			margin: 1em;
 			
