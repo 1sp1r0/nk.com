@@ -163,6 +163,29 @@
 		border-top: 1px solid #ccc; 
 		border-bottom: 1px solid #ccc;
 	}
+
+
+
+	.tag-list{
+		@include whitney_book;
+		text-align: left;
+		@extend article;
+		border: 0;
+		color: #aaa;
+
+		dt{
+			display: inline-block;
+			margin-right: 1em;
+			color: $nkblue;
+		}
+
+		dd{
+			margin-right: .5em;
+			a{
+				border-bottom: none;
+			}
+		}
+	}
 	
 	
 }

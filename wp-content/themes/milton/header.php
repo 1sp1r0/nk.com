@@ -81,7 +81,7 @@
 		}elseif(is_page()){
 			$pageType = 'page';
 		}elseif(is_archive()){
-			$pageType = 'archive';
+			$pageType = 'adventure-guide';
 		}
 	
 	?>

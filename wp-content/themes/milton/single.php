@@ -8,11 +8,16 @@
 	
 	<p class="article_summary" role="contentinfo"><?php the_field('article_summary'); ?></p>
 	
+	<article class="whitney_book" role="article">
+		<?php if(get_field('image')){ echo '<img class="article_image" src="'.get_field('image').'" />'; } ?>
+		<?php the_content(); ?>
+	</article>
+
 	<?php
 	$tags = get_the_tags();
 	
 	if($tags){
-		echo '<dl><dt class="label">Tags</dt><br/>';
+		echo '<dl class="tag-list"><dt>Tags</dt>';
 		
 		foreach($tags as $tag){
 			if(end($tags) !== $tag){
@@ -20,19 +25,12 @@
 
 			}else{ $comma = ''; }
 			
-			echo '<dd>'.$tag->name.$comma.' </dd>';
+			echo '<dd><a href="' . get_bloginfo('url') . '/tag/' . $tag->slug . '">' . $tag->name . $comma . '</a></dd>';
 		}
 		
 		echo '</dl>';
 	}
 	?>
-	
-	
-	
-	<article class="whitney_book" role="article">
-		<?php if(get_field('image')){ echo '<img class="article_image" src="'.get_field('image').'" />'; } ?>
-		<?php the_content(); ?>
-	</article>
 	
 	<p class="byline">Posted by <?php the_author(); ?> in <?php the_date('F, Y'); ?></p>
 	
