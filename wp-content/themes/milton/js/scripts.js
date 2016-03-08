@@ -199,5 +199,43 @@ $(document).ready(function(){
 	}
 
 	if( $('#services-expand') ){ expandServices(); }
+
+
+	function gaEvent(category, action, label, value){
+		ga('send', 'event', category, action, label, value); 
+	}
+
+	$('.newsletter-signup .hbspt-form input[type="submit"]').click( function(){
+		if($('.ref').length < 0){
+
+			if( $('.ref').attr('data-ref') == 'technology' ){
+				gaEvent('newsletter','submit-form','technology-page');
+			}
+
+		}else{
+			gaEvent('newsletter','submit-form');
+		}
+		
+	});
+
+	$('.global_nav a[href="http://info.newkind.com/consultation"]').click( function(){
+		if($('.ref').length < 0){
+
+			if( $('.ref').attr('data-ref') == 'technology' ){
+				gaEvent('consultation','enter-form','technology-page');
+			}
+
+		}else{
+			gaEvent('consultation','enter-form');
+		}
+	});
+
+	$('a[data-ref="ag-brandpositioning"]').click( function(){
+
+		ga('send', 'event', 'ag-brand-positioning', 'click');
+
+	});
+
+
 	
 });
