@@ -1,5 +1,15 @@
 # README #
 
-This repository houses the wordpress installation and custom theme ("Milton") for [New Kind](http://www.newkind.com).
+## Welcome to New Kind ##
 
-For more information, contact Josh Mobley via email [josh@joshmobley.net](mailto:josh@joshmobley.net) or on twitter [@joshmobley](http://www.twitter.com/joshmobley).
+New Kind is a branding firm for organizations that are inventing or reinventing themselves.
+
+This repo houses our custom wordpress theme named 'Milton', named after the architect who build the structure in which we physically work every day, G. Milton Small.
+
+Find us at http://newkind.com
+
+New Kind
+
+We bring people together
+to share in the adventure
+of creating the future.
