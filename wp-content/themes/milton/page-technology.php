@@ -1,6 +1,10 @@
 <?php
 
-get_header(); 
+$metaTitle = 'New Kind - Technology & Startup Branding Experts';
+$metaDescription = 'We help tech startups build brands from the ground up. We help established organizations stay fit for the future.';
+$metaKeywords = 'technology branding firm, technology branding agency, startup branding agency, startup branding firm, tech branding agency, tech branding firm, startup brand package, startup brand strategy';
+
+include('header-landing.php'); 
 ?>
 
 <div class="new-wrapper ref" data-ref="technology">
@@ -37,7 +41,7 @@ get_header();
 				   industry. We <a href="<?php echo get_bloginfo('url'); ?>/our-story">helped Red Hat grow</a> from one office in North Carolina
 				   to a global $1 billion industry leader.</p>
 
-				 <p>Today, New Kind helps technology companies build brand and culture through an open, collaborative approach to strategy, research, content, and design. We help young companies build brands from the ground up. We help established organizations stay fit for the future.</p>
+				 <p>Today, New Kind helps technology companies build brand and culture through an open, collaborative approach to strategy, research, content, and design. We help tech startups build brands from the ground up. We help established organizations stay fit for the future.</p>
 
 
 
