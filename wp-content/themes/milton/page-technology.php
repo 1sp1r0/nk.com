@@ -17,7 +17,7 @@ include('header-landing.php');
 		
 		<div class="wrapper">
 		
-			<h3>We are a branding firm for technology companies inventing or reinventing themselves.</h3>
+			<h3>We are a branding firm for startups and technology companies.</h3>
 		
 		</div>
 		
@@ -29,7 +29,7 @@ include('header-landing.php');
 
 			<div class="align-left">
 			
-				<h3><strong>We know what it takes to build a successful technology brand because we’ve been there.</strong></h3>
+				<h3><strong>We know what it takes to build successful startup and tech brands because we’ve been there.</strong></h3>
 			
 			</div><!--.align-left-->
 
@@ -41,7 +41,7 @@ include('header-landing.php');
 				   industry. We <a href="<?php echo get_bloginfo('url'); ?>/our-story">helped Red Hat grow</a> from one office in North Carolina
 				   to a global $1 billion industry leader.</p>
 
-				 <p>Today, New Kind helps technology companies build brand and culture through an open, collaborative approach to strategy, research, content, and design. We help tech startups build brands from the ground up. We help established organizations stay fit for the future.</p>
+				 <p>Today, New Kind helps technology companies and startups build brand and culture through an open, collaborative approach to strategy, research, content, and design. We help build brands from the ground up. We help established organizations stay fit for the future.</p>
 
 
 
