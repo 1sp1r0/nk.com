@@ -17,7 +17,7 @@ include('header-landing.php');
 		
 		<div class="wrapper">
 		
-			<h3>We are a branding firm for startups and technology companies.</h3>
+			<h3>We are a branding agency for startups and technology companies.</h3>
 		
 		</div>
 		
